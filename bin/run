@@ -2,4 +2,4 @@
 
 require_relative '../config/environment'
 
-Collection.new
+Catalog.new(5).list_all

@@ -20,4 +20,8 @@ class Audiobook
     attributes.each {|key, value| self.send(("#{key}="), value)}
   end
 
+  def to_s()
+    return :url_librivox.to_s + ": " + self.url_librivox
+  end
+
 end
