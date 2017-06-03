@@ -9,11 +9,20 @@ class Audiobook
     return @@all
   end
 
+  def self.list_all()
+    self.all.each {|audiobook| puts audiobook.to_s }
+  end
+
   attr_accessor :url_librivox, :url_iarchive, :url_text_source
 
   def initialize(attributes)
     self.add_attributes(attributes)
-    @@all << self
+    if @@all.detect{|a| a.url_librivox == self.url_librivox}
+       puts "DUPLICATE URL ENCOUNTERED: " + self.url_librivox
+    else
+      @@all << self
+    # if !@@all.detect{|a| a.url_librivox == self.url_librivox}
+    end
   end
 
   def add_attributes(attributes)
@@ -22,9 +31,6 @@ class Audiobook
 
   def to_s()
     output_string = :url_librivox.to_s + ": " + self.url_librivox
-    if self.url_text_source != nil
-      output_string += "\n -- " + :url_text_source.to_s + ": " + self.url_text_source
-    end
     return output_string
   end
 

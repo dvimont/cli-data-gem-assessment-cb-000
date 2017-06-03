@@ -3,5 +3,7 @@
 require_relative '../config/environment'
 
 puts "*** BUILDING CATALOG OF AUDIOBOOKS! ***"
-Catalog.new(5).list_all
+optional_parm = "" # "&id=7926"
+CatalogBuilder.build(5, optional_parm)
+Audiobook.list_all
 puts "Audiobook count: " + Audiobook.all.size.to_s
