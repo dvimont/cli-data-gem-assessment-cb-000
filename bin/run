@@ -2,4 +2,6 @@
 
 require_relative '../config/environment'
 
+puts "*** BUILDING CATALOG OF AUDIOBOOKS! ***"
 Catalog.new(5).list_all
+puts "Audiobook count: " + Audiobook.all.size.to_s
