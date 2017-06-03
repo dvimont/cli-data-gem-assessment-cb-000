@@ -4,6 +4,6 @@ require_relative '../config/environment'
 
 puts "*** BUILDING CATALOG OF AUDIOBOOKS! ***"
 optional_parm = "" # "&id=7926"
-CatalogBuilder.build(5, optional_parm)
-Audiobook.list_all
-puts "Audiobook count: " + Audiobook.all.size.to_s
+CatalogBuilder.build(10000, optional_parm)
+# Audiobook.list_all
+puts "=====\nAudiobook count: " + Audiobook.all.size.to_s

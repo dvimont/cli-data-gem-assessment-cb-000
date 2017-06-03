@@ -1,5 +1,6 @@
 require 'open-uri'
 require 'json'
+require 'nokogiri'
 
 class CatalogBuilder
 
@@ -25,6 +26,16 @@ class CatalogBuilder
 
     Audiobook.mass_initialize(hash_array)
     puts "** Initialization of Audiobook collection completed: " + Time.now.to_s
+
+    self.scrape_webpages
   end
 
+  def self.scrape_webpages
+    puts "** STARTING scraping of pages for #{Audiobook.all.size.to_s} audiobooks **" +
+        Time.now.to_s
+
+
+    puts "** COMPLETED scraping of pages for #{Audiobook.all.size.to_s} audiobooks **" +
+        Time.now.to_s
+  end
 end

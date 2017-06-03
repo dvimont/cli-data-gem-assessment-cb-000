@@ -1,5 +1,5 @@
 class Audiobook
-  @@all = Array.new
+  @@all = SortedSet.new
 
   def self.mass_initialize(hash_array)
     hash_array.each{ |hash| Audiobook.new(hash) }
@@ -17,12 +17,7 @@ class Audiobook
 
   def initialize(attributes)
     self.add_attributes(attributes)
-    if @@all.detect{|a| a.url_librivox == self.url_librivox}
-       puts "DUPLICATE URL ENCOUNTERED: " + self.url_librivox
-    else
-      @@all << self
-    # if !@@all.detect{|a| a.url_librivox == self.url_librivox}
-    end
+    @@all.add(self)
   end
 
   def add_attributes(attributes)
@@ -32,6 +27,10 @@ class Audiobook
   def to_s()
     output_string = :url_librivox.to_s + ": " + self.url_librivox
     return output_string
+  end
+
+  def <=>(other)
+    return self.url_librivox <=> other.url_librivox
   end
 
 end
