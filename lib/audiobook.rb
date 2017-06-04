@@ -13,11 +13,13 @@ class Audiobook
     self.all.each {|audiobook| puts audiobook.to_s }
   end
 
-  attr_accessor :url_librivox, :url_iarchive, :url_text_source
+  attr_accessor :id, :url_librivox #, :url_iarchive, :url_text_source
 
   def initialize(attributes)
     self.add_attributes(attributes)
-    @@all.add(self)
+    if !(self.url_librivox == nil || self.url_librivox == "") # librivox project not completed
+      @@all.add(self)
+    end
   end
 
   def add_attributes(attributes)
@@ -25,12 +27,13 @@ class Audiobook
   end
 
   def to_s()
-    output_string = :url_librivox.to_s + ": " + self.url_librivox
+    output_string = "\n" +
+        :id.to_s + ": " + self.id +
+        "\n  " + :url_librivox.to_s + ": " + self.url_librivox
     return output_string
   end
 
   def <=>(other)
-    return self.url_librivox <=> other.url_librivox
+    return self.id <=> other.id
   end
-
 end
