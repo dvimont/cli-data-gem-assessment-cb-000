@@ -28,23 +28,18 @@ class CatalogBuilder
         if ex.to_s.start_with?("404")
           puts "** HTTP 404 response from Librivox API; apparent end of catalog has been reached! **"
         else
-          puts "** Error has been returned by OpenURI during call to Librivox API. Error message is as follows:"
+          puts "** Error returned by OpenURI during call to Librivox API. Error message is as follows:"
         end
         puts ex.to_s
         puts "====="
         break
       end
-
       offset += call_limit
       puts "** Call to API completed: " + current_time
 
       json_string = api_result.read
-      puts "** Reading into JSON string completed: " + current_time
-
       returned_hash = JSON.parse(json_string,{symbolize_names: true})
       hash_array = returned_hash.values[0]
-      puts "** Conversion of JSON string into Hash completed: " + current_time
-
       Audiobook.mass_initialize(hash_array)
       puts "** Initialization of Audiobook set completed: " + current_time
       puts "====="

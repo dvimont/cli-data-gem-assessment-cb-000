@@ -13,11 +13,11 @@ class Audiobook
     self.all.each {|audiobook| puts audiobook.to_s }
   end
 
-  attr_accessor :id, :url_librivox #, :url_iarchive, :url_text_source
+  attr_accessor :id, :url_librivox, :title, :date_released  #, :url_iarchive, :url_text_source
 
   def initialize(attributes)
     self.add_attributes(attributes)
-    if !(self.url_librivox == nil || self.url_librivox == "") # librivox project not completed
+    if !(self.url_librivox == nil || self.url_librivox == "") # only completed audiobooks have URL
       @@all.add(self)
     end
   end
