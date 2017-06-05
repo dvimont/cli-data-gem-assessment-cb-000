@@ -4,6 +4,8 @@ require_relative '../config/environment'
 
 puts "*** BUILDING CATALOG OF AUDIOBOOKS! ***"
 optional_parm = "" # "&id=7926"
-CatalogBuilder.build(2) # 10000, optional_parm)
+CatalogBuilder.build(20) # 10000, optional_parm)
 Audiobook.list_all
+puts "LANGUAGES (" + Language.all.size.to_s + "):"
+Language.all.each{|lang| puts lang.to_s}
 puts "=====\nAudiobook count: " + Audiobook.all.size.to_s

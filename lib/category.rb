@@ -1,18 +1,19 @@
 class Category # abstract class
 
-  class << self  # establishes a block for defining class methods and fields
-    attr_reader :all
-    @all = SortedSet.new
-  end
+#  class << self  # establishes a block for defining class methods and fields
+#    attr_reader :all
+#    @all = SortedSet.new
+#  end
 
   attr_accessor :id
   attr_reader :audiobooks, :audiobooks_by_title, :audiobooks_by_date
 
   def initialize(attributes)
     self.add_attributes(attributes)
+    self.class.all.add(self)
+
     @audiobooks = SortedSet.new # default (id) order
     @audiobooks_by_title = SortedSet.new {|a,b| a.title <=> b.title}
-    # newest to oldest
     @audiobooks_by_date = SortedSet.new {|a,b| b.date_released <=> a.date_released}
   end
 
@@ -22,9 +23,13 @@ class Category # abstract class
 
   def add_audiobook(audiobook)
     if !self.audiobooks.include?(audiobook)
-      self.audiobooks.push(audiobook)
-      self.audiobooks_by_title.push(audiobook)
-      self.audiobooks_by_date.push(audiobook)
+      self.audiobooks.add(audiobook)
+      self.audiobooks_by_title.add(audiobook)
+      self.audiobooks_by_date.add(audiobook)
     end
+  end
+
+  def <=>(other)
+    return self.id <=> other.id
   end
 end

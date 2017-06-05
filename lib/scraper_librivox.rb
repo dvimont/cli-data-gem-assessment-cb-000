@@ -62,7 +62,9 @@ class ScraperLibrivox
           readers_hash = Hash.new
           rows.each{|tr_element|
             reader_element = tr_element.css("a")[reader_index]
-            readers_hash[reader_element.attribute("href").value[/\d+$/]] = reader_element.text
+            if reader_element != nil
+              readers_hash[reader_element.attribute("href").value[/\d+$/]] = reader_element.text
+            end
           }
           if !readers_hash.empty?
             attributes[:reader_data] = readers_hash
