@@ -1,5 +1,5 @@
 class Category # abstract class
-  
+
   class << self  # establishes a block for defining class methods and fields
     attr_reader :all
     @all = SortedSet.new
@@ -25,5 +25,6 @@ class Category # abstract class
       self.audiobooks.push(audiobook)
       self.audiobooks_by_title.push(audiobook)
       self.audiobooks_by_date.push(audiobook)
+    end
   end
 end
