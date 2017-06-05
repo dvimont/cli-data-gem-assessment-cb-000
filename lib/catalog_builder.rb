@@ -5,7 +5,7 @@ require 'nokogiri'
 class CatalogBuilder
 
   LIBRIVOX_API_URL = "https://librivox.org/api/feed/audiobooks/"
-  LIBRIVOX_API_PARMS = "?fields={id,url_librivox}&format=json"
+  LIBRIVOX_API_PARMS = "?fields={id,url_librivox,language}&format=json"
   DEFAULT_CATALOG_SIZE = 100
   LIMIT_PER_CALL = 50
 
@@ -49,12 +49,13 @@ class CatalogBuilder
   end
 
   def self.scrape_webpages
-    puts "** STARTING scraping of pages for #{Audiobook.all.size.to_s} audiobooks: " +
-        current_time
+    puts "** STARTING scraping of pages for #{Audiobook.all.size.to_s} audiobooks: " + current_time
 
+    Audiobook.all.each{ |audiobook|
+      audiobook.add_attributes(ScraperLibrivox.get_audiobook_attributes_hash(audiobook.url_librivox))
+    }
 
-    puts "** COMPLETED scraping of pages for #{Audiobook.all.size.to_s} audiobooks: " +
-        current_time
+    puts "** COMPLETED scraping of pages for #{Audiobook.all.size.to_s} audiobooks: " + current_time
   end
 
   def self.current_time

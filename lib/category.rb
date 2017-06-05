@@ -10,7 +10,7 @@ class Category # abstract class
 
   def initialize(attributes)
     self.add_attributes(attributes)
-    @audiobooks = SortedSet.new # default order
+    @audiobooks = SortedSet.new # default (id) order
     @audiobooks_by_title = SortedSet.new {|a,b| a.title <=> b.title}
     # newest to oldest
     @audiobooks_by_date = SortedSet.new {|a,b| b.date_released <=> a.date_released}

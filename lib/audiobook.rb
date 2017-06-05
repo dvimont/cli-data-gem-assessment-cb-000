@@ -13,7 +13,9 @@ class Audiobook
     self.all.each {|audiobook| puts audiobook.to_s }
   end
 
-  attr_accessor :id, :url_librivox, :title, :date_released  #, :url_iarchive, :url_text_source
+  attr_accessor :id, :url_librivox, :title, :language, :date_released,
+                :http_error, :author_data, :genre_data, :reader_data
+                 #, :url_iarchive, :url_text_source
 
   def initialize(attributes)
     self.add_attributes(attributes)
@@ -23,13 +25,27 @@ class Audiobook
   end
 
   def add_attributes(attributes)
-    attributes.each {|key, value| self.send(("#{key}="), value)}
+    attributes.each {|key, value|
+      if value.is_a?(String) && value.start_with?("http:")
+        value = "https" + value[4,value.length]
+      end
+      self.send(("#{key}="), value)
+    }
   end
 
   def to_s()
     output_string = "\n" +
         :id.to_s + ": " + self.id +
-        "\n  " + :url_librivox.to_s + ": " + self.url_librivox
+        "\n  " + :url_librivox.to_s + ": " + self.url_librivox +
+        "\n  " + :title.to_s + ": " + self.title +
+        "\n  " + :author_data.to_s + ": " + self.author_data.to_s +
+        "\n  " + :reader_data.to_s + ": " + self.reader_data.to_s +
+        "\n  " + :language.to_s + ": " + self.language +
+        "\n  " + :genre_data.to_s + ": " + self.genre_data +
+        "\n  " + :date_released.to_s + ": " + self.date_released
+    if self.http_error != nil
+      output_string += "\n  " + :http_error.to_s + ": " + self.http_error
+    end
     return output_string
   end
 
