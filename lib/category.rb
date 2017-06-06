@@ -12,9 +12,9 @@ class Category # abstract class
     self.add_attributes(attributes)
     self.class.all[self.id] = self
 
-    @audiobooks = SortedSet.new # default (id) order
+    @audiobooks = HashWithBsearch.new # default (id) order
     @audiobooks_by_title = HashWithBsearch.new # {|a,b| a.title <=> b.title}
-    @audiobooks_by_date = SortedSet.new # {|a,b| b.date_released <=> a.date_released}
+    @audiobooks_by_date = HashWithBsearch.new {|a,b| b <=> a}
   end
 
   def add_attributes(attributes)
@@ -22,14 +22,14 @@ class Category # abstract class
   end
 
   def add_audiobook(audiobook)
-    if !self.audiobooks.include?(audiobook)
-      self.audiobooks.add(audiobook)
+    if self.audiobooks[audiobook.id] == nil
+      self.audiobooks[audiobook.id] = audiobook
       title_key = audiobook.title
       if title_key.upcase.start_with?("THE ")
         title_key = title_key[4,title_key.length]
       end
       self.audiobooks_by_title[title_key] = audiobook
-      self.audiobooks_by_date.add(audiobook)
+      self.audiobooks_by_date[audiobook.date_released] = audiobook
     end
   end
 
