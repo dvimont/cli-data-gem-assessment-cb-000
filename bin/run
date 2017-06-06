@@ -7,8 +7,9 @@ optional_parm = "&id=7926" # get explicit audiobook webpage for development/test
 CatalogBuilder.build(2) # 10000, optional_parm)
 # Audiobook.list_all
 puts "LANGUAGES (" + Language.all.size.to_s + "):"
-Language.all.each{|key, language|
+Language.all.sorted_hash.each{|key, language|
   puts language.id.to_s
-  language.audiobooks_by_title.each{|audiobook| puts "  " + audiobook.title}
+  puts language.audiobooks_by_title.sorted_hash.size.to_s + " audiobooks in this language."
+  language.audiobooks_by_title.sorted_hash.each{|title, audiobook| puts "  " + title + " " + audiobook.id}
 }
 puts "=====\nAudiobook count: " + Audiobook.all.size.to_s

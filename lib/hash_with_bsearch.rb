@@ -5,9 +5,13 @@
 ##  so important. Note that every time the content of the Hash is altered, it
 ##  requires the @sorted_key_value_array to be computed via hash#sort.
 
-class HashWithBsearch < Hash
+class HashWithBsearch
 
   @sorted_key_value_array = Array.new
+
+  def sorted_hash
+    return @sorted_key_value_array.to_h
+  end
 
   def sync_sorted_key_value_array()
     if self.size == 0
@@ -33,7 +37,7 @@ class HashWithBsearch < Hash
     end
   end
 
-  # OVERRIDES OF METHODS WHICH RESULT IN ALTERATION OF HASH CONTENT
+  # INITIALIZE ACCEPTS OPTIONAL OVERRIDE COMPARATOR BLOCK
   def initialize(&block)
     result = super
     if block_given?
@@ -45,6 +49,7 @@ class HashWithBsearch < Hash
     return result
   end
 
+  # OVERRIDES OF METHODS WHICH RESULT IN ALTERATION OF HASH CONTENT
   def shift()
     result = super
     self.sync_sorted_key_value_array

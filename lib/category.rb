@@ -13,7 +13,7 @@ class Category # abstract class
     self.class.all[self.id] = self
 
     @audiobooks = SortedSet.new # default (id) order
-    @audiobooks_by_title = SortedSet.new # {|a,b| a.title <=> b.title}
+    @audiobooks_by_title = HashWithBsearch.new # {|a,b| a.title <=> b.title}
     @audiobooks_by_date = SortedSet.new # {|a,b| b.date_released <=> a.date_released}
   end
 
@@ -24,7 +24,8 @@ class Category # abstract class
   def add_audiobook(audiobook)
     if !self.audiobooks.include?(audiobook)
       self.audiobooks.add(audiobook)
-      self.audiobooks_by_title.add(audiobook)
+      puts "TITLE: " + audiobook.title
+      self.audiobooks_by_title[audiobook.title] = audiobook
       self.audiobooks_by_date.add(audiobook)
     end
   end

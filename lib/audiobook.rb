@@ -23,6 +23,9 @@ class Audiobook
     self.add_attributes(attributes)
     if !(self.url_librivox == nil || self.url_librivox == "") # only completed audiobooks have URL
       @@all.add(self)
+      if @language != nil
+        @language.add_audiobook(self)
+      end
     end
   end
 
@@ -37,7 +40,6 @@ class Audiobook
 
   def language=(language_string)
     @language = Language.create_or_get_existing(language_string)
-    @language.add_audiobook(self)
   end
 
   def to_s()
