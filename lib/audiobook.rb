@@ -62,9 +62,3 @@ class Audiobook
     return self.id <=> other.id
   end
 end
-
-class AudiobookByTitle < Audiobook
-  def <=>(other)
-    return self.title <=> other.title
-  end
-end

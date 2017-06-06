@@ -24,8 +24,11 @@ class Category # abstract class
   def add_audiobook(audiobook)
     if !self.audiobooks.include?(audiobook)
       self.audiobooks.add(audiobook)
-      puts "TITLE: " + audiobook.title
-      self.audiobooks_by_title[audiobook.title] = audiobook
+      title_key = audiobook.title
+      if title_key.upcase.start_with?("THE ")
+        title_key = title_key[4,title_key.length]
+      end
+      self.audiobooks_by_title[title_key] = audiobook
       self.audiobooks_by_date.add(audiobook)
     end
   end
