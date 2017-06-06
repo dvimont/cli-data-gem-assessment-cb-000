@@ -40,12 +40,18 @@ class CatalogBuilder
       json_string = api_result.read
       returned_hash = JSON.parse(json_string,{symbolize_names: true})
       hash_array = returned_hash.values[0]
+      hash_array.each{ |hash|
+        scraped_hash =
+          ScraperLibrivox.get_audiobook_attributes_hash(hash[:url_librivox])
+        hash.merge!(scraped_hash)
+      }
+  #    scraped_array = ScraperLibrivox.get_audiobook_attributes_hash(hash_array[:url_librivox])
       Audiobook.mass_initialize(hash_array)
       puts "** Initialization of Audiobook set completed: " + current_time
       puts "====="
     end
 
-    self.scrape_webpages
+#    self.scrape_webpages
   end
 
   def self.scrape_webpages

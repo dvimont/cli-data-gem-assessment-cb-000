@@ -13,8 +13,8 @@ class Category # abstract class
     self.class.all[self.id] = self
 
     @audiobooks = SortedSet.new # default (id) order
-    @audiobooks_by_title = SortedSet.new {|a,b| a.title <=> b.title}
-    @audiobooks_by_date = SortedSet.new {|a,b| b.date_released <=> a.date_released}
+    @audiobooks_by_title = SortedSet.new # {|a,b| a.title <=> b.title}
+    @audiobooks_by_date = SortedSet.new # {|a,b| b.date_released <=> a.date_released}
   end
 
   def add_attributes(attributes)

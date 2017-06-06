@@ -13,7 +13,7 @@ class Audiobook
     self.all.each {|audiobook| puts audiobook.to_s }
   end
 
-  attr_accessor :id, :url_librivox, :title, :language, :date_released,
+  attr_accessor :id, :url_librivox, :title, :date_released,
                 :author_data, :genre_data, :reader_data,
                 :http_error
                  #, :url_iarchive, :url_text_source
@@ -58,5 +58,11 @@ class Audiobook
 
   def <=>(other)
     return self.id <=> other.id
+  end
+end
+
+class AudiobookByTitle < Audiobook
+  def <=>(other)
+    return self.title <=> other.title
   end
 end

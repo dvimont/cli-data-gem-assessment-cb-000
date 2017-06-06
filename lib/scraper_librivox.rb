@@ -8,6 +8,9 @@ class ScraperLibrivox
     def get_audiobook_attributes_hash(url_librivox)
       attributes = Hash.new
       begin
+        if url_librivox.start_with?("http:")
+          url_librivox = "https" + url_librivox[4,url_librivox.length]
+        end
         page_content = Nokogiri::HTML(open(url_librivox, :read_timeout=>nil))
         # title, author, genre
         title_author_genre_section =

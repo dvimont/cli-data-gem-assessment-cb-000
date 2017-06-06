@@ -9,11 +9,11 @@ class HashWithBsearch < Hash
 
   @sorted_key_value_array = Array.new
 
-  def sync_sorted_key_value_array
+  def sync_sorted_key_value_array()
     if self.size == 0
       @sorted_key_value_array = Array.new
     else
-      @sorted_key_value_array = self.sort{|a,b| a<=>b}
+      @sorted_key_value_array = self.sort &@sort_block
     end
   end
 
@@ -34,8 +34,13 @@ class HashWithBsearch < Hash
   end
 
   # OVERRIDES OF METHODS WHICH RESULT IN ALTERATION OF HASH CONTENT
-  def initialize(object=nil)
+  def initialize(&block)
     result = super
+    if block_given?
+      @sort_block = proc &block
+    else
+      @sort_block = proc {|a,b| a<=>b}
+    end
     self.sync_sorted_key_value_array
     return result
   end
