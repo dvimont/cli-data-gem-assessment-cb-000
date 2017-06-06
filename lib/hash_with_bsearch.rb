@@ -1,9 +1,10 @@
-## NOTE: This Hash wrapper efficiently returns values (via the #[] method)
-##       through encapsulated use of the Array#bsearch method.
+## NOTE: This Hash wrapper efficiently finds and returns values
+##  (via the #[] method) through encapsulated use of the Array#bsearch method.
+##
 ##  It is intended for situations in which efficiency of lookups is paramount,
 ##  but where efficiency in adding values and building the initial Hash is not
 ##  so important. Note that every time the content of the Hash is altered, it
-##  requires the @sorted_key_value_array to be computed via Hash#sort.
+##  requires the @sorted_key_value_array to be recomputed via Hash#sort.
 
 class HashWithBsearch
 
@@ -16,7 +17,7 @@ class HashWithBsearch
     else
       @sort_block = proc {|a,b| a<=>b}
     end
-    sync_sorted_array_and_hash
+    sync_sorted_array_and_hash   # utilizes @sort_block
     return result
   end
 
@@ -50,7 +51,7 @@ class HashWithBsearch
     return @sorted_hash.values
   end
 
-  # SETTER METHODS
+  # SETTER METHODS -- additional methods may need to be added!
   def []=(key, value)
     @wrapped_hash[key] = value
     sync_sorted_array_and_hash

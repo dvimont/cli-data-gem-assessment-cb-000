@@ -1,4 +1,6 @@
-class Subcategory < Category
+module Subcategory
+  extend Category::ClassMethods
+  include Category::InstanceMethods
 
  # Subcategory objects don't contain their own attributes, instead inheriting
  #   attributes from owner_object. Subcategory is just a container for their
@@ -9,6 +11,8 @@ class Subcategory < Category
  #    @owner_object field set to Author object == "Mark Twain", and the
  #    object would contain @audiobooks, @audiobooks_by_date, and @audiobooks_by_title
  #    SortedSets containing fiction works by Mark Twain.
-  attr_accessor :owner_object
+ module InstanceMethods
+   attr_accessor :owner_object
+ end
 
 end
