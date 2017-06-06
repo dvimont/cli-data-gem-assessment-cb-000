@@ -1,13 +1,14 @@
 class Language < Category
   @@SUBCATEGORIZABLE = false
-  @@all = SortedSet.new
+  @@all = HashWithBsearch.new     # SortedSet.new
 
   def self.create_or_get_existing(id_string)
-    new_object = self.all.to_a.bsearch{|category| category.id >= id_string}
-    if new_object == nil
-      new_object = Language.new(id_string)
+    retrieved_object = self.all[id_string]
+                      # self.all.to_a.bsearch{|category| category.id >= id_string}
+    if retrieved_object == nil
+      retrieved_object = Language.new(id_string)
     end
-    return new_object
+    return retrieved_object
   end
 
   def self.all
