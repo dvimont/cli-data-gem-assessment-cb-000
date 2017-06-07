@@ -42,9 +42,8 @@ class ScraperLibrivox
           #   {"91" => "Charles DICKENS (1812 - 1870)"}
           authors_hash[element.attribute("href").value[/\d+$/]] = element.text
         }
-        if !authors_hash.empty?
-          attributes[:authors_hash] = authors_hash
-        end
+        # NOTE: authors_hash added to attributes hash below, after possible
+        #   multiple authors are scraped from the table section of the page.
 
         genre_elements = title_author_genre_section.css("p.book-page-genre")
         genre_elements.each{ |element|
@@ -84,7 +83,7 @@ class ScraperLibrivox
           rows.each{|tr_element|
             reader_element = tr_element.css("a")[reader_index]
             if reader_element != nil
-              # NOTE: reader data consists of (1) url ending w/ author-id (2) string
+              # NOTE: reader data consists of (1) url ending w/ reader-id (2) string
               #   containing reader's displayable name and OPTIONAL (birth-death) designation.
               # The following statement builds a hash entry like:
               #     {"110" => "Cynthia Lyons (1946-2011)"}
@@ -94,6 +93,31 @@ class ScraperLibrivox
           if !readers_hash.empty?
             attributes[:readers_hash] = readers_hash
           end
+        end
+        # SCRAPE: possible multiple authors
+          # examine "thead" section to see in which "column" authors are displayed
+        author_index = nil
+        headers.each_with_index {|element, i|
+          if element.text == "Author"
+            author_index = i
+            break
+          end
+        }
+        if author_index != nil
+          rows = chapter_download_table.css("tbody tr")
+          rows.each{|tr_element|
+            author_element = tr_element.css("a")[author_index]
+            if author_element != nil
+              # NOTE: author data consists of (1) url ending w/ author-id (2) string
+              #   containing author's displayable name and OPTIONAL (birth-death) designation.
+              # The following statement builds a hash entry like:
+              #     {"91" => "Charles DICKENS (1812 - 1870)"}
+              authors_hash[author_element.attribute("href").value[/\d+$/]] = author_element.text
+            end
+          }
+        end
+        if !authors_hash.empty?
+          attributes[:authors_hash] = authors_hash
         end
 
       rescue OpenURI::HTTPError => ex

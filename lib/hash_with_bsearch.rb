@@ -8,7 +8,6 @@
 
 class HashWithBsearch
 
-  # INITIALIZE ACCEPTS OPTIONAL OVERRIDE COMPARATOR BLOCK
   def initialize(sort_option=:ascending)
     result = (@wrapped_hash = Hash.new)
     @sort_option = sort_option

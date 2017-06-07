@@ -35,7 +35,19 @@ class Author
           attributes[:death_year] = years[1]
         end
       end
-      authors.push(Author.create_or_get_existing(id, attributes))
+      author_object = Author.create_or_get_existing(id, attributes)
+      # Some author_data_string scrapes do not include date info
+      #   Add such data from current author_data_string if author_object doesn't
+      #   currently have it.
+      if (author_object.birth_year.nil? || author_object.birth_year == "") &&
+            !attributes[:birth_year].nil? && !attributes[:birth_year].empty?
+        author_object.add_attributes({birth_year: attributes[:birth_year]})
+      end
+      if (author_object.death_year.nil? || author_object.death_year == "") &&
+            !attributes[:death_year].nil? && !attributes[:death_year].empty?
+        author_object.add_attributes({birth_year: attributes[:birth_year]})
+      end
+      authors.push(author_object)
     }
     return authors
   end
