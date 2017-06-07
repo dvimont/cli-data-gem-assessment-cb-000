@@ -1,0 +1,1988 @@
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 ie"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 ie"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 ie"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9 ie"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type">
+
+  <title>LibriVox</title>
+  <meta name="description" content="Librivox" />
+  <meta name="author" content="Librivox" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://librivox.org/favicon.ico">
+  <link rel="stylesheet" href="https://librivox.org/css/style.css?v=1">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <script type="text/javascript" src="https://librivox.org/js/catalog/small-menu.js"></script> 
+ 
+
+  <script type="text/javascript">
+  	var CI_ROOT = "https://librivox.org/"
+  </script>
+
+</head>
+
+<body>
+
+	<section class="header-wrap">
+		<header class="site-header">
+		
+			<!-- Site title/Logo and tagline -->
+			<hgroup class="logo-wrap">
+				<h1 class="logo"><a href="https://librivox.org/"><img src="https://librivox.org/images/librivox-logo.png" alt="librivox-logo" width="180" height="37"><span class="assistive-text">Librivox</span></a></h1>
+				<h3 class="tagline">Acoustical liberation of books in the public domain</h3>
+			</hgroup>
+			
+			<!-- Sub menu -->
+			<nav class="sub-menu">
+			<h1 class="assistive-text icon-fontawesome-webfont"><span>Menu</span></h1>
+			<div class="assistive-text skip-link"><a href="#" title="Skip to content">Skip to content</a></div> 
+				<ul class="sub-menu-list">
+					<li class="first"><a href="https://librivox.org/pages/about-librivox">about</a></li>
+					<li><a href="http://forum.librivox.org/">forum</a></li>	
+					<li><a href="https://librivox.org/pages/contact-librivox">contact</a></li>
+					<li><a href="https://librivox.org/pages/help">help</a></li>
+					<li class="twitter ir"><a href="http://twitter.com/librivox">Twitter</a></li>
+					<!-- <li class="facebook ir"><a href="http://www.facebook.com/LibriVox">Facebook</a></li> -->
+					<li class="rss "><a href="https://librivox.org/pages/librivox-feeds">rss</a></li> 
+				</ul>																
+			</nav><!-- end sub-menu -->   
+			
+			<!-- Search Form -->	
+			<div class="search-wrap">
+				<form role="search" action="#" id="searchform" method="get" class="searchform">
+					<label class="assistive-text" for="q">Search Librivox</label>
+					<input type="text" placeholder="Search by Author, Title or Reader" id="q" name="q" class="field">
+					<input type="text" id="dummy" name="dummy" style="display:none;">
+					<input type="submit" value="Search" id="searchsubmit" name="submit" class="submit">
+				</form>
+
+				<a href="#" class="advanced-search js-advanced-search"> Advanced search</a>	
+			</div> <!-- end search-wrap -->		    
+		</header>
+		
+
+
+	<!-- Main menu -->	
+	<div class="main-menu-wrap">
+		<section class="main-menu">
+			<h3>Browse the catalog</h3>
+			<nav class="main-menu-list-wrap"> 
+				<ul class="main-menu-list">
+					<li data-menu_item="author" class="js-menu_item first"><a href="#"><span class="author-icon"></span>Author</a></li>
+					<li data-menu_item="title" class="js-menu_item last"><a href="#"><span class="title-icon"></span>Title</a></li>
+					<li data-menu_item="genre" class="js-menu_item "><a href="#" ><span class="genre-icon"></span>Genre/Subject</a></li>
+					<li data-menu_item="language" class="js-menu_item "><a href="#"><span class="language-icon"></span>Language</a></li>
+					<!-- <li data-menu_item="reader" class="js-menu_item "><a href="#"><span class="reader-icon"></span>Reader</a></li> -->
+					
+				</ul>
+			</nav>
+			
+													
+		</section> <!-- end main-menu --> 
+		
+
+	</div> <!-- end .main-menu-wrap -->	  
+
+	</section><!-- end .header-wrap -->	
+
+
+	<input type="hidden" id="primary_key" value="0">
+
+<div class="main-content">
+	
+	
+	<div class="sidebar book-page">
+
+
+	<a href="https://librivox.org/pages/donate-to-librivox/" class="donate">Donate to Librivox</a>
+
+	<a href="https://librivox.org/pages/thank-a-reader/" class="thank-reader">Thank a reader</a>
+
+
+	
+	<div class="disclaimer">
+		LibriVox recordings are Public Domain in the USA. If you are not in the USA, please verify the copyright status of these works in your own country before downloading, otherwise you may be violating copyright laws.
+	</div>
+
+
+	
+	<div class="book-page-sidebar">
+		
+		<h4>Listen/Download (<a href="https://librivox.org/pages/help">help?</a>)</h4>
+
+		<dl class="listen-download clearfix">
+				
+			  <dt>Whole book (zip file)</dt>
+			  <dd><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_monte_cristo_0711_librivox_64kb_mp3.zip" class="book-download-btn">Download</a></dd>
+			
+			  <dt>Subscribe by iTunes</dt>
+			  <dd><a href="itpc://librivox.org/rss/47" class="book-download-btn">iTunes</a></dd>
+
+			  <dt>RSS Feed</dt>
+			  <dd><a href="http://librivox.org/rss/47" class="book-download-btn">RSS</a></dd>
+
+			  <dt>Download torrent</dt>
+			  <dd><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_monte_cristo_0711_librivox_archive.torrent" class="book-download-btn">Torrent</a></dd> 					  
+		</dl>
+
+		
+					
+	</div>
+	
+	<div class="book-page-sidebar">
+		<h4>Production details</h4>
+		<dl class="product-details clearfix">
+		  <dt>Running Time:</dt>
+		  <dd>49:43:15</dd>
+
+		  <dt>Zip file size:</dt>
+		  <dd>1.3GB</dd>
+		
+		  <dt>Catalog date:</dt>
+		  <dd>2007-11-30</dd>
+		
+		  <dt>Read by:</dt>
+		  <dd>LibriVox Volunteers</dd> 
+		  
+		  <dt>Book Coordinator:</dt>
+		  <dd><a href="https://librivox.org/reader/20">Gesine</a></dd>
+		  
+		  <dt>Meta Coordinator:</dt>
+		  <dd><a href="https://librivox.org/reader/20">Gesine</a></dd>
+		  
+		  <dt>Proof Listener:</dt>
+		  <dd><a href="https://librivox.org/reader/">&nbsp;</a></dd>				  
+		</dl>
+
+	</div>
+	
+	<div class="book-page-sidebar">
+		<h4>Links</h4>
+
+					<p><a href="http://www.archive.org/details/count_monte_cristo_0711_librivox">Internet Archive Page</a></p>
+		
+					<p><a href="http://www.gutenberg.org/etext/1184">Online text</a></p>
+		
+									<p><a href="http://en.wikipedia.org/wiki/Alexandre_Dumas">Wikipedia - Alexandre Dumas</a></p>
+							
+
+					<p><a href="http://en.wikipedia.org/wiki/Count_of_Monte_Cristo">Wikipedia Book - The Count of Monte Cristo</a></p>
+		
+					<p><a href="http://www.archive.org/details/LibrivoxPlainVanillaCdCaseInserts">standard or slim CD case insert</a></p>
+					<p><a href="http://librivox.org/le-comte-de-monte-cristo-by-alexandre-dumas/">Librovox recording of the French original</a></p>
+					<p><a href="https://archive.org/download/count_monte_cristo_0711_librivox/CountOfMonteCristoPart1-32kb_librivox.m4b">Download M4B Orig. Part 1 (175MB)</a></p>
+					<p><a href="https://archive.org/download/count_monte_cristo_0711_librivox/CountOfMonteCristoPart2-32kb_librivox.m4b">Download M4B Orig. Part 2 (174MB)</a></p>
+					<p><a href="https://archive.org/download/count_monte_cristo_0711_librivox/CountOfMonteCristoPart3-32kb_librivox.m4b">Download M4B Orig. Part 3 (175MB)</a></p>
+					<p><a href="https://archive.org/download/count_monte_cristo_0711_librivox/CountOfMonteCristoPart4-32kb_librivox.m4b">Download M4B Orig. Part 4 (175MB)</a></p>
+					<p><a href="https://archive.org/download/count_monte_cristo_0711_librivox/CountOfMonteCristoPart148kb_librivox.m4b">Download M4B Alt. Part 1 (192MB)</a></p>
+					<p><a href="https://archive.org/download/count_monte_cristo_0711_librivox/CountOfMonteCristoPart248kb_librivox.m4b">Download M4B Alt. Part 2 (263MB)</a></p>
+					<p><a href="https://archive.org/download/count_monte_cristo_0711_librivox/CountOfMonteCristoPart348kb_librivox.m4b">Download M4B Alt. Part 3 (200MB)</a></p>
+					<p><a href="https://archive.org/download/count_monte_cristo_0711_librivox/CountOfMonteCristoPart448kb_librivox.m4b">Download M4B Alt. Part 4 (209MB)</a></p>
+					<p><a href="https://archive.org/download/count_monte_cristo_0711_librivox/CountOfMonteCristoPart548kb_librivox.m4b">Download M4B Alt. Part 5 (172MB)</a></p>
+		
+	</div>
+				
+
+
+
+
+</div>	
+	
+	<div class="page book-page">
+
+			<div class="content-wrap clearfix">
+				<div class="book-page-book-cover">
+					<img src="http://www.archive.org/download/LibrivoxCdCoverArt12/Count_Monte_Cristo_1110.jpg" alt="book-cover-large" width="175" height="175" />
+
+										<a href="http://www.archive.org/download/LibrivoxCdCoverArt12/Count_Monte_Cristo_1110.jpg" class="download-cover">Download cover art</a>
+					
+										<a href="http://www.archive.org/download/LibrivoxCdCoverArt12/Count_Monte_Cristo_1110.pdf" class="download-cover">Download CD case insert</a>
+					
+				</div>
+				
+				<h1>The Count of Monte Cristo</h1>
+				
+				<p class="book-page-author"><a href="https://librivox.org/author/431">Alexandre DUMAS (1802 - 1870)</a>, translated by <a href="https://librivox.org/author/221"> UNKNOWN ( - )</a></p>
+				
+				<div class="description"><p><i>The Count of Monte Cristo</i> (French: <i>Le Comte de Monte-Cristo</i>) is an adventure novel by Alexandre Dumas, père. It is often considered, along with <i>The Three Musketeers</i>, as Dumas's most popular work. The writing of the work was completed in 1844. Like many of his novels, it is expanded from the plot outlines suggested by his collaborating ghostwriter Auguste Maquet.</p><p>The story takes place in France, Italy, islands in the Mediterranean and the Levant during the historical events of 1815–1838 (from just before the Hundred Days through the reign of Louis-Philippe of France). The historical setting is a fundamental element of the book. It is primarily concerned with themes of justice, vengeance, mercy, and forgiveness, and is told in the style of an adventure story. (Summary from Wikipedia)</p>
+<p>This book contains alternate versions of a number of chapters – indicated by an alt after the file number. The Zip files contain both versions of these chapters.</p><p>There are 2 versions of the M4Bs made , one containing the original files for these chapters (4 parts), the other containing the alternate files for the chapters (5 parts).</p></div>	<!-- .description -->
+
+				<p class="book-page-genre"><span>Genre(s):</span> Literary Fiction, Published 1800 -1900</p>
+
+				<p class="book-page-genre"><span>Language:</span> English</p>
+
+				
+				
+			</div> 	<!-- end .content-wrap --> 
+		
+			<table class="chapter-download">
+					<thead>
+						<tr>
+							<th>Section</th>
+							<th>Chapter</th>
+							
+							<th>Reader</th>
+							<th>Time</th>
+
+							
+						</tr>
+					</thead>
+						<tbody>
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_001_dumas_64kb.mp3" class="play-btn">Play</a> 01 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_001_dumas.mp3" class="chapter-name">Marseilles–The Arrival </a></td>
+								
+								<td><a href="https://librivox.org/reader/14">Kristin LeMoine</a><br/></td>
+								<td>00:19:39</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_002_dumas_64kb.mp3" class="play-btn">Play</a> 02 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_002_dumas.mp3" class="chapter-name">Father and Son</a></td>
+								
+								<td><a href="https://librivox.org/reader/17">Gord Mackenzie</a><br/></td>
+								<td>00:19:17</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_003_dumas_64kb.mp3" class="play-btn">Play</a> 03 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_003_dumas.mp3" class="chapter-name">The Catalans</a></td>
+								
+								<td><a href="https://librivox.org/reader/17">Gord Mackenzie</a><br/></td>
+								<td>00:31:38</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_004_dumas_64kb.mp3" class="play-btn">Play</a> 04 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_004_dumas.mp3" class="chapter-name">Conspiracy</a></td>
+								
+								<td><a href="https://librivox.org/reader/17">Gord Mackenzie</a><br/></td>
+								<td>00:18:52</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_005_dumas_64kb.mp3" class="play-btn">Play</a> 05 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_005_dumas.mp3" class="chapter-name">The Marriage-Feast</a></td>
+								
+								<td><a href="https://librivox.org/reader/32">Betsie Bush</a><br/></td>
+								<td>00:33:33</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_006_dumas_64kb.mp3" class="play-btn">Play</a> 06 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_006_dumas.mp3" class="chapter-name">The Deputy Procureur du Roi</a></td>
+								
+								<td><a href="https://librivox.org/reader/1474">Jc Guan</a><br/></td>
+								<td>00:26:03</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_007_dumas_64kb.mp3" class="play-btn">Play</a> 07 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_007_dumas.mp3" class="chapter-name">The Examination</a></td>
+								
+								<td><a href="https://librivox.org/reader/1474">Jc Guan</a><br/></td>
+								<td>00:21:24</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_008_dumas_64kb.mp3" class="play-btn">Play</a> 08 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_008_dumas.mp3" class="chapter-name">The Chateau D’If</a></td>
+								
+								<td><a href="https://librivox.org/reader/14">Kristin LeMoine</a><br/></td>
+								<td>00:21:14</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_009_dumas_64kb.mp3" class="play-btn">Play</a> 09 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_009_dumas.mp3" class="chapter-name">The Evening of the Betrothal</a></td>
+								
+								<td><a href="https://librivox.org/reader/688">J. M. Smallheer</a><br/></td>
+								<td>00:10:58</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_010_dumas_64kb.mp3" class="play-btn">Play</a> 10 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_010_dumas.mp3" class="chapter-name">The King’s Closet at the Tuileries</a></td>
+								
+								<td><a href="https://librivox.org/reader/688">J. M. Smallheer</a><br/></td>
+								<td>00:18:03</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_011_dumas_64kb.mp3" class="play-btn">Play</a> 11 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_011_dumas.mp3" class="chapter-name">The Corsican Ogre</a></td>
+								
+								<td><a href="https://librivox.org/reader/36">Chip</a><br/></td>
+								<td>00:20:51</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_012_dumas_64kb.mp3" class="play-btn">Play</a> 12 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_012_dumas.mp3" class="chapter-name">Father and Son</a></td>
+								
+								<td><a href="https://librivox.org/reader/36">Chip</a><br/></td>
+								<td>00:16:59</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_013_dumas_64kb.mp3" class="play-btn">Play</a> 13 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_013_dumas.mp3" class="chapter-name">The Hundred Days</a></td>
+								
+								<td><a href="https://librivox.org/reader/37">wolvrin</a><br/></td>
+								<td>00:16:45</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_014_dumas_64kb.mp3" class="play-btn">Play</a> 14 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_014_dumas.mp3" class="chapter-name">The Two Prisoners</a></td>
+								
+								<td><a href="https://librivox.org/reader/684">Lizzie Driver</a><br/></td>
+								<td>00:22:25</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_015_dumas_64kb.mp3" class="play-btn">Play</a> 15 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_015_dumas.mp3" class="chapter-name">Number 34 and Number 27</a></td>
+								
+								<td><a href="https://librivox.org/reader/38">R. Francis Smith</a><br/></td>
+								<td>00:33:03</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_016_dumas_64kb.mp3" class="play-btn">Play</a> 16 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_016_dumas.mp3" class="chapter-name">A Learned Italian</a></td>
+								
+								<td><a href="https://librivox.org/reader/684">Lizzie Driver</a><br/></td>
+								<td>00:28:08</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_017_dumas_64kb.mp3" class="play-btn">Play</a> 17 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_017_dumas.mp3" class="chapter-name">The Abbe’s Chamb</a></td>
+								
+								<td><a href="https://librivox.org/reader/40">Vicki Barbour</a><br/></td>
+								<td>00:50:33</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_018_dumas_64kb.mp3" class="play-btn">Play</a> 18 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_018_dumas.mp3" class="chapter-name">The Treasure</a></td>
+								
+								<td><a href="https://librivox.org/reader/1851">Kehinde</a><br/></td>
+								<td>00:29:05</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_019_dumas_64kb.mp3" class="play-btn">Play</a> 19 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_019_dumas.mp3" class="chapter-name">The Third Attack</a></td>
+								
+								<td><a href="https://librivox.org/reader/1988">Ransom</a><br/></td>
+								<td>00:23:03</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_020_dumas_64kb.mp3" class="play-btn">Play</a> 20 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_020_dumas.mp3" class="chapter-name">The Cemetary of Chateau D’If </a></td>
+								
+								<td><a href="https://librivox.org/reader/14">Kristin LeMoine</a><br/></td>
+								<td>00:12:42</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_021_dumas_64kb.mp3" class="play-btn">Play</a> 21 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_021_dumas.mp3" class="chapter-name">The Island of Tiboulen </a></td>
+								
+								<td><a href="https://librivox.org/reader/14">Kristin LeMoine</a><br/></td>
+								<td>00:23:36</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_022_dumas_64kb.mp3" class="play-btn">Play</a> 22 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_022_dumas.mp3" class="chapter-name">The Smugglers</a></td>
+								
+								<td><a href="https://librivox.org/reader/14">Kristin LeMoine</a><br/></td>
+								<td>00:18:24</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_023_dumas_64kb.mp3" class="play-btn">Play</a> 23 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_023_dumas.mp3" class="chapter-name">The Island of Monte Cristo</a></td>
+								
+								<td><a href="https://librivox.org/reader/1065">Justin Brett</a><br/></td>
+								<td>00:19:36</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_024_dumas_64kb.mp3" class="play-btn">Play</a> 24 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_024_dumas.mp3" class="chapter-name">The Secret Cave</a></td>
+								
+								<td><a href="https://librivox.org/reader/41">telkins</a><br/></td>
+								<td>00:17:33</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_025_dumas_64kb.mp3" class="play-btn">Play</a> 25 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_025_dumas.mp3" class="chapter-name">The Unknown</a></td>
+								
+								<td><a href="https://librivox.org/reader/533">Ana Simão</a><br/></td>
+								<td>00:20:56</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_025alt_dumas_64kb.mp3" class="play-btn">Play</a> 26 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_025alt_dumas.mp3" class="chapter-name">The Unknown, alternate version</a></td>
+								
+								<td><a href="https://librivox.org/reader/5405">Anka</a><br/></td>
+								<td>00:18:32</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_026_dumas_64kb.mp3" class="play-btn">Play</a> 27 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_026_dumas.mp3" class="chapter-name">The Pont du Gard Inn</a></td>
+								
+								<td><a href="https://librivox.org/reader/533">Ana Simão</a><br/></td>
+								<td>00:38:16</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_026alt_dumas_64kb.mp3" class="play-btn">Play</a> 28 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_026alt_dumas.mp3" class="chapter-name">The Pont du Gard Inn, alternate version</a></td>
+								
+								<td><a href="https://librivox.org/reader/5405">Anka</a><br/></td>
+								<td>00:31:28</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_027_dumas_64kb.mp3" class="play-btn">Play</a> 29 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_027_dumas.mp3" class="chapter-name">The Story</a></td>
+								
+								<td><a href="https://librivox.org/reader/45">featherheadfop</a><br/></td>
+								<td>00:28:31</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_028_dumas_64kb.mp3" class="play-btn">Play</a> 30 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_028_dumas.mp3" class="chapter-name">The Prison Register</a></td>
+								
+								<td><a href="https://librivox.org/reader/36">Chip</a><br/></td>
+								<td>00:15:33</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_029_dumas_64kb.mp3" class="play-btn">Play</a> 31 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_029_dumas.mp3" class="chapter-name">The House of Morrel & Son</a></td>
+								
+								<td><a href="https://librivox.org/reader/36">Chip</a><br/></td>
+								<td>00:29:27</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_030_dumas_64kb.mp3" class="play-btn">Play</a> 32 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_030_dumas.mp3" class="chapter-name">The Fifth of September</a></td>
+								
+								<td><a href="https://librivox.org/reader/1127">Lady Maria</a><br/></td>
+								<td>00:36:29</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_031_dumas_64kb.mp3" class="play-btn">Play</a> 33 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_031_dumas.mp3" class="chapter-name">Italy: Sinbad the Sailor</a></td>
+								
+								<td><a href="https://librivox.org/reader/533">Ana Simão</a><br/></td>
+								<td>00:57:21</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_031alt_dumas_64kb.mp3" class="play-btn">Play</a> 34 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_031alt_dumas.mp3" class="chapter-name">Italy: Sinbad the Sailor, alternate version</a></td>
+								
+								<td><a href="https://librivox.org/reader/5405">Anka</a><br/></td>
+								<td>00:49:25</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_032_dumas_64kb.mp3" class="play-btn">Play</a> 35 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_032_dumas.mp3" class="chapter-name">The Waking</a></td>
+								
+								<td><a href="https://librivox.org/reader/533">Ana Simão</a><br/></td>
+								<td>00:14:44</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_032alt_dumas_64kb.mp3" class="play-btn">Play</a> 36 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_032alt_dumas.mp3" class="chapter-name">The Waking, alternate version</a></td>
+								
+								<td><a href="https://librivox.org/reader/5405">Anka</a><br/></td>
+								<td>00:12:48</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_033_dumas_64kb.mp3" class="play-btn">Play</a> 37 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_033_dumas.mp3" class="chapter-name">Roman Bandits</a></td>
+								
+								<td><a href="https://librivox.org/reader/533">Ana Simão</a><br/></td>
+								<td>01:09:21</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_033alt_dumas_64kb.mp3" class="play-btn">Play</a> 38 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_033alt_dumas.mp3" class="chapter-name">Roman Bandits, alternate version</a></td>
+								
+								<td><a href="https://librivox.org/reader/5405">Anka</a><br/></td>
+								<td>01:03:54</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_034a_dumas_64kb.mp3" class="play-btn">Play</a> 39 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_034a_dumas.mp3" class="chapter-name">The Colosseum part 1</a></td>
+								
+								<td><a href="https://librivox.org/reader/1474">Jc Guan</a><br/></td>
+								<td>00:35:21</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_034b_dumas_64kb.mp3" class="play-btn">Play</a> 40 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_034b_dumas.mp3" class="chapter-name">The Colosseum part 2</a></td>
+								
+								<td><a href="https://librivox.org/reader/1474">Jc Guan</a><br/></td>
+								<td>00:34:56</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_035_dumas_64kb.mp3" class="play-btn">Play</a> 41 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_035_dumas.mp3" class="chapter-name">La Mazzolata</a></td>
+								
+								<td><a href="https://librivox.org/reader/45">featherheadfop</a><br/></td>
+								<td>00:30:42</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_036_dumas_64kb.mp3" class="play-btn">Play</a> 42 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_036_dumas.mp3" class="chapter-name">The Carnival at Rom</a></td>
+								
+								<td><a href="https://librivox.org/reader/1127">Lady Maria</a><br/></td>
+								<td>00:38:57</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_037_dumas_64kb.mp3" class="play-btn">Play</a> 43 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_037_dumas.mp3" class="chapter-name">The Catacombs of Saint Sebastian</a></td>
+								
+								<td><a href="https://librivox.org/reader/49">vrk74</a><br/></td>
+								<td>00:35:09</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_038_dumas_64kb.mp3" class="play-btn">Play</a> 44 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_038_dumas.mp3" class="chapter-name">The Compact</a></td>
+								
+								<td><a href="https://librivox.org/reader/243">Jennifer Stearns</a><br/></td>
+								<td>00:19:18</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_039_dumas_64kb.mp3" class="play-btn">Play</a> 45 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_039_dumas.mp3" class="chapter-name">The Guest</a></td>
+								
+								<td><a href="https://librivox.org/reader/243">Jennifer Stearns</a><br/></td>
+								<td>00:17:31</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_040_dumas_64kb.mp3" class="play-btn">Play</a> 46 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_040_dumas.mp3" class="chapter-name">The Breakfast</a></td>
+								
+								<td><a href="https://librivox.org/reader/51">rakkar</a><br/></td>
+								<td>00:48:15</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_041_dumas_64kb.mp3" class="play-btn">Play</a> 47 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_041_dumas.mp3" class="chapter-name">The Presentation</a></td>
+								
+								<td><a href="https://librivox.org/reader/45">featherheadfop</a><br/></td>
+								<td>00:28:05</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_042_dumas_64kb.mp3" class="play-btn">Play</a> 48 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_042_dumas.mp3" class="chapter-name">Monsieur Bertuccio</a></td>
+								
+								<td><a href="https://librivox.org/reader/52">Luisa Hall</a><br/></td>
+								<td>00:09:16</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_043_dumas_64kb.mp3" class="play-btn">Play</a> 49 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_043_dumas.mp3" class="chapter-name">The House at Auteuil</a></td>
+								
+								<td><a href="https://librivox.org/reader/533">Ana Simão</a><br/></td>
+								<td>00:16:11</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_043alt_dumas_64kb.mp3" class="play-btn">Play</a> 50 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_043alt_dumas.mp3" class="chapter-name">The House at Auteuil, altenate version</a></td>
+								
+								<td><a href="https://librivox.org/reader/2607">Ruth Golding</a><br/></td>
+								<td>00:19:21</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_044_dumas_64kb.mp3" class="play-btn">Play</a> 51 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_044_dumas.mp3" class="chapter-name">The Vendetta</a></td>
+								
+								<td><a href="https://librivox.org/reader/533">Ana Simão</a><br/></td>
+								<td>00:54:11</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_044alt_dumas_64kb.mp3" class="play-btn">Play</a> 52 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_044alt_dumas.mp3" class="chapter-name">The Vendetta , alternate version</a></td>
+								
+								<td><a href="https://librivox.org/reader/2544">Annise</a><br/></td>
+								<td>00:54:28</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_045_dumas_64kb.mp3" class="play-btn">Play</a> 53 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_045_dumas.mp3" class="chapter-name">The Rain of Blood</a></td>
+								
+								<td><a href="https://librivox.org/reader/533">Ana Simão</a><br/></td>
+								<td>00:34:40</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_045alt_dumas_64kb.mp3" class="play-btn">Play</a> 54 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_045alt_dumas.mp3" class="chapter-name">The Rain of Blood, alternate version</a></td>
+								
+								<td><a href="https://librivox.org/reader/2297">Philippa</a><br/></td>
+								<td>00:35:21</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_046_dumas_64kb.mp3" class="play-btn">Play</a> 55 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_046_dumas.mp3" class="chapter-name">Unlimited Credit</a></td>
+								
+								<td><a href="https://librivox.org/reader/1224">Heather Duncan</a><br/></td>
+								<td>00:32:39</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_047_dumas_64kb.mp3" class="play-btn">Play</a> 56 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_047_dumas.mp3" class="chapter-name">The Dappled Greys</a></td>
+								
+								<td><a href="https://librivox.org/reader/224">Caitlin Kelly</a><br/></td>
+								<td>00:32:22</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_048_dumas_64kb.mp3" class="play-btn">Play</a> 57 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_048_dumas.mp3" class="chapter-name">The Ideology</a></td>
+								
+								<td><a href="https://librivox.org/reader/1593">Kristine Bekere</a><br/></td>
+								<td>00:30:23</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_049_dumas_64kb.mp3" class="play-btn">Play</a> 58 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_049_dumas.mp3" class="chapter-name">Haidee</a></td>
+								
+								<td><a href="https://librivox.org/reader/54">Westwinds12</a><br/></td>
+								<td>00:13:54</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_050_dumas_64kb.mp3" class="play-btn">Play</a> 59 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_050_dumas.mp3" class="chapter-name">The Morrel Family</a></td>
+								
+								<td><a href="https://librivox.org/reader/55">David Jaquay</a><br/></td>
+								<td>00:18:37</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_051_dumas_64kb.mp3" class="play-btn">Play</a> 60 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_051_dumas.mp3" class="chapter-name">Pyramus and Thisbe</a></td>
+								
+								<td><a href="https://librivox.org/reader/55">David Jaquay</a><br/></td>
+								<td>00:28:37</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_052_dumas_64kb.mp3" class="play-btn">Play</a> 61 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_052_dumas.mp3" class="chapter-name">Toxicology</a></td>
+								
+								<td><a href="https://librivox.org/reader/55">David Jaquay</a><br/></td>
+								<td>00:36:29</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_053_dumas_64kb.mp3" class="play-btn">Play</a> 62 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_053_dumas.mp3" class="chapter-name"> Robert le Diable</a></td>
+								
+								<td><a href="https://librivox.org/reader/56">Kirsten Ferreri</a><br/></td>
+								<td>00:36:04</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_054_dumas_64kb.mp3" class="play-btn">Play</a> 63 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_054_dumas.mp3" class="chapter-name">A Flurry in Stocks</a></td>
+								
+								<td><a href="https://librivox.org/reader/56">Kirsten Ferreri</a><br/></td>
+								<td>00:23:11</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_055_dumas_64kb.mp3" class="play-btn">Play</a> 64 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_055_dumas.mp3" class="chapter-name">Major Cavalcanti</a></td>
+								
+								<td><a href="https://librivox.org/reader/56">Kirsten Ferreri</a><br/></td>
+								<td>00:21:09</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_056_dumas_64kb.mp3" class="play-btn">Play</a> 65 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_056_dumas.mp3" class="chapter-name">Andrea Cavalcanti</a></td>
+								
+								<td><a href="https://librivox.org/reader/57">Ophelia Darcy</a><br/></td>
+								<td>00:24:46</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_057_dumas_64kb.mp3" class="play-btn">Play</a> 66 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_057_dumas.mp3" class="chapter-name">In the Lucerne Patch</a></td>
+								
+								<td><a href="https://librivox.org/reader/58">George Coutts</a><br/></td>
+								<td>00:26:47</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_058_dumas_64kb.mp3" class="play-btn">Play</a> 67 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_058_dumas.mp3" class="chapter-name">M. Noirtier de Villefort</a></td>
+								
+								<td><a href="https://librivox.org/reader/681">Lucy Burgoyne (1950 - 2014)</a><br/></td>
+								<td>00:27:29</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_059_dumas_64kb.mp3" class="play-btn">Play</a> 68 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_059_dumas.mp3" class="chapter-name">The Will</a></td>
+								
+								<td><a href="https://librivox.org/reader/681">Lucy Burgoyne (1950 - 2014)</a><br/></td>
+								<td>00:26:49</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_060_dumas_64kb.mp3" class="play-btn">Play</a> 69 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_060_dumas.mp3" class="chapter-name">The Telegraph</a></td>
+								
+								<td><a href="https://librivox.org/reader/681">Lucy Burgoyne (1950 - 2014)</a><br/></td>
+								<td>00:29:02</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_061_dumas_64kb.mp3" class="play-btn">Play</a> 70 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_061_dumas.mp3" class="chapter-name">How a Gardener…</a></td>
+								
+								<td><a href="https://librivox.org/reader/54">Westwinds12</a><br/></td>
+								<td>00:21:33</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_062_dumas_64kb.mp3" class="play-btn">Play</a> 71 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_062_dumas.mp3" class="chapter-name">Ghosts</a></td>
+								
+								<td><a href="https://librivox.org/reader/54">Westwinds12</a><br/></td>
+								<td>00:21:43</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_063_dumas_64kb.mp3" class="play-btn">Play</a> 72 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_063_dumas.mp3" class="chapter-name">The Dinner</a></td>
+								
+								<td><a href="https://librivox.org/reader/58">George Coutts</a><br/></td>
+								<td>00:21:51</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_064_dumas_64kb.mp3" class="play-btn">Play</a> 73 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_064_dumas.mp3" class="chapter-name">The Beggar</a></td>
+								
+								<td><a href="https://librivox.org/reader/60">|CBW|Simon</a><br/></td>
+								<td>00:23:43</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_065_dumas_64kb.mp3" class="play-btn">Play</a> 74 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_065_dumas.mp3" class="chapter-name">A Conjugal Scene</a></td>
+								
+								<td><a href="https://librivox.org/reader/61">Paul-Gabriel Wiener</a><br/></td>
+								<td>00:23:31</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_066_dumas_64kb.mp3" class="play-btn">Play</a> 75 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_066_dumas.mp3" class="chapter-name">Matrimonial Projects</a></td>
+								
+								<td><a href="https://librivox.org/reader/62">Faris</a><br/></td>
+								<td>00:23:33</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_067_dumas_64kb.mp3" class="play-btn">Play</a> 76 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_067_dumas.mp3" class="chapter-name">At the Office of the King’s Attorney</a></td>
+								
+								<td><a href="https://librivox.org/reader/90">Dan Threetrees</a><br/></td>
+								<td>00:25:04</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_068_dumas_64kb.mp3" class="play-btn">Play</a> 77 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_068_dumas.mp3" class="chapter-name">A Summer Ball</a></td>
+								
+								<td><a href="https://librivox.org/reader/64">Robin Cotter</a><br/></td>
+								<td>00:17:07</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_069_dumas_64kb.mp3" class="play-btn">Play</a> 78 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_069_dumas.mp3" class="chapter-name">The Inquiry</a></td>
+								
+								<td><a href="https://librivox.org/reader/64">Robin Cotter</a><br/></td>
+								<td>00:22:28</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_070_dumas_64kb.mp3" class="play-btn">Play</a> 79 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_070_dumas.mp3" class="chapter-name">The Ball </a></td>
+								
+								<td><a href="https://librivox.org/reader/64">Robin Cotter</a><br/></td>
+								<td>00:21:34</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_071_dumas_64kb.mp3" class="play-btn">Play</a> 80 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_071_dumas.mp3" class="chapter-name">Bread and Salt</a></td>
+								
+								<td><a href="https://librivox.org/reader/65">chriss the girl</a><br/></td>
+								<td>00:08:48</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_072_dumas_64kb.mp3" class="play-btn">Play</a> 81 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_072_dumas.mp3" class="chapter-name">Madame de Saint-Meran</a></td>
+								
+								<td><a href="https://librivox.org/reader/544">bozgeez</a><br/></td>
+								<td>00:29:30</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_073a_dumas_64kb.mp3" class="play-btn">Play</a> 82 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_073a_dumas.mp3" class="chapter-name">The Promise, part 1</a></td>
+								
+								<td><a href="https://librivox.org/reader/2010">Julie Bynum</a><br/></td>
+								<td>00:28:11</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_073b_dumas_64kb.mp3" class="play-btn">Play</a> 83 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_073b_dumas.mp3" class="chapter-name">The Promise, part 2</a></td>
+								
+								<td><a href="https://librivox.org/reader/2010">Julie Bynum</a><br/></td>
+								<td>00:24:50</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_074_dumas_64kb.mp3" class="play-btn">Play</a> 84 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_074_dumas.mp3" class="chapter-name">The Villefort Family Vault</a></td>
+								
+								<td><a href="https://librivox.org/reader/1353">Clarke Bell</a><br/></td>
+								<td>00:23:38</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_075_dumas_64kb.mp3" class="play-btn">Play</a> 85 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_075_dumas.mp3" class="chapter-name">A Signed Statement</a></td>
+								
+								<td><a href="https://librivox.org/reader/251">Mark Nelson</a><br/></td>
+								<td>00:07:50</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_076_dumas_64kb.mp3" class="play-btn">Play</a> 86 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_076_dumas.mp3" class="chapter-name">The Progress of Cavalcanti the Younger</a></td>
+								
+								<td><a href="https://librivox.org/reader/251">Mark Nelson</a><br/></td>
+								<td>00:26:20</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_077_dumas_64kb.mp3" class="play-btn">Play</a> 87 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_077_dumas.mp3" class="chapter-name">Haidee</a></td>
+								
+								<td><a href="https://librivox.org/reader/251">Mark Nelson</a><br/></td>
+								<td>00:56:45</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_078_dumas_64kb.mp3" class="play-btn">Play</a> 88 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_078_dumas.mp3" class="chapter-name">We Hear from Yanina</a></td>
+								
+								<td><a href="https://librivox.org/reader/826">Thomas Wells</a><br/></td>
+								<td>00:39:02</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_079_dumas_64kb.mp3" class="play-btn">Play</a> 89 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_079_dumas.mp3" class="chapter-name"> The Lemonade</a></td>
+								
+								<td><a href="https://librivox.org/reader/697">Aruna</a><br/></td>
+								<td>00:25:35</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_080_dumas_64kb.mp3" class="play-btn">Play</a> 90 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_080_dumas.mp3" class="chapter-name">The Accusation</a></td>
+								
+								<td><a href="https://librivox.org/reader/826">Thomas Wells</a><br/></td>
+								<td>00:12:23</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_081_dumas_64kb.mp3" class="play-btn">Play</a> 91 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_081_dumas.mp3" class="chapter-name">The Room of the Retired Baker</a></td>
+								
+								<td><a href="https://librivox.org/reader/1241">Catherine Fitz</a><br/></td>
+								<td>00:32:01</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_082_dumas_64kb.mp3" class="play-btn">Play</a> 92 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_082_dumas.mp3" class="chapter-name">The Burglary</a></td>
+								
+								<td><a href="https://librivox.org/reader/66">Alex Foster</a><br/></td>
+								<td>00:26:42</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_083_dumas_64kb.mp3" class="play-btn">Play</a> 93 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_083_dumas.mp3" class="chapter-name">The Hand of God</a></td>
+								
+								<td><a href="https://librivox.org/reader/1266">Jenilee</a><br/></td>
+								<td>00:13:15</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_084_dumas_64kb.mp3" class="play-btn">Play</a> 94 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_084_dumas.mp3" class="chapter-name">Beauchamp</a></td>
+								
+								<td><a href="https://librivox.org/reader/1241">Catherine Fitz</a><br/></td>
+								<td>00:13:47</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_085_dumas_64kb.mp3" class="play-btn">Play</a> 95 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_085_dumas.mp3" class="chapter-name">The Journey</a></td>
+								
+								<td><a href="https://librivox.org/reader/1241">Catherine Fitz</a><br/></td>
+								<td>00:19:54</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_086_dumas_64kb.mp3" class="play-btn">Play</a> 96 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_086_dumas.mp3" class="chapter-name">The Trial</a></td>
+								
+								<td><a href="https://librivox.org/reader/1241">Catherine Fitz</a><br/></td>
+								<td>00:27:28</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_087_dumas_64kb.mp3" class="play-btn">Play</a> 97 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_087_dumas.mp3" class="chapter-name">The Challenge</a></td>
+								
+								<td><a href="https://librivox.org/reader/1241">Catherine Fitz</a><br/></td>
+								<td>00:13:37</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_088_dumas_64kb.mp3" class="play-btn">Play</a> 98 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_088_dumas.mp3" class="chapter-name">The Insult</a></td>
+								
+								<td><a href="https://librivox.org/reader/67">Adam M Smith</a><br/></td>
+								<td>00:19:41</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_089_dumas_64kb.mp3" class="play-btn">Play</a> 99 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_089_dumas.mp3" class="chapter-name">A Nocturnal Visit</a></td>
+								
+								<td><a href="https://librivox.org/reader/26">Denny Sayers (d. 2015)</a><br/></td>
+								<td>00:23:48</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_090_dumas_64kb.mp3" class="play-btn">Play</a> 100 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_090_dumas.mp3" class="chapter-name">The Meeting</a></td>
+								
+								<td><a href="https://librivox.org/reader/26">Denny Sayers (d. 2015)</a><br/></td>
+								<td>00:37:08</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_091_dumas_64kb.mp3" class="play-btn">Play</a> 101 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_091_dumas.mp3" class="chapter-name">Mother and Son</a></td>
+								
+								<td><a href="https://librivox.org/reader/26">Denny Sayers (d. 2015)</a><br/></td>
+								<td>00:20:34</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_092_dumas_64kb.mp3" class="play-btn">Play</a> 102 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_092_dumas.mp3" class="chapter-name">The Suicide</a></td>
+								
+								<td><a href="https://librivox.org/reader/207">Kevin McAsh</a><br/></td>
+								<td>00:16:58</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_093_dumas_64kb.mp3" class="play-btn">Play</a> 103 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_093_dumas.mp3" class="chapter-name"> Valentine</a></td>
+								
+								<td><a href="https://librivox.org/reader/207">Kevin McAsh</a><br/></td>
+								<td>00:14:44</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_094_dumas_64kb.mp3" class="play-btn">Play</a> 104 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_094_dumas.mp3" class="chapter-name">Maximilian’s Avowal</a></td>
+								
+								<td><a href="https://librivox.org/reader/533">Ana Simão</a><br/></td>
+								<td>00:29:05</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_094alt_dumas_64kb.mp3" class="play-btn">Play</a> 105 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_094alt_dumas.mp3" class="chapter-name">Maximilian’s Avowal, alternate version</a></td>
+								
+								<td><a href="https://librivox.org/reader/2297">Philippa</a><br/></td>
+								<td>00:28:22</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_095_dumas_64kb.mp3" class="play-btn">Play</a> 106 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_095_dumas.mp3" class="chapter-name"> Father and Daughter</a></td>
+								
+								<td><a href="https://librivox.org/reader/64">Robin Cotter</a><br/></td>
+								<td>00:24:40</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_096_dumas_64kb.mp3" class="play-btn">Play</a> 107 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_096_dumas.mp3" class="chapter-name">The Contract</a></td>
+								
+								<td><a href="https://librivox.org/reader/688">J. M. Smallheer</a><br/></td>
+								<td>00:20:50</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_097_dumas_64kb.mp3" class="play-btn">Play</a> 108 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_097_dumas.mp3" class="chapter-name">The Departure for Belgium</a></td>
+								
+								<td><a href="https://librivox.org/reader/688">J. M. Smallheer</a><br/></td>
+								<td>00:12:16</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_098_dumas_64kb.mp3" class="play-btn">Play</a> 109 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_098_dumas.mp3" class="chapter-name">The Bell and Bottle Tavern</a></td>
+								
+								<td><a href="https://librivox.org/reader/55">David Jaquay</a><br/></td>
+								<td>00:24:46</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_099_dumas_64kb.mp3" class="play-btn">Play</a> 110 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_099_dumas.mp3" class="chapter-name">The Law</a></td>
+								
+								<td><a href="https://librivox.org/reader/1034">Kevin O'Coin</a><br/></td>
+								<td>00:22:06</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_100_dumas_64kb.mp3" class="play-btn">Play</a> 111 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_100_dumas.mp3" class="chapter-name">The Apparition</a></td>
+								
+								<td><a href="https://librivox.org/reader/1049">Sam Fold</a><br/></td>
+								<td>00:16:01</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_101_dumas_64kb.mp3" class="play-btn">Play</a> 112 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_101_dumas.mp3" class="chapter-name">Locusta</a></td>
+								
+								<td><a href="https://librivox.org/reader/1084">Nichole Karl</a><br/></td>
+								<td>00:13:19</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_102_dumas_64kb.mp3" class="play-btn">Play</a> 113 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_102_dumas.mp3" class="chapter-name">Valentine</a></td>
+								
+								<td><a href="https://librivox.org/reader/84">Christie Nowak</a><br/></td>
+								<td>00:11:22</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_103_dumas_64kb.mp3" class="play-btn">Play</a> 114 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_103_dumas.mp3" class="chapter-name">Maximilian</a></td>
+								
+								<td><a href="https://librivox.org/reader/84">Christie Nowak</a><br/></td>
+								<td>00:16:05</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_104_dumas_64kb.mp3" class="play-btn">Play</a> 115 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_104_dumas.mp3" class="chapter-name">Danglars Signature</a></td>
+								
+								<td><a href="https://librivox.org/reader/125">Claire Goget</a><br/></td>
+								<td>00:22:32</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_105_dumas_64kb.mp3" class="play-btn">Play</a> 116 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_105_dumas.mp3" class="chapter-name">The Cemetery of Pere-la-Chaise</a></td>
+								
+								<td><a href="https://librivox.org/reader/1593">Kristine Bekere</a><br/></td>
+								<td>00:30:26</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_106_dumas_64kb.mp3" class="play-btn">Play</a> 117 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_106_dumas.mp3" class="chapter-name">Dividing the Proceeds</a></td>
+								
+								<td><a href="https://librivox.org/reader/1874">Ernst Schnell</a><br/></td>
+								<td>00:33:54</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_107_dumas_64kb.mp3" class="play-btn">Play</a> 118 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_107_dumas.mp3" class="chapter-name">The Lions’ Den</a></td>
+								
+								<td><a href="https://librivox.org/reader/70">Kurt Copeland</a><br/></td>
+								<td>00:14:38</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_108_dumas_64kb.mp3" class="play-btn">Play</a> 119 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_108_dumas.mp3" class="chapter-name">The Judge</a></td>
+								
+								<td><a href="https://librivox.org/reader/697">Aruna</a><br/></td>
+								<td>00:24:03</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_109_dumas_64kb.mp3" class="play-btn">Play</a> 120 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_109_dumas.mp3" class="chapter-name">The Assizes</a></td>
+								
+								<td><a href="https://librivox.org/reader/749">Monika Bruss</a><br/></td>
+								<td>00:13:04</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_110_dumas_64kb.mp3" class="play-btn">Play</a> 121 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_110_dumas.mp3" class="chapter-name">The Indictment</a></td>
+								
+								<td><a href="https://librivox.org/reader/70">Kurt Copeland</a><br/></td>
+								<td>00:14:23</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_111_dumas_64kb.mp3" class="play-btn">Play</a> 122 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_111_dumas.mp3" class="chapter-name"> Expiation</a></td>
+								
+								<td><a href="https://librivox.org/reader/64">Robin Cotter</a><br/></td>
+								<td>00:23:25</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_112_dumas_64kb.mp3" class="play-btn">Play</a> 123 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_112_dumas.mp3" class="chapter-name">The Departure</a></td>
+								
+								<td><a href="https://librivox.org/reader/64">Robin Cotter</a><br/></td>
+								<td>00:38:55</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_113_dumas_64kb.mp3" class="play-btn">Play</a> 124 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_113_dumas.mp3" class="chapter-name">The Past </a></td>
+								
+								<td><a href="https://librivox.org/reader/64">Robin Cotter</a><br/></td>
+								<td>00:31:11</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_114_dumas_64kb.mp3" class="play-btn">Play</a> 125 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_114_dumas.mp3" class="chapter-name">Peppino</a></td>
+								
+								<td><a href="https://librivox.org/reader/1363">Tammy Sanders</a><br/></td>
+								<td>00:28:38</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_115_dumas_64kb.mp3" class="play-btn">Play</a> 126 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_115_dumas.mp3" class="chapter-name"> Luigi Vampa’s Bill of Fare</a></td>
+								
+								<td><a href="https://librivox.org/reader/482">Seth P. Mariscal</a><br/></td>
+								<td>00:14:04</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_116_dumas_64kb.mp3" class="play-btn">Play</a> 127 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_116_dumas.mp3" class="chapter-name">The Pardon</a></td>
+								
+								<td><a href="https://librivox.org/reader/1053">katyleah</a><br/></td>
+								<td>00:11:26</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_117_dumas_64kb.mp3" class="play-btn">Play</a> 128 </td>
+								<td><a href="http://www.archive.org/download/count_monte_cristo_0711_librivox/count_of_monte_cristo_117_dumas.mp3" class="chapter-name">The Fifth of October</a></td>
+								
+								<td><a href="https://librivox.org/reader/1593">Kristine Bekere</a><br/></td>
+								<td>00:32:28</td>
+
+															</tr>
+
+						
+					</tbody>
+				</table>
+	
+
+</div><!-- end .page -->
+</div><!-- end .main-content -->
+
+
+	<footer class="footer-wrap">
+		<div class="footer">
+		
+		   
+			
+			<p class="license clear"><a href="#"><img src="https://librivox.org/images/public-domain-license.gif" alt="public-domain-license" width="88" height="31" /></a></p>
+		</div><!-- end .footer-wrap -->	
+	</footer>
+    <!--[if lte IE 9]>	
+	    <script type="text/javascript" src="https://librivox.org/js/catalog/jquery.columnizer.js"></script>
+     <![endif]-->
+
+
+
+<script type="text/javascript">
+
+	var search_category = "page";
+
+	var sub_category;
+
+	var advanced_search = "0";
+
+	var primary_key = 0;
+
+	var search_page  = "1";
+	set_advanced_form_page(search_page);
+
+	var search_order = 'alpha';
+
+	var project_type = 'either';
+
+	var q = "";
+
+	var spinner = '<div class="loading_img" style="margin-left:300px;margin-top:60px;"><img src="../../img/loading.gif"/></div>';
+
+	$('.browse-header').hide();
+
+	var pathArray = window.location.pathname.split( '/' );
+
+	var current_page = pathArray[1]; 
+
+	if (q != '')
+	{
+		advanced_search = 0;
+		$('.advanced-search-inner').hide('slow');
+		librivox_search();
+	}
+	else if (advanced_search == 1)
+	{
+		advanced_search_actions();
+	}
+	else if (advanced_search == 2)
+	{
+		advanced_form_submit();
+	}
+	else if (advanced_search == 3)
+	{
+		//may be able to combine with below
+		$('.advanced-search-inner').hide();
+		get_results(search_category, search_page, sub_category, primary_key);
+	}
+	else
+	{	
+		//only on loading search page
+		if (current_page == 'search') 
+		{
+			var item = $('.js-menu_item[data-menu_item="'+search_category+'"]');
+			load_search_data(item, search_category);
+		}
+		else if (jQuery.inArray(current_page, ['author', 'reader', 'group']) > -1)
+		{
+			get_results(current_page, search_page, sub_category, primary_key);
+		}
+
+	}	
+	advanced_search = 0; // it's done its job
+
+
+	// do better 
+	$('#sort_type').hide();
+	if (search_category == 'title' ||  search_category == 'reader')
+	{
+		$('#sort_type').show();
+	}	
+
+	$('#sort_menu').hide();
+	if (search_category == 'title' || (primary_key > 0))
+	{
+		$('#sort_menu').show();
+	}	
+
+
+	// Manage menus
+	$('.js-menu_item').on('click', function(e){
+
+		search_category = $(this).attr('data-menu_item');
+
+		primary_key = 0;
+
+		if (current_page != 'search') 
+		{
+			window.location.href = CI_ROOT + 'search/' + search_category;
+		}	
+
+		e.preventDefault();
+
+		$('.advanced-search-inner').hide('slow');
+		$('#sidebar_wrapper').show();
+
+		$('#sort_menu').hide();
+		if (search_category == 'title' || (primary_key > 0))
+		{
+			$('#sort_menu').show();
+		}	
+
+		q = '';
+		$('#q').val('');		
+		
+		load_search_data($(this), $(this).attr('data-menu_item'));
+
+	});
+
+	$('.js-title-submenu').on('click', function(e){
+		e.preventDefault();
+		$('.js-title-submenu a').removeClass('selected');
+		$(this).children('a').addClass('selected');
+
+		project_type = $(this).attr('data-submenu');
+
+		set_advanced_form_page(1); //this is a new search, so reset
+
+		get_results(search_category, search_page, sub_category, primary_key);
+	});
+
+	$('.js-sort-menu').on('change', function(){
+		search_order = $(this).val();
+		get_results(search_category, search_page, sub_category, primary_key);
+
+	});
+
+
+	function load_search_data(item, label)
+	{
+		$('.js-menu_item a').removeClass('active').removeClass('current-page');
+
+		item.children('a').addClass('active').addClass('current-page');
+
+		//console.log(item.attr('data-menu_item'));
+
+		//global
+		search_order = 'alpha';
+		if (item.attr('data-menu_item') == 'title')
+		{
+			search_order = 'catalog_date';
+		}
+
+		$('.js-sort-menu').val(search_order);		
+
+		get_results(search_category, 1);
+
+		set_browse_header(label);
+
+	}
+
+
+	function set_browse_header(label)
+	{
+		label = label.charAt(0).toUpperCase() + label.slice(1);
+		var text = 'Browsing <span>'+ label +'</span>';
+		$('.browse-header').html(text).show();
+		$('.browse-header-wrap').show();
+	}
+
+
+	function get_results(search_category, search_page, sub_category, primary_key)
+	{
+	    sub_category 	= typeof sub_category !== 'undefined' ? sub_category : '';
+	    primary_key 	= typeof primary_key !== 'undefined' ? primary_key : 0;
+	    search_order 	= typeof search_order !== 'undefined' ? search_order : 'alpha';
+	    project_type 	= typeof project_type !== 'undefined' ? project_type : 'either';
+
+		var params = { 'primary_key': primary_key, 'search_category':search_category, 'sub_category': sub_category ,'search_page':search_page, 'search_order': search_order, 'project_type': project_type} ;
+
+		if (history.pushState && current_page == 'search') {
+			history.pushState(null, location.textContent, location.href);
+			history.replaceState(null, null, "https://librivox.org/search");
+		}
+
+		$.ajax({
+		  	url: CI_ROOT + current_page + '/get_results' ,
+		  	type: 'get', //yes, get...we want these all to work through the browser addressbar as well, now
+		  	data: { 'primary_key': primary_key, 'search_category':search_category, 'sub_category': sub_category ,'search_page':search_page, 'search_order': search_order, 'project_type': project_type},
+		  	beforeSend: function(){
+		  		$('.browse-list').html(spinner);
+		  		$('.page-number-nav').html('');
+		  	}, 		  	
+	      	complete: function(r){
+				var response_obj = jQuery.parseJSON(r.responseText);
+
+				$('.browse-list').html('');
+
+				if (response_obj.status == 'SUCCESS')
+				{				
+
+			  		$('#sort_menu').hide();
+			  		$('#sort_type').hide();
+
+
+					if ((response_obj.results != 'No results') && (search_category != 'group') && (search_category == 'title' || (primary_key > 0)))
+					{
+						$('#sort_menu').show();	
+						$('#sort_type').show();				
+					}
+
+					$('.browse-list').html(response_obj.results);
+					$('.page-number-nav').html(response_obj.pagination);
+				}
+
+				if (history.pushState) {
+					history.pushState(null, location.textContent, location.href);
+
+					history.replaceState(null, null, "?primary_key=" + primary_key + '&search_category=' + search_category + '&search_page=' + search_page + '&search_form=get_results');	
+					
+				}
+
+
+			}
+		});		
+	}
+
+
+	/* Advanced search form function  */
+
+	$('#advanced_search_form_submit').on('click', function(e){
+		e.preventDefault();
+
+		set_advanced_form_page(1); //this is a new search, so reset
+
+		advanced_form_submit();
+	});
+
+	function set_advanced_form_page(new_page)
+	{
+		search_page = new_page;
+		$('#search_page').val(new_page);
+	}
+
+	function advanced_form_submit()
+	{
+		$('.advanced-search-inner').hide('slow');
+
+		$('#sort_type').hide();
+		//console.log('hidden');	
+
+		q = '';
+		$('#q').val('');
+
+		get_advanced_results();
+
+		$('#sidebar_wrapper').show();		
+	}
+
+	function get_advanced_results()
+	{
+
+		$.ajax({
+		  	url: CI_ROOT  + 'advanced_search',
+		  	type: 'get',
+		  	data: $('#advanced_search_form').serialize() + '&q=' + q ,
+		  	beforeSend: function(){
+		  		$('.browse-list').html(spinner);
+		  		$('.page-number-nav').html('');
+		  	}, 
+	      	complete: function(r){
+				var response_obj = jQuery.parseJSON(r.responseText);
+
+				$('.browse-list').html(''); //clear the spinner, success or no
+				
+				//console.log(response_obj.status);
+
+		  		$('#sort_menu').hide();
+		  		$('#sort_type').hide();
+
+				if (response_obj.status == 'SUCCESS')
+				{					
+					$('.browse-list').html(response_obj.results);
+					$('.page-number-nav').html(response_obj.pagination);
+										
+					if (search_category == 'title' || (primary_key > 0))
+					{
+						$('#sort_menu').show();
+					}	
+				}
+
+
+				if (history.pushState) {
+					history.pushState(null, location.textContent, location.href);
+
+					if (q != '')
+					{
+						history.replaceState(null, null, "?q=" + q + '&search_form=advanced');
+					}	
+					else
+					{
+						history.replaceState(null, null, "?" + $('#advanced_search_form').serialize());
+					}	
+					
+				}
+
+			}
+		});
+	}	
+
+
+	$('.js-advanced-search').on('click', function(e){
+
+		// TODO: make toggle
+
+		if (current_page != 'search') 
+		{
+			window.location.href = CI_ROOT + 'search/' + 'advanced_search';
+		}
+
+
+		e.preventDefault();
+		advanced_search_actions();
+		return false;	
+
+	});
+
+	function advanced_search_actions()
+	{
+
+		$('.browse-header').html('');
+		$('.browse-list').html('');			
+		$('.page-number-nav').html('');
+		$('#sidebar_wrapper').hide();
+		$('#sort_menu').hide();
+
+		$('.advanced-search-inner').show('slow');
+
+	}
+
+
+	/* end Advanced Search Form*/
+
+	/* Librivox search form */
+
+	$('#searchsubmit').on('click', function(e){
+		e.preventDefault();
+
+		//console.log(current_page);
+
+		q = $('#q').val();
+
+		if (current_page != 'search') 
+		{
+			window.location.href = CI_ROOT + 'search/q/' + q;
+		}
+
+		librivox_search();
+
+		$('#sidebar_wrapper').show();
+		$('.advanced-search-inner').hide('slow');
+
+	});
+
+
+	function librivox_search()
+	{
+		set_advanced_form_page(1); //this is a new search, so reset
+
+		search_order = 'alpha';
+
+		$('#advanced_search_form #sort_order').val('alpha'); // the code eventually serializes the form, so we need to set it to alpha here
+
+		$('.browse-header-wrap').hide();
+
+		get_advanced_results();
+	}
+
+
+	/* end Librivox search form*/
+
+
+	$(document).on('click', '.page-number', function(e)
+	{
+		e.preventDefault();
+		search_page = $(this).attr('data-page_number');
+		var call_function = $(this).attr('data-call_function');
+
+		if (call_function == 'get_advanced_results')
+		{
+			$('#search_page').val(search_page); //set it for the form.serialize()
+			get_advanced_results();
+		}
+		else
+		{
+			get_results(search_category, search_page, sub_category, primary_key);
+		}	
+		
+		return false;
+	});
+
+	$(document).on('click', '.js-sublink', function(e)
+	{
+		e.preventDefault();
+		sub_category = $(this).attr('data-sub_category');
+		primary_key = $(this).attr('data-primary_key');
+
+		set_advanced_form_page(1); //this is a new search, so reset
+
+		if (search_category == 'title' || (primary_key > 0))
+		{
+			$('#sort_menu').show();
+		}
+
+		var label = $(this).text();
+
+		set_browse_header(label);
+
+		get_results(search_category, search_page, sub_category, primary_key);
+
+		return false;
+
+	});	
+
+	//reader sections
+
+	$('.data_tab').on('click', function(){
+		$('.data_tab').removeClass('selected');
+		$(this).addClass('selected');
+
+		$('.tab-pane').removeClass('selected').hide();
+
+		var active_pane = $(this).attr('data-tab');
+		$('#'+ active_pane ).show();
+
+		return false;
+	});
+
+
+</script>
+
+<script type="text/javascript">
+
+ var _gaq = _gaq || [];
+ _gaq.push(['_setAccount', 'UA-1429228-8']);
+ _gaq.push(['_setDomainName', 'librivox.org']);
+ _gaq.push(['_trackPageview']);
+
+ (function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+ </script>

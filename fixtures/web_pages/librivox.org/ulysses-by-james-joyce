@@ -1,0 +1,1120 @@
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 ie"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 ie"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 ie"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9 ie"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type">
+
+  <title>LibriVox</title>
+  <meta name="description" content="Librivox" />
+  <meta name="author" content="Librivox" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://librivox.org/favicon.ico">
+  <link rel="stylesheet" href="https://librivox.org/css/style.css?v=1">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <script type="text/javascript" src="https://librivox.org/js/catalog/small-menu.js"></script> 
+ 
+
+  <script type="text/javascript">
+  	var CI_ROOT = "https://librivox.org/"
+  </script>
+
+</head>
+
+<body>
+
+	<section class="header-wrap">
+		<header class="site-header">
+		
+			<!-- Site title/Logo and tagline -->
+			<hgroup class="logo-wrap">
+				<h1 class="logo"><a href="https://librivox.org/"><img src="https://librivox.org/images/librivox-logo.png" alt="librivox-logo" width="180" height="37"><span class="assistive-text">Librivox</span></a></h1>
+				<h3 class="tagline">Acoustical liberation of books in the public domain</h3>
+			</hgroup>
+			
+			<!-- Sub menu -->
+			<nav class="sub-menu">
+			<h1 class="assistive-text icon-fontawesome-webfont"><span>Menu</span></h1>
+			<div class="assistive-text skip-link"><a href="#" title="Skip to content">Skip to content</a></div> 
+				<ul class="sub-menu-list">
+					<li class="first"><a href="https://librivox.org/pages/about-librivox">about</a></li>
+					<li><a href="http://forum.librivox.org/">forum</a></li>	
+					<li><a href="https://librivox.org/pages/contact-librivox">contact</a></li>
+					<li><a href="https://librivox.org/pages/help">help</a></li>
+					<li class="twitter ir"><a href="http://twitter.com/librivox">Twitter</a></li>
+					<!-- <li class="facebook ir"><a href="http://www.facebook.com/LibriVox">Facebook</a></li> -->
+					<li class="rss "><a href="https://librivox.org/pages/librivox-feeds">rss</a></li> 
+				</ul>																
+			</nav><!-- end sub-menu -->   
+			
+			<!-- Search Form -->	
+			<div class="search-wrap">
+				<form role="search" action="#" id="searchform" method="get" class="searchform">
+					<label class="assistive-text" for="q">Search Librivox</label>
+					<input type="text" placeholder="Search by Author, Title or Reader" id="q" name="q" class="field">
+					<input type="text" id="dummy" name="dummy" style="display:none;">
+					<input type="submit" value="Search" id="searchsubmit" name="submit" class="submit">
+				</form>
+
+				<a href="#" class="advanced-search js-advanced-search"> Advanced search</a>	
+			</div> <!-- end search-wrap -->		    
+		</header>
+		
+
+
+	<!-- Main menu -->	
+	<div class="main-menu-wrap">
+		<section class="main-menu">
+			<h3>Browse the catalog</h3>
+			<nav class="main-menu-list-wrap"> 
+				<ul class="main-menu-list">
+					<li data-menu_item="author" class="js-menu_item first"><a href="#"><span class="author-icon"></span>Author</a></li>
+					<li data-menu_item="title" class="js-menu_item last"><a href="#"><span class="title-icon"></span>Title</a></li>
+					<li data-menu_item="genre" class="js-menu_item "><a href="#" ><span class="genre-icon"></span>Genre/Subject</a></li>
+					<li data-menu_item="language" class="js-menu_item "><a href="#"><span class="language-icon"></span>Language</a></li>
+					<!-- <li data-menu_item="reader" class="js-menu_item "><a href="#"><span class="reader-icon"></span>Reader</a></li> -->
+					
+				</ul>
+			</nav>
+			
+													
+		</section> <!-- end main-menu --> 
+		
+
+	</div> <!-- end .main-menu-wrap -->	  
+
+	</section><!-- end .header-wrap -->	
+
+
+	<input type="hidden" id="primary_key" value="0">
+
+<div class="main-content">
+	
+	
+	<div class="sidebar book-page">
+
+
+	<a href="https://librivox.org/pages/donate-to-librivox/" class="donate">Donate to Librivox</a>
+
+	<a href="https://librivox.org/pages/thank-a-reader/" class="thank-reader">Thank a reader</a>
+
+
+	
+	<div class="disclaimer">
+		LibriVox recordings are Public Domain in the USA. If you are not in the USA, please verify the copyright status of these works in your own country before downloading, otherwise you may be violating copyright laws.
+	</div>
+
+
+	
+	<div class="book-page-sidebar">
+		
+		<h4>Listen/Download (<a href="https://librivox.org/pages/help">help?</a>)</h4>
+
+		<dl class="listen-download clearfix">
+				
+			  <dt>Whole book (zip file)</dt>
+			  <dd><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_2007_librivox_64kb_mp3.zip" class="book-download-btn">Download</a></dd>
+			
+			  <dt>Subscribe by iTunes</dt>
+			  <dd><a href="itpc://librivox.org/rss/457" class="book-download-btn">iTunes</a></dd>
+
+			  <dt>RSS Feed</dt>
+			  <dd><a href="http://librivox.org/rss/457" class="book-download-btn">RSS</a></dd>
+
+			  <dt>Download torrent</dt>
+			  <dd><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_2007_librivox_archive.torrent" class="book-download-btn">Torrent</a></dd> 					  
+		</dl>
+
+		
+					
+	</div>
+	
+	<div class="book-page-sidebar">
+		<h4>Production details</h4>
+		<dl class="product-details clearfix">
+		  <dt>Running Time:</dt>
+		  <dd>32:39:01</dd>
+
+		  <dt>Zip file size:</dt>
+		  <dd>940.5MB</dd>
+		
+		  <dt>Catalog date:</dt>
+		  <dd>2007-06-15</dd>
+		
+		  <dt>Read by:</dt>
+		  <dd>LibriVox Volunteers</dd> 
+		  
+		  <dt>Book Coordinator:</dt>
+		  <dd><a href="https://librivox.org/reader/78">Hugh McGuire</a></dd>
+		  
+		  <dt>Meta Coordinator:</dt>
+		  <dd><a href="https://librivox.org/reader/78">Hugh McGuire</a></dd>
+		  
+		  <dt>Proof Listener:</dt>
+		  <dd><a href="https://librivox.org/reader/">&nbsp;</a></dd>				  
+		</dl>
+
+	</div>
+	
+	<div class="book-page-sidebar">
+		<h4>Links</h4>
+
+					<p><a href="http://www.archive.org/details/ulysses_2007_librivox">Internet Archive Page</a></p>
+		
+					<p><a href="http://www.gutenberg.org/etext/4300">Online text</a></p>
+		
+									<p><a href="http://en.wikipedia.org/wiki/James_Joyce">Wikipedia - James Joyce</a></p>
+							
+
+					<p><a href="http://en.wikipedia.org/wiki/Ulysses_(novel)">Wikipedia Book - Ulysses</a></p>
+		
+					<p><a href="https://archive.org/download/ulysses_2007_librivox/UlyssesPart1_librivox.m4b">M4B audio book, part 1 (238mb)</a></p>
+					<p><a href="https://archive.org/download/ulysses_2007_librivox/UlyssesPart2_librivox.m4b">M4B audio book, part 2 (222mb)</a></p>
+					<p><a href="https://archive.org/download/ulysses_2007_librivox/UlyssesPart3_librivox.m4b">M4B audio book, part 3 (213mb)</a></p>
+					<p><a href="https://archive.org/download/ulysses_2007_librivox/UlyssesPart4_librivox.m4b">M4B audio book, part 4 (228mb)</a></p>
+		
+	</div>
+				
+
+
+
+
+</div>	
+	
+	<div class="page book-page">
+
+			<div class="content-wrap clearfix">
+				<div class="book-page-book-cover">
+					<img src="http://www.archive.org/download/LibrivoxCdCoverArt4/Ulysses_1004.jpg" alt="book-cover-large" width="175" height="175" />
+
+										<a href="http://www.archive.org/download/LibrivoxCdCoverArt4/Ulysses_1004.jpg" class="download-cover">Download cover art</a>
+					
+										<a href="http://www.archive.org/download/LibrivoxCdCoverArt4/Ulysses_1004.pdf" class="download-cover">Download CD case insert</a>
+					
+				</div>
+				
+				<h1>Ulysses</h1>
+				
+				<p class="book-page-author"><a href="https://librivox.org/author/495">James JOYCE (1882 - 1941)</a></p>
+				
+				<div class="description"><br /><strong><em>NOTE:</em> </strong> <em>Because of the nature of this project, there was a bending of usual LibriVox procedures: pub-like background noise was encouraged, as well as group readings; and no editing was required, so in places there may be some accidental variation from the original text ... <strong>Listener be warned!</strong></em>  <br /><br />
+<em>Here is some more information about the <a href="http://librivox.org/2009/11/22/about-that-ulysses-recording/">genesis of the LibriVox Ulysses project</a>.</em>  (Summary by Hugh McGuire)<br /><br />
+
+Still one of the most radical novels of the 20th Century, James Joyce's Ulysses is considered to have ushered in the era of the modern novel.  Loosely based on Homer's Odyssey, the book follows Leopold Bloom and a number of other characters through an ordinary day, twenty four hours, in Dublin, on June 16, 1904. The text is dense and difficult, but perfectly suited to an oral reading, filled with language tricks, puns and jokes, stream of consciousness, and bawdiness.</br><br />
+<strong>Full cast list for sections 15f and 15g:</strong><br />
+Character identifications read by <a href="http://librivox.org/reader/36">Chip</a><br />
+Read by: <a href="http://librivox.org/reader/56">Kirsten Ferreri</a> and <a href="http://librivox.org/reader/895">Max Porter Zasada</a><br />
+Bloom read by <a href="http://librivox.org/reader/94">David Barnes</a><br />
+Stephen read by <a href="http://librivox.org/reader/66">Alex Foster</a><br />
+Kitty read by <a href="http://librivox.org/reader/14">Kristin LeMoine</a><br />
+Florry read by <a href="http://librivox.org/reader/277">Alessia</a><br />
+Zoe read by <a href="http://librivox.org/reader/83">Catharine Eastman</a><br />
+Lynch read by <a href="http://librivox.org/reader/91">Stephan Möbius</a><br />
+Bella, list of names, and sundry characters read by <a href="http://librivox.org/reader/177">Kymm Zuckert</a><br />
+Marion read by <a href="http://librivox.org/reader/121">Nikolle Doolin</a><br />
+Boylan read by <a href="http://librivox.org/reader/252">Rainer</a><br />
+Private Carr read by <a href="http://librivox.org/reader/511">Matthew Shepherd</a><br />
+Private Compton read by <a href="http://librivox.org/reader/447">Seth Woodworth</a><br />
+Cissy Caffrey read by <a href="http://librivox.org/reader/19">Kara Shallenberg</a><br />
+Maginni read by <a href="http://librivox.org/reader/78">Hugh Mcguire</a><br />
+The Mother read by <a href="http://librivox.org/reader/110">Cynthia Lyons</a><br /><br />
+
+<strong>Additional sundry characters and background voices:</strong><br />
+<a href="http://librivox.org/reader/167">Peter Yearsley</a>, <a href="http://librivox.org/reader/31">Martin Clifton</a>, <a href="http://librivox.org/reader/91">Stephan Möbius</a>, <a href="http://librivox.org/reader/177">Kymm Zuckert, <a href="http://librivox.org/reader/543">Ted Delorme</a>, Hajduk, <a href="http://librivox.org/reader/107">John Greenman</a>, <a href="http://librivox.org/reader/472">Tina Tilney</a>, <a href="http://librivox.org/reader/30">Annie Coleman</a>, <a href="http://librivox.org/reader/554">The Good Reverend Doctor</a>, <a href="http://librivox.org/reader/204">Mark F. Smith</a>, <a href="http://librivox.org/reader/205">Esther</a>, <a href="http://librivox.org/reader/919">Cecilia</a>, <a href="http://librivox.org/reader/20">Gesine</a>, <a href="http://librivox.org/reader/23">Anita Roy Dobbs</a>, <a href="http://librivox.org/reader/14">Kristin LeMoine</a>, <a href="http://librivox.org/reader/83">Catharine Eastman</a>, <a href="http://librivox.org/reader/174">Peter Eastman</a><br /><br />
+
+<strong>The ten segments were edited as follows:</strong><br />
+1st, 5th, and 6th segments with The Woods, The Dance, and The Ghost, were edited by <a href="http://librivox.org/reader/23">Anita Roy Dobbs</a>;<br />
+2nd and 4th segments with The Brothel and The Race were edited and sound designed by <a href="http://librivox.org/reader/91">Stephan Möbius</a>;<br />
+3rd and 10th segments with The Affair and The End were edited by <a href="http://librivox.org/reader/20">Gesine</a>;<br />
+7th segment, with The Chase, was edited by <a href="http://librivox.org/reader/554">The Good Reverend Doctor</a>;<br />
+8th and 9th segments, with The Kings and The Fight, were edited and sound designed by <a href="http://librivox.org/reader/2142">annelika</a>. <br /><br /></div>	<!-- .description -->
+
+				<p class="book-page-genre"><span>Genre(s):</span> Published 1900 onward</p>
+
+				<p class="book-page-genre"><span>Language:</span> English</p>
+
+				
+				
+			</div> 	<!-- end .content-wrap --> 
+		
+			<table class="chapter-download">
+					<thead>
+						<tr>
+							<th>Section</th>
+							<th>Chapter</th>
+							
+							<th>Reader</th>
+							<th>Time</th>
+
+							
+						</tr>
+					</thead>
+						<tbody>
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_01_joyce_64kb.mp3" class="play-btn">Play</a> 01 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_01_joyce.mp3" class="chapter-name">stately, plump Buck ...</a></td>
+								
+								<td><a href="https://librivox.org/reader/78">Hugh McGuire</a><br/></td>
+								<td>01:00:40</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_02_joyce_64kb.mp3" class="play-btn">Play</a> 02 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_02_joyce.mp3" class="chapter-name">you, cochrane, what city sent ...</a></td>
+								
+								<td><a href="https://librivox.org/reader/19">Kara Shallenberg</a><br/></td>
+								<td>00:34:37</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_03_joyce_64kb.mp3" class="play-btn">Play</a> 03 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_03_joyce.mp3" class="chapter-name">ineluctable modality of the visible ...</a></td>
+								
+								<td><a href="https://librivox.org/reader/584">miette</a><br/></td>
+								<td>00:47:10</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_04_joyce_64kb.mp3" class="play-btn">Play</a> 04 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_04_joyce.mp3" class="chapter-name">mr. leopold bloom ate with relish ...</a></td>
+								
+								<td><a href="https://librivox.org/reader/89">Kristen McQuillin</a><br/></td>
+								<td>00:43:25</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_05_joyce_64kb.mp3" class="play-btn">Play</a> 05 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_05_joyce.mp3" class="chapter-name">by lorries along sir john rogerson's ...</a></td>
+								
+								<td><a href="https://librivox.org/reader/17">Gord Mackenzie</a><br/></td>
+								<td>00:50:16</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_06_joyce_64kb.mp3" class="play-btn">Play</a> 06 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_06_joyce.mp3" class="chapter-name">martin cunningham, first, poked ...</a></td>
+								
+								<td><a href="https://librivox.org/reader/20">Gesine</a><br/></td>
+								<td>01:23:05</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_07_joyce_64kb.mp3" class="play-btn">Play</a> 07 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_07_joyce.mp3" class="chapter-name">in the heart of the hibernian ...</a></td>
+								
+								<td><a href="https://librivox.org/reader/56">Kirsten Ferreri</a><br/></td>
+								<td>00:57:49</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_08a_joyce_64kb.mp3" class="play-btn">Play</a> 08 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_08a_joyce.mp3" class="chapter-name">pineapple rock, lemon platt ...</a></td>
+								
+								<td><a href="https://librivox.org/reader/30">Annie Coleman Rothenberg</a><br/></td>
+								<td>00:46:26</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_08b_joyce_64kb.mp3" class="play-btn">Play</a> 09 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_08b_joyce.mp3" class="chapter-name">grafton street gay with …</a></td>
+								
+								<td><a href="https://librivox.org/reader/30">Annie Coleman Rothenberg</a><br/></td>
+								<td>00:43:21</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_09a_joyce_64kb.mp3" class="play-btn">Play</a> 10 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_09a_joyce.mp3" class="chapter-name">urbane, to confort them ...</a></td>
+								
+								<td><a href="https://librivox.org/reader/78">Hugh McGuire</a><br/></td>
+								<td>00:50:59</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_09b_joyce_64kb.mp3" class="play-btn">Play</a> 11 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_09b_joyce.mp3" class="chapter-name"> buck Mulligan rapped…</a></td>
+								
+								<td><a href="https://librivox.org/reader/78">Hugh McGuire</a><br/></td>
+								<td>00:42:43</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_10a_joyce_64kb.mp3" class="play-btn">Play</a> 12 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_10a_joyce.mp3" class="chapter-name">the superior, very reverend ...</a></td>
+								
+								<td><a href="https://librivox.org/reader/78">Hugh McGuire</a><br/></td>
+								<td>00:45:21</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_10b_joyce_64kb.mp3" class="play-btn">Play</a> 13 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_10b_joyce.mp3" class="chapter-name">the lacquey by the door</a></td>
+								
+								<td><a href="https://librivox.org/reader/78">Hugh McGuire</a><br/></td>
+								<td>00:45:37</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_11a_joyce_64kb.mp3" class="play-btn">Play</a> 14 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_11a_joyce.mp3" class="chapter-name">bronze by gold heard ...</a></td>
+								
+								<td><a href="https://librivox.org/reader/19">Kara Shallenberg</a><br/></td>
+								<td>00:44:42</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_11b_joyce_64kb.mp3" class="play-btn">Play</a> 15 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_11b_joyce.mp3" class="chapter-name">never would richie...</a></td>
+								
+								<td><a href="https://librivox.org/reader/19">Kara Shallenberg</a><br/></td>
+								<td>00:55:18</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_12a_joyce_64kb.mp3" class="play-btn">Play</a> 16 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_12a_joyce.mp3" class="chapter-name">I was just passing the time ...</a></td>
+								
+								<td><a href="https://librivox.org/reader/584">miette</a><br/></td>
+								<td>01:09:06</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_12b_joyce_64kb.mp3" class="play-btn">Play</a> 17 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_12b_joyce.mp3" class="chapter-name">here says joe …</a></td>
+								
+								<td><a href="https://librivox.org/reader/584">miette</a><br/></td>
+								<td>01:37:23</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_13a_joyce_64kb.mp3" class="play-btn">Play</a> 18 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_13a_joyce.mp3" class="chapter-name">the summer evening had ...</a></td>
+								
+								<td><a href="https://librivox.org/reader/154">Robert Foster</a><br/></td>
+								<td>00:20:17</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_13b_joyce_64kb.mp3" class="play-btn">Play</a> 19 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_13b_joyce.mp3" class="chapter-name">edy boardman asked …</a></td>
+								
+								<td><a href="https://librivox.org/reader/154">Robert Foster</a><br/></td>
+								<td>00:34:02</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_13c_joyce_64kb.mp3" class="play-btn">Play</a> 20 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_13c_joyce.mp3" class="chapter-name">canon ohanlon put …</a></td>
+								
+								<td><a href="https://librivox.org/reader/154">Robert Foster</a><br/></td>
+								<td>00:27:17</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_13d_joyce_64kb.mp3" class="play-btn">Play</a> 21 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_13d_joyce.mp3" class="chapter-name">wonder how is she</a></td>
+								
+								<td><a href="https://librivox.org/reader/154">Robert Foster</a><br/></td>
+								<td>00:26:08</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_14a_joyce_64kb.mp3" class="play-btn">Play</a> 22 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_14a_joyce.mp3" class="chapter-name">deshil holles eamus ...</a></td>
+								
+								<td><a href="https://librivox.org/reader/585">pheo</a><br/></td>
+								<td>01:00:19</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_14b_joyce_64kb.mp3" class="play-btn">Play</a> 23 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_14b_joyce.mp3" class="chapter-name">to revert to mr. bloom</a></td>
+								
+								<td><a href="https://librivox.org/reader/585">pheo</a><br/></td>
+								<td>00:55:05</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_15a_joyce_64kb.mp3" class="play-btn">Play</a> 24 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_15a_joyce.mp3" class="chapter-name">the mabbot street entrance…</a></td>
+								
+								<td><a href="https://librivox.org/reader/23">Anita Roy Dobbs</a><br/></td>
+								<td>00:54:39</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_15b_joyce_64kb.mp3" class="play-btn">Play</a> 25 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_15b_joyce.mp3" class="chapter-name">GEORGE FOTTRELL: (Clerk of the crown…</a></td>
+								
+								<td><a href="https://librivox.org/reader/23">Anita Roy Dobbs</a><br/></td>
+								<td>00:51:52</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_15c_joyce_64kb.mp3" class="play-btn">Play</a> 26 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_15c_joyce.mp3" class="chapter-name">bloom explains to those near him…</a></td>
+								
+								<td><a href="https://librivox.org/reader/23">Anita Roy Dobbs</a><br/></td>
+								<td>00:34:48</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_15d_joyce_64kb.mp3" class="play-btn">Play</a> 27 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_15d_joyce.mp3" class="chapter-name">ELIJAH: No yapping…</a></td>
+								
+								<td><a href="https://librivox.org/reader/23">Anita Roy Dobbs</a><br/></td>
+								<td>00:41:48</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_15e_joyceEDNC_64kb.mp3" class="play-btn">Play</a> 28 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_15e_joyceEDNC.mp3" class="chapter-name">RICHIE GOULDING: (Bagweighted…</a></td>
+								
+								<td><a href="https://librivox.org/reader/56">Kirsten Ferreri</a><br/><a href="https://librivox.org/reader/895">Max Porter Zasada</a><br/></td>
+								<td>00:30:59</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_15f_joyceED_64kb.mp3" class="play-btn">Play</a> 29 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_15f_joyceED.mp3" class="chapter-name">BLOOM: (Pigeonbreasted…</a></td>
+								
+								<td>Group</td>
+								<td>00:52:02</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_15g_joyceED_64kb.mp3" class="play-btn">Play</a> 30 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_15g_joyceED.mp3" class="chapter-name"> SIMON: Think of your mother…</a></td>
+								
+								<td>Group</td>
+								<td>00:55:50</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_16a_joyce_64kb.mp3" class="play-btn">Play</a> 31 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_16a_joyce.mp3" class="chapter-name">preparatory to anything ...</a></td>
+								
+								<td><a href="https://librivox.org/reader/20">Gesine</a><br/></td>
+								<td>00:48:11</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_16b_joyce_64kb.mp3" class="play-btn">Play</a> 32 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_16b_joyce.mp3" class="chapter-name">there ensued a somewhat …</a></td>
+								
+								<td><a href="https://librivox.org/reader/20">Gesine</a><br/></td>
+								<td>00:55:46</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_16c_joyce_64kb.mp3" class="play-btn">Play</a> 33 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_16c_joyce.mp3" class="chapter-name">this morning hynes …</a></td>
+								
+								<td><a href="https://librivox.org/reader/20">Gesine</a><br/></td>
+								<td>00:57:36</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_17a_joyce_64kb.mp3" class="play-btn">Play</a> 34 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_17a_joyce.mp3" class="chapter-name">what parallel courses did...</a></td>
+								
+								<td><a href="https://librivox.org/reader/254">Alan Davis Drake (1945-2010)</a><br/></td>
+								<td>00:50:40</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_17b_joyce_64kb.mp3" class="play-btn">Play</a> 35 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_17b_joyce.mp3" class="chapter-name">what two temperaments</a></td>
+								
+								<td><a href="https://librivox.org/reader/254">Alan Davis Drake (1945-2010)</a><br/></td>
+								<td>00:57:24</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_17c_joyce_64kb.mp3" class="play-btn">Play</a> 36 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_17c_joyce.mp3" class="chapter-name">how did the centripetal …</a></td>
+								
+								<td><a href="https://librivox.org/reader/254">Alan Davis Drake (1945-2010)</a><br/></td>
+								<td>00:52:32</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_17d_joyce_64kb.mp3" class="play-btn">Play</a> 37 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_17d_joyce.mp3" class="chapter-name">what did the 2nd …</a></td>
+								
+								<td><a href="https://librivox.org/reader/254">Alan Davis Drake (1945-2010)</a><br/></td>
+								<td>00:43:51</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_18a_joyce_64kb.mp3" class="play-btn">Play</a> 38 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_18a_joyce.mp3" class="chapter-name">yes because he never did ...</a></td>
+								
+								<td><a href="https://librivox.org/reader/586">dwaber</a><br/></td>
+								<td>01:01:38</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_18b_joyce_64kb.mp3" class="play-btn">Play</a> 39 </td>
+								<td><a href="http://www.archive.org/download/ulysses_2007_librivox/ulysses_18b_joyce.mp3" class="chapter-name">he was looking at me …</a></td>
+								
+								<td><a href="https://librivox.org/reader/586">dwaber</a><br/></td>
+								<td>01:08:19</td>
+
+															</tr>
+
+						
+					</tbody>
+				</table>
+	
+
+</div><!-- end .page -->
+</div><!-- end .main-content -->
+
+
+	<footer class="footer-wrap">
+		<div class="footer">
+		
+		   
+			
+			<p class="license clear"><a href="#"><img src="https://librivox.org/images/public-domain-license.gif" alt="public-domain-license" width="88" height="31" /></a></p>
+		</div><!-- end .footer-wrap -->	
+	</footer>
+    <!--[if lte IE 9]>	
+	    <script type="text/javascript" src="https://librivox.org/js/catalog/jquery.columnizer.js"></script>
+     <![endif]-->
+
+
+
+<script type="text/javascript">
+
+	var search_category = "page";
+
+	var sub_category;
+
+	var advanced_search = "0";
+
+	var primary_key = 0;
+
+	var search_page  = "1";
+	set_advanced_form_page(search_page);
+
+	var search_order = 'alpha';
+
+	var project_type = 'either';
+
+	var q = "";
+
+	var spinner = '<div class="loading_img" style="margin-left:300px;margin-top:60px;"><img src="../../img/loading.gif"/></div>';
+
+	$('.browse-header').hide();
+
+	var pathArray = window.location.pathname.split( '/' );
+
+	var current_page = pathArray[1]; 
+
+	if (q != '')
+	{
+		advanced_search = 0;
+		$('.advanced-search-inner').hide('slow');
+		librivox_search();
+	}
+	else if (advanced_search == 1)
+	{
+		advanced_search_actions();
+	}
+	else if (advanced_search == 2)
+	{
+		advanced_form_submit();
+	}
+	else if (advanced_search == 3)
+	{
+		//may be able to combine with below
+		$('.advanced-search-inner').hide();
+		get_results(search_category, search_page, sub_category, primary_key);
+	}
+	else
+	{	
+		//only on loading search page
+		if (current_page == 'search') 
+		{
+			var item = $('.js-menu_item[data-menu_item="'+search_category+'"]');
+			load_search_data(item, search_category);
+		}
+		else if (jQuery.inArray(current_page, ['author', 'reader', 'group']) > -1)
+		{
+			get_results(current_page, search_page, sub_category, primary_key);
+		}
+
+	}	
+	advanced_search = 0; // it's done its job
+
+
+	// do better 
+	$('#sort_type').hide();
+	if (search_category == 'title' ||  search_category == 'reader')
+	{
+		$('#sort_type').show();
+	}	
+
+	$('#sort_menu').hide();
+	if (search_category == 'title' || (primary_key > 0))
+	{
+		$('#sort_menu').show();
+	}	
+
+
+	// Manage menus
+	$('.js-menu_item').on('click', function(e){
+
+		search_category = $(this).attr('data-menu_item');
+
+		primary_key = 0;
+
+		if (current_page != 'search') 
+		{
+			window.location.href = CI_ROOT + 'search/' + search_category;
+		}	
+
+		e.preventDefault();
+
+		$('.advanced-search-inner').hide('slow');
+		$('#sidebar_wrapper').show();
+
+		$('#sort_menu').hide();
+		if (search_category == 'title' || (primary_key > 0))
+		{
+			$('#sort_menu').show();
+		}	
+
+		q = '';
+		$('#q').val('');		
+		
+		load_search_data($(this), $(this).attr('data-menu_item'));
+
+	});
+
+	$('.js-title-submenu').on('click', function(e){
+		e.preventDefault();
+		$('.js-title-submenu a').removeClass('selected');
+		$(this).children('a').addClass('selected');
+
+		project_type = $(this).attr('data-submenu');
+
+		set_advanced_form_page(1); //this is a new search, so reset
+
+		get_results(search_category, search_page, sub_category, primary_key);
+	});
+
+	$('.js-sort-menu').on('change', function(){
+		search_order = $(this).val();
+		get_results(search_category, search_page, sub_category, primary_key);
+
+	});
+
+
+	function load_search_data(item, label)
+	{
+		$('.js-menu_item a').removeClass('active').removeClass('current-page');
+
+		item.children('a').addClass('active').addClass('current-page');
+
+		//console.log(item.attr('data-menu_item'));
+
+		//global
+		search_order = 'alpha';
+		if (item.attr('data-menu_item') == 'title')
+		{
+			search_order = 'catalog_date';
+		}
+
+		$('.js-sort-menu').val(search_order);		
+
+		get_results(search_category, 1);
+
+		set_browse_header(label);
+
+	}
+
+
+	function set_browse_header(label)
+	{
+		label = label.charAt(0).toUpperCase() + label.slice(1);
+		var text = 'Browsing <span>'+ label +'</span>';
+		$('.browse-header').html(text).show();
+		$('.browse-header-wrap').show();
+	}
+
+
+	function get_results(search_category, search_page, sub_category, primary_key)
+	{
+	    sub_category 	= typeof sub_category !== 'undefined' ? sub_category : '';
+	    primary_key 	= typeof primary_key !== 'undefined' ? primary_key : 0;
+	    search_order 	= typeof search_order !== 'undefined' ? search_order : 'alpha';
+	    project_type 	= typeof project_type !== 'undefined' ? project_type : 'either';
+
+		var params = { 'primary_key': primary_key, 'search_category':search_category, 'sub_category': sub_category ,'search_page':search_page, 'search_order': search_order, 'project_type': project_type} ;
+
+		if (history.pushState && current_page == 'search') {
+			history.pushState(null, location.textContent, location.href);
+			history.replaceState(null, null, "https://librivox.org/search");
+		}
+
+		$.ajax({
+		  	url: CI_ROOT + current_page + '/get_results' ,
+		  	type: 'get', //yes, get...we want these all to work through the browser addressbar as well, now
+		  	data: { 'primary_key': primary_key, 'search_category':search_category, 'sub_category': sub_category ,'search_page':search_page, 'search_order': search_order, 'project_type': project_type},
+		  	beforeSend: function(){
+		  		$('.browse-list').html(spinner);
+		  		$('.page-number-nav').html('');
+		  	}, 		  	
+	      	complete: function(r){
+				var response_obj = jQuery.parseJSON(r.responseText);
+
+				$('.browse-list').html('');
+
+				if (response_obj.status == 'SUCCESS')
+				{				
+
+			  		$('#sort_menu').hide();
+			  		$('#sort_type').hide();
+
+
+					if ((response_obj.results != 'No results') && (search_category != 'group') && (search_category == 'title' || (primary_key > 0)))
+					{
+						$('#sort_menu').show();	
+						$('#sort_type').show();				
+					}
+
+					$('.browse-list').html(response_obj.results);
+					$('.page-number-nav').html(response_obj.pagination);
+				}
+
+				if (history.pushState) {
+					history.pushState(null, location.textContent, location.href);
+
+					history.replaceState(null, null, "?primary_key=" + primary_key + '&search_category=' + search_category + '&search_page=' + search_page + '&search_form=get_results');	
+					
+				}
+
+
+			}
+		});		
+	}
+
+
+	/* Advanced search form function  */
+
+	$('#advanced_search_form_submit').on('click', function(e){
+		e.preventDefault();
+
+		set_advanced_form_page(1); //this is a new search, so reset
+
+		advanced_form_submit();
+	});
+
+	function set_advanced_form_page(new_page)
+	{
+		search_page = new_page;
+		$('#search_page').val(new_page);
+	}
+
+	function advanced_form_submit()
+	{
+		$('.advanced-search-inner').hide('slow');
+
+		$('#sort_type').hide();
+		//console.log('hidden');	
+
+		q = '';
+		$('#q').val('');
+
+		get_advanced_results();
+
+		$('#sidebar_wrapper').show();		
+	}
+
+	function get_advanced_results()
+	{
+
+		$.ajax({
+		  	url: CI_ROOT  + 'advanced_search',
+		  	type: 'get',
+		  	data: $('#advanced_search_form').serialize() + '&q=' + q ,
+		  	beforeSend: function(){
+		  		$('.browse-list').html(spinner);
+		  		$('.page-number-nav').html('');
+		  	}, 
+	      	complete: function(r){
+				var response_obj = jQuery.parseJSON(r.responseText);
+
+				$('.browse-list').html(''); //clear the spinner, success or no
+				
+				//console.log(response_obj.status);
+
+		  		$('#sort_menu').hide();
+		  		$('#sort_type').hide();
+
+				if (response_obj.status == 'SUCCESS')
+				{					
+					$('.browse-list').html(response_obj.results);
+					$('.page-number-nav').html(response_obj.pagination);
+										
+					if (search_category == 'title' || (primary_key > 0))
+					{
+						$('#sort_menu').show();
+					}	
+				}
+
+
+				if (history.pushState) {
+					history.pushState(null, location.textContent, location.href);
+
+					if (q != '')
+					{
+						history.replaceState(null, null, "?q=" + q + '&search_form=advanced');
+					}	
+					else
+					{
+						history.replaceState(null, null, "?" + $('#advanced_search_form').serialize());
+					}	
+					
+				}
+
+			}
+		});
+	}	
+
+
+	$('.js-advanced-search').on('click', function(e){
+
+		// TODO: make toggle
+
+		if (current_page != 'search') 
+		{
+			window.location.href = CI_ROOT + 'search/' + 'advanced_search';
+		}
+
+
+		e.preventDefault();
+		advanced_search_actions();
+		return false;	
+
+	});
+
+	function advanced_search_actions()
+	{
+
+		$('.browse-header').html('');
+		$('.browse-list').html('');			
+		$('.page-number-nav').html('');
+		$('#sidebar_wrapper').hide();
+		$('#sort_menu').hide();
+
+		$('.advanced-search-inner').show('slow');
+
+	}
+
+
+	/* end Advanced Search Form*/
+
+	/* Librivox search form */
+
+	$('#searchsubmit').on('click', function(e){
+		e.preventDefault();
+
+		//console.log(current_page);
+
+		q = $('#q').val();
+
+		if (current_page != 'search') 
+		{
+			window.location.href = CI_ROOT + 'search/q/' + q;
+		}
+
+		librivox_search();
+
+		$('#sidebar_wrapper').show();
+		$('.advanced-search-inner').hide('slow');
+
+	});
+
+
+	function librivox_search()
+	{
+		set_advanced_form_page(1); //this is a new search, so reset
+
+		search_order = 'alpha';
+
+		$('#advanced_search_form #sort_order').val('alpha'); // the code eventually serializes the form, so we need to set it to alpha here
+
+		$('.browse-header-wrap').hide();
+
+		get_advanced_results();
+	}
+
+
+	/* end Librivox search form*/
+
+
+	$(document).on('click', '.page-number', function(e)
+	{
+		e.preventDefault();
+		search_page = $(this).attr('data-page_number');
+		var call_function = $(this).attr('data-call_function');
+
+		if (call_function == 'get_advanced_results')
+		{
+			$('#search_page').val(search_page); //set it for the form.serialize()
+			get_advanced_results();
+		}
+		else
+		{
+			get_results(search_category, search_page, sub_category, primary_key);
+		}	
+		
+		return false;
+	});
+
+	$(document).on('click', '.js-sublink', function(e)
+	{
+		e.preventDefault();
+		sub_category = $(this).attr('data-sub_category');
+		primary_key = $(this).attr('data-primary_key');
+
+		set_advanced_form_page(1); //this is a new search, so reset
+
+		if (search_category == 'title' || (primary_key > 0))
+		{
+			$('#sort_menu').show();
+		}
+
+		var label = $(this).text();
+
+		set_browse_header(label);
+
+		get_results(search_category, search_page, sub_category, primary_key);
+
+		return false;
+
+	});	
+
+	//reader sections
+
+	$('.data_tab').on('click', function(){
+		$('.data_tab').removeClass('selected');
+		$(this).addClass('selected');
+
+		$('.tab-pane').removeClass('selected').hide();
+
+		var active_pane = $(this).attr('data-tab');
+		$('#'+ active_pane ).show();
+
+		return false;
+	});
+
+
+</script>
+
+<script type="text/javascript">
+
+ var _gaq = _gaq || [];
+ _gaq.push(['_setAccount', 'UA-1429228-8']);
+ _gaq.push(['_setDomainName', 'librivox.org']);
+ _gaq.push(['_trackPageview']);
+
+ (function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+ </script>

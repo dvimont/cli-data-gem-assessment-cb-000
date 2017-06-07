@@ -8,8 +8,11 @@ class CatalogBuilder
   LIBRIVOX_API_PARMS = "?fields={id,url_librivox,language}&format=json"
   DEFAULT_CATALOG_SIZE = 100
   LIMIT_PER_CALL = 50
+  LOCAL_API_RESPONSE_URI_PREFIX = "./fixtures/api_responses/"
+  @@special_processing_parm = :none
 
-  def self.build(catalog_size=DEFAULT_CATALOG_SIZE, optional_parms="")
+  def self.build(catalog_size=DEFAULT_CATALOG_SIZE, special_processing=:none, optional_parms="")
+    @@special_processing = special_processing
     offset = 0
     records_remaining_to_fetch = catalog_size
 
@@ -18,12 +21,24 @@ class CatalogBuilder
                             LIMIT_PER_CALL : records_remaining_to_fetch
       records_remaining_to_fetch -= call_limit
 
-      puts "** Call to API sent for #{call_limit.to_s} records at offset #{offset.to_s}: " + current_time
+      puts "** Called API for #{call_limit.to_s} records at offset #{offset.to_s}: " + current_time
 
       begin
-        api_result = open(LIBRIVOX_API_URL + LIBRIVOX_API_PARMS +
-            "&offset=" + offset.to_s + "&limit=" + call_limit.to_s + optional_parms,
-            :read_timeout=>nil)
+        api_parms = LIBRIVOX_API_PARMS +
+            "&offset=" + offset.to_s + "&limit=" + call_limit.to_s + optional_parms
+        if @@special_processing == :save_http_responses
+          open(get_local_uri(api_parms), "wb") { |file|
+            open(LIBRIVOX_API_URL + api_parms, :read_timeout=>nil) { |uri|
+               file.write(uri.read)
+            }
+          }
+        end
+        if @@special_processing == :local_uri_calls
+          uri = get_local_uri(api_parms)
+        else
+          uri = LIBRIVOX_API_URL + api_parms
+        end
+        api_result = open(uri, :read_timeout=>nil)
       rescue OpenURI::HTTPError => ex
         if ex.to_s.start_with?("404")
           puts "** HTTP 404 response from Librivox API; apparent end of catalog has been reached! **"
@@ -40,28 +55,23 @@ class CatalogBuilder
       json_string = api_result.read
       returned_hash = JSON.parse(json_string,{symbolize_names: true})
       hash_array = returned_hash.values[0]
-      hash_array.each{ |hash|
-        scraped_hash =
-          ScraperLibrivox.get_audiobook_attributes_hash(hash[:url_librivox])
-        hash.merge!(scraped_hash)
-      }
-  #    scraped_array = ScraperLibrivox.get_audiobook_attributes_hash(hash_array[:url_librivox])
       Audiobook.mass_initialize(hash_array)
       puts "** Initialization of Audiobook set completed: " + current_time
       puts "====="
     end
 
-#    self.scrape_webpages
+    self.scrape_webpages
+    self.build_category_objects
   end
 
   def self.scrape_webpages
     puts "** STARTING scraping of pages for #{Audiobook.all.size.to_s} audiobooks: " + current_time
-
     Audiobook.all.each{ |audiobook|
-      audiobook.add_attributes(ScraperLibrivox.get_audiobook_attributes_hash(audiobook.url_librivox))
+      audiobook.add_attributes(
+        ScraperLibrivox.get_audiobook_attributes_hash(audiobook.url_librivox, @@special_processing))
     }
-
     puts "** COMPLETED scraping of pages for #{Audiobook.all.size.to_s} audiobooks: " + current_time
+    puts "====="
   end
 
   def self.current_time
@@ -69,4 +79,18 @@ class CatalogBuilder
     current_time = current_time.slice(0,current_time.length - 6)
     return current_time
   end
+
+  def self.build_category_objects
+    puts "** STARTING building of Category objects for #{Audiobook.all.size.to_s} audiobooks: " + current_time
+    Audiobook.all.each{ |audiobook|
+      audiobook.build_category_objects
+    }
+    puts "** COMPLETED building of Category objects for #{Audiobook.all.size.to_s} audiobooks: " + current_time
+    puts "====="
+  end
+
+  def self.get_local_uri(api_parms)
+    return LOCAL_API_RESPONSE_URI_PREFIX + api_parms
+  end
+
 end

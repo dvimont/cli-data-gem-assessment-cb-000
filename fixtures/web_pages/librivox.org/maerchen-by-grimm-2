@@ -1,0 +1,1425 @@
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 ie"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 ie"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 ie"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9 ie"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type">
+
+  <title>LibriVox</title>
+  <meta name="description" content="Librivox" />
+  <meta name="author" content="Librivox" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://librivox.org/favicon.ico">
+  <link rel="stylesheet" href="https://librivox.org/css/style.css?v=1">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <script type="text/javascript" src="https://librivox.org/js/catalog/small-menu.js"></script> 
+ 
+
+  <script type="text/javascript">
+  	var CI_ROOT = "https://librivox.org/"
+  </script>
+
+</head>
+
+<body>
+
+	<section class="header-wrap">
+		<header class="site-header">
+		
+			<!-- Site title/Logo and tagline -->
+			<hgroup class="logo-wrap">
+				<h1 class="logo"><a href="https://librivox.org/"><img src="https://librivox.org/images/librivox-logo.png" alt="librivox-logo" width="180" height="37"><span class="assistive-text">Librivox</span></a></h1>
+				<h3 class="tagline">Acoustical liberation of books in the public domain</h3>
+			</hgroup>
+			
+			<!-- Sub menu -->
+			<nav class="sub-menu">
+			<h1 class="assistive-text icon-fontawesome-webfont"><span>Menu</span></h1>
+			<div class="assistive-text skip-link"><a href="#" title="Skip to content">Skip to content</a></div> 
+				<ul class="sub-menu-list">
+					<li class="first"><a href="https://librivox.org/pages/about-librivox">about</a></li>
+					<li><a href="http://forum.librivox.org/">forum</a></li>	
+					<li><a href="https://librivox.org/pages/contact-librivox">contact</a></li>
+					<li><a href="https://librivox.org/pages/help">help</a></li>
+					<li class="twitter ir"><a href="http://twitter.com/librivox">Twitter</a></li>
+					<!-- <li class="facebook ir"><a href="http://www.facebook.com/LibriVox">Facebook</a></li> -->
+					<li class="rss "><a href="https://librivox.org/pages/librivox-feeds">rss</a></li> 
+				</ul>																
+			</nav><!-- end sub-menu -->   
+			
+			<!-- Search Form -->	
+			<div class="search-wrap">
+				<form role="search" action="#" id="searchform" method="get" class="searchform">
+					<label class="assistive-text" for="q">Search Librivox</label>
+					<input type="text" placeholder="Search by Author, Title or Reader" id="q" name="q" class="field">
+					<input type="text" id="dummy" name="dummy" style="display:none;">
+					<input type="submit" value="Search" id="searchsubmit" name="submit" class="submit">
+				</form>
+
+				<a href="#" class="advanced-search js-advanced-search"> Advanced search</a>	
+			</div> <!-- end search-wrap -->		    
+		</header>
+		
+
+
+	<!-- Main menu -->	
+	<div class="main-menu-wrap">
+		<section class="main-menu">
+			<h3>Browse the catalog</h3>
+			<nav class="main-menu-list-wrap"> 
+				<ul class="main-menu-list">
+					<li data-menu_item="author" class="js-menu_item first"><a href="#"><span class="author-icon"></span>Author</a></li>
+					<li data-menu_item="title" class="js-menu_item last"><a href="#"><span class="title-icon"></span>Title</a></li>
+					<li data-menu_item="genre" class="js-menu_item "><a href="#" ><span class="genre-icon"></span>Genre/Subject</a></li>
+					<li data-menu_item="language" class="js-menu_item "><a href="#"><span class="language-icon"></span>Language</a></li>
+					<!-- <li data-menu_item="reader" class="js-menu_item "><a href="#"><span class="reader-icon"></span>Reader</a></li> -->
+					
+				</ul>
+			</nav>
+			
+													
+		</section> <!-- end main-menu --> 
+		
+
+	</div> <!-- end .main-menu-wrap -->	  
+
+	</section><!-- end .header-wrap -->	
+
+
+	<input type="hidden" id="primary_key" value="0">
+
+<div class="main-content">
+	
+	
+	<div class="sidebar book-page">
+
+
+	<a href="https://librivox.org/pages/donate-to-librivox/" class="donate">Donate to Librivox</a>
+
+	<a href="https://librivox.org/pages/thank-a-reader/" class="thank-reader">Thank a reader</a>
+
+
+	
+	<div class="disclaimer">
+		LibriVox recordings are Public Domain in the USA. If you are not in the USA, please verify the copyright status of these works in your own country before downloading, otherwise you may be violating copyright laws.
+	</div>
+
+
+	
+	<div class="book-page-sidebar">
+		
+		<h4>Listen/Download (<a href="https://librivox.org/pages/help">help?</a>)</h4>
+
+		<dl class="listen-download clearfix">
+				
+			  <dt>Whole book (zip file)</dt>
+			  <dd><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_maerchen2_librivox_64kb_mp3.zip" class="book-download-btn">Download</a></dd>
+			
+			  <dt>Subscribe by iTunes</dt>
+			  <dd><a href="itpc://librivox.org/rss/444" class="book-download-btn">iTunes</a></dd>
+
+			  <dt>RSS Feed</dt>
+			  <dd><a href="http://librivox.org/rss/444" class="book-download-btn">RSS</a></dd>
+
+			  <dt>Download torrent</dt>
+			  <dd><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_maerchen2_librivox_archive.torrent" class="book-download-btn">Torrent</a></dd> 					  
+		</dl>
+
+		
+					
+	</div>
+	
+	<div class="book-page-sidebar">
+		<h4>Production details</h4>
+		<dl class="product-details clearfix">
+		  <dt>Running Time:</dt>
+		  <dd>8:26:19</dd>
+
+		  <dt>Zip file size:</dt>
+		  <dd>243.0MB</dd>
+		
+		  <dt>Catalog date:</dt>
+		  <dd>2006-07-11</dd>
+		
+		  <dt>Read by:</dt>
+		  <dd>LibriVox Volunteers</dd> 
+		  
+		  <dt>Book Coordinator:</dt>
+		  <dd><a href="https://librivox.org/reader/20">Gesine</a></dd>
+		  
+		  <dt>Meta Coordinator:</dt>
+		  <dd><a href="https://librivox.org/reader/20">Gesine</a></dd>
+		  
+		  <dt>Proof Listener:</dt>
+		  <dd><a href="https://librivox.org/reader/">&nbsp;</a></dd>				  
+		</dl>
+
+	</div>
+	
+	<div class="book-page-sidebar">
+		<h4>Links</h4>
+
+					<p><a href="http://www.archive.org/details/grimm_maerchen2_librivox">Internet Archive Page</a></p>
+		
+					<p><a href="http://gutenberg.spiegel.de/grimm/maerchen/0htmldir.htm">Online text</a></p>
+		
+									<p><a href="http://en.wikipedia.org/wiki/Brothers_Grimm">Wikipedia -  Jacob & Wilhelm Grimm</a></p>
+							
+
+		
+					<p><a href="http://de.wikipedia.org/wiki/Grimms_Märchen">de.Wikipedia - Grimms Märchen</a></p>
+					<p><a href="http://librivox.org/maerchen-by-grimm-1/ ">Grimms Märchen 1</a></p>
+					<p><a href="http://librivox.org/maerchen-by-grimm-3/ ">Grimms Märchen 3</a></p>
+					<p><a href="http://librivox.org/maerchen-by-grimm-4/ ">Grimms Märchen 4</a></p>
+					<p><a href="http://librivox.org/maerchen-by-grimm-5/ ">Grimms Märchen 5</a></p>
+					<p><a href="https://archive.org/download/grimm_maerchen2_librivox/GrimmsMrchen2Part1_librivox.m4b">M4B Hörbuch Teil 1</a></p>
+					<p><a href="https://archive.org/download/grimm_maerchen2_librivox/GrimmsMrchen2Part2_librivox.m4b">M4B Hörbuch Teil 2</a></p>
+		
+	</div>
+				
+
+
+
+
+</div>	
+	
+	<div class="page book-page">
+
+			<div class="content-wrap clearfix">
+				<div class="book-page-book-cover">
+					<img src="http://archive.org/download/grimm_maerchen2_librivox/grimm2_booklet.jpg" alt="book-cover-large" width="175" height="175" />
+
+										<a href="http://archive.org/download/grimm_maerchen2_librivox/grimm2_booklet.jpg" class="download-cover">Download cover art</a>
+					
+										<a href="http://archive.org/download/grimm_maerchen2_librivox/grimm2_booklet.pdf" class="download-cover">Download CD case insert</a>
+					
+				</div>
+				
+				<h1>Märchen 2</h1>
+				
+				<p class="book-page-author"><a href="https://librivox.org/author/4098"> Jacob & Wilhelm GRIMM (1785 - 1863)</a></p>
+				
+				<div class="description"><p>Anfang des 19. Jahrhundert begannen die Brüder Jacob und Wilhelm Grimm, traditionelle, bisher vor allem mündlich weitergegebene Erzählungen zusammenzutragen. Diese Sammlung ist als die Märchen der Gebrüder Grimm weltbekannt geworden und umfaßt so berühmte Geschichten wie Rapunzel, Hänsel und Gretel, Rumpelstilzchen, Rotkäppchen und viele andere. Diese Märchen wurden später stark editiert und beschönt. Die hier vorliegenden Versionen entsprechen aber stärker den originalen, teils drastischen Fassungen.<br />
+(Zusammenfassung von Rainer)
+</p></div>	<!-- .description -->
+
+				<p class="book-page-genre"><span>Genre(s):</span> Children's Fiction, Myths, Legends & Fairy Tales</p>
+
+				<p class="book-page-genre"><span>Language:</span> German</p>
+
+								<p class="book-page-genre"><span>Group:</span><a href="https://librivox.org/group/545"> Märchen von Jacob & Wilhelm Grimm</a></p>
+				
+				
+			</div> 	<!-- end .content-wrap --> 
+		
+			<table class="chapter-download">
+					<thead>
+						<tr>
+							<th>Section</th>
+							<th>Chapter</th>
+							
+							<th>Reader</th>
+							<th>Time</th>
+
+							
+						</tr>
+					</thead>
+						<tbody>
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_001_allerleirauh_64kb.mp3" class="play-btn">Play</a> 01 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_001_allerleirauh.mp3" class="chapter-name">Allerleirauh</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:13:37</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_002_armutunddemut_64kb.mp3" class="play-btn">Play</a> 02 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_002_armutunddemut.mp3" class="chapter-name">Armut und Demut führen zum Himmel</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:03:37</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_003_aschenputtel_64kb.mp3" class="play-btn">Play</a> 03 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_003_aschenputtel.mp3" class="chapter-name">Aschenputtel</a></td>
+								
+								<td><a href="https://librivox.org/reader/146">Felix</a><br/></td>
+								<td>00:13:41</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_004_bruederchen_und_schwesterchen_64kb.mp3" class="play-btn">Play</a> 04 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_004_bruederchen_und_schwesterchen.mp3" class="chapter-name">Brüderchen und Schwesterchen</a></td>
+								
+								<td><a href="https://librivox.org/reader/137">Stephan Gambke</a><br/></td>
+								<td>00:14:38</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_005_bruderlustig_64kb.mp3" class="play-btn">Play</a> 05 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_005_bruderlustig.mp3" class="chapter-name">Bruder Lustig</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:24:50</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_006_das_buerle_64kb.mp3" class="play-btn">Play</a> 06 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_006_das_buerle.mp3" class="chapter-name">Das Bürle</a></td>
+								
+								<td><a href="https://librivox.org/reader/430">Dr. Jochen Kulow</a><br/></td>
+								<td>00:11:50</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_007_dasdietmarsicheluegenmaerchen_64kb.mp3" class="play-btn">Play</a> 07 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_007_dasdietmarsicheluegenmaerchen.mp3" class="chapter-name">Das dietmarsische Lügenmärchen</a></td>
+								
+								<td><a href="https://librivox.org/reader/430">Dr. Jochen Kulow</a><br/></td>
+								<td>00:01:45</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_008_das_eselein_64kb.mp3" class="play-btn">Play</a> 08 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_008_das_eselein.mp3" class="chapter-name">Das Eselein</a></td>
+								
+								<td><a href="https://librivox.org/reader/430">Dr. Jochen Kulow</a><br/></td>
+								<td>00:08:24</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_009_dashausgesinde_64kb.mp3" class="play-btn">Play</a> 09 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_009_dashausgesinde.mp3" class="chapter-name">Das Hausgesinde</a></td>
+								
+								<td><a href="https://librivox.org/reader/430">Dr. Jochen Kulow</a><br/></td>
+								<td>00:01:55</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_010_hirtenbueblein_64kb.mp3" class="play-btn">Play</a> 10 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_010_hirtenbueblein.mp3" class="chapter-name">Das Hirtenbüblein</a></td>
+								
+								<td><a href="https://librivox.org/reader/430">Dr. Jochen Kulow</a><br/></td>
+								<td>00:02:43</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_012_lumpengesindel_64kb.mp3" class="play-btn">Play</a> 11 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_012_lumpengesindel.mp3" class="chapter-name">Das Lumpengesindel</a></td>
+								
+								<td><a href="https://librivox.org/reader/137">Stephan Gambke</a><br/></td>
+								<td>00:05:16</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_013_das_maedchen_ohne_haende_FIXED_64kb.mp3" class="play-btn">Play</a> 12 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_013_das_maedchen_ohne_haende_FIXED.mp3" class="chapter-name">Das Mädchen ohne Hände</a></td>
+								
+								<td><a href="https://librivox.org/reader/253">Stefan Schmelz</a><br/></td>
+								<td>00:14:32</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_014_das_maerchen_vom_schlaraffenland_64kb.mp3" class="play-btn">Play</a> 13 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_014_das_maerchen_vom_schlaraffenland.mp3" class="chapter-name">Das Märchen vom Schlaraffenland</a></td>
+								
+								<td><a href="https://librivox.org/reader/253">Stefan Schmelz</a><br/></td>
+								<td>00:02:58</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_015_das_meerhaeschen_64kb.mp3" class="play-btn">Play</a> 14 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_015_das_meerhaeschen.mp3" class="chapter-name">Das Meerhäschen</a></td>
+								
+								<td><a href="https://librivox.org/reader/253">Stefan Schmelz</a><br/></td>
+								<td>00:07:52</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_016_das_raetsel_64kb.mp3" class="play-btn">Play</a> 15 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_016_das_raetsel.mp3" class="chapter-name">Das Rätsel</a></td>
+								
+								<td><a href="https://librivox.org/reader/20">Gesine</a><br/></td>
+								<td>00:07:52</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_017_riesenspielzeug_64kb.mp3" class="play-btn">Play</a> 16 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_017_riesenspielzeug.mp3" class="chapter-name">Das Riesenspielzeug</a></td>
+								
+								<td><a href="https://librivox.org/reader/430">Dr. Jochen Kulow</a><br/></td>
+								<td>00:02:41</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_018_totenhemdchen_64kb.mp3" class="play-btn">Play</a> 17 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_018_totenhemdchen.mp3" class="chapter-name">Das Totenhemdchen</a></td>
+								
+								<td><a href="https://librivox.org/reader/66">Alex Foster</a><br/></td>
+								<td>00:02:29</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_019_dasunglueck_64kb.mp3" class="play-btn">Play</a> 18 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_019_dasunglueck.mp3" class="chapter-name">Das Unglück</a></td>
+								
+								<td><a href="https://librivox.org/reader/430">Dr. Jochen Kulow</a><br/></td>
+								<td>00:02:01</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_021_das_wasser_des_lebens_64kb.mp3" class="play-btn">Play</a> 19 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_021_das_wasser_des_lebens.mp3" class="chapter-name">Das Wasser des Lebens</a></td>
+								
+								<td><a href="https://librivox.org/reader/253">Stefan Schmelz</a><br/></td>
+								<td>00:13:42</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_022_das_alte_muetterchen_64kb.mp3" class="play-btn">Play</a> 20 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_022_das_alte_muetterchen.mp3" class="chapter-name">Das alte Mütterchen</a></td>
+								
+								<td><a href="https://librivox.org/reader/253">Stefan Schmelz</a><br/></td>
+								<td>00:02:43</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_023_das-arme-maedchen_2_64kb.mp3" class="play-btn">Play</a> 21 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_023_das-arme-maedchen_2.mp3" class="chapter-name">Das arme Mädchen</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:02:01</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_024_das_blaue_licht_64kb.mp3" class="play-btn">Play</a> 22 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_024_das_blaue_licht.mp3" class="chapter-name">Das blaue Licht</a></td>
+								
+								<td><a href="https://librivox.org/reader/253">Stefan Schmelz</a><br/></td>
+								<td>00:10:35</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_025_das_eigensinnige_kind_64kb.mp3" class="play-btn">Play</a> 23 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_025_das_eigensinnige_kind.mp3" class="chapter-name">Das eigensinnige Kind</a></td>
+								
+								<td><a href="https://librivox.org/reader/430">Dr. Jochen Kulow</a><br/></td>
+								<td>00:01:22</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_026_das_junggegluehte_maennlein_64kb.mp3" class="play-btn">Play</a> 24 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_026_das_junggegluehte_maennlein.mp3" class="chapter-name">Das junggeglühte Männlein</a></td>
+								
+								<td><a href="https://librivox.org/reader/430">Dr. Jochen Kulow</a><br/></td>
+								<td>00:04:33</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_041_armeundderreiche_64kb.mp3" class="play-btn">Play</a> 25 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_041_armeundderreiche.mp3" class="chapter-name">Der Arme und der Reiche</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:10:04</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_042_der_baerenhaeuter_64kb.mp3" class="play-btn">Play</a> 26 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_042_der_baerenhaeuter.mp3" class="chapter-name">Der Bärenhäuter</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:12:21</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_043_derbauerundderteufel_64kb.mp3" class="play-btn">Play</a> 27 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_043_derbauerundderteufel.mp3" class="chapter-name">Der Bauer und der Teufel</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:02:58</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_044_der_dreschflegel_vom_himmel_64kb.mp3" class="play-btn">Play</a> 28 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_044_der_dreschflegel_vom_himmel.mp3" class="chapter-name">Der Dreschflegel vom Himmel </a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:02:46</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_045_der_eisenhans_64kb.mp3" class="play-btn">Play</a> 29 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_045_der_eisenhans.mp3" class="chapter-name">Der Eisenhans</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:20:22</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_046_der_eisenofen_64kb.mp3" class="play-btn">Play</a> 30 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_046_der_eisenofen.mp3" class="chapter-name">Der Eisenofen</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:13:31</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_047_der_frieder_und_das_catherlieschen_64kb.mp3" class="play-btn">Play</a> 31 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_047_der_frieder_und_das_catherlieschen.mp3" class="chapter-name">Der Frieder und das Catherlieschen</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:14:57</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_048_froschkoenig_64kb.mp3" class="play-btn">Play</a> 32 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_048_froschkoenig.mp3" class="chapter-name">Der Froschkönig</a></td>
+								
+								<td><a href="https://librivox.org/reader/278">AliceG</a><br/></td>
+								<td>00:11:14</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_049_der_fuchs_und_das_pferd_64kb.mp3" class="play-btn">Play</a> 33 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_049_der_fuchs_und_das_pferd.mp3" class="chapter-name">Der Fuchs und das Pferd</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:03:11</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_050_der_fuchs_und_die_frau_gevatterin_64kb.mp3" class="play-btn">Play</a> 34 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_050_der_fuchs_und_die_frau_gevatterin.mp3" class="chapter-name">Der Fuchs und die Frau Gevatterin</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:02:36</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_051_der_fuchs_und_die_gaense_64kb.mp3" class="play-btn">Play</a> 35 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_051_der_fuchs_und_die_gaense.mp3" class="chapter-name">Der Fuchs und die Gänse</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:01:48</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_052_der_fuchs_und_die_katze_64kb.mp3" class="play-btn">Play</a> 36 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_052_der_fuchs_und_die_katze.mp3" class="chapter-name">Der Fuchs und die Katze</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:02:13</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_054_gevattertod_64kb.mp3" class="play-btn">Play</a> 37 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_054_gevattertod.mp3" class="chapter-name">Der Gevatter Tod</a></td>
+								
+								<td><a href="https://librivox.org/reader/411">Oliver Lucas</a><br/></td>
+								<td>00:08:18</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_056_der_hahnenbalken_64kb.mp3" class="play-btn">Play</a> 38 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_056_der_hahnenbalken.mp3" class="chapter-name">Der Hahnenbalken</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:01:59</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_057_der_hase_und_der_igel_FIXED_64kb.mp3" class="play-btn">Play</a> 39 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_057_der_hase_und_der_igel_FIXED.mp3" class="chapter-name">Der Hase und der Igel</a></td>
+								
+								<td><a href="https://librivox.org/reader/253">Stefan Schmelz</a><br/></td>
+								<td>00:08:12</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_066_der_mond_FIXED_64kb.mp3" class="play-btn">Play</a> 40 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_066_der_mond_FIXED.mp3" class="chapter-name">Der Mond</a></td>
+								
+								<td><a href="https://librivox.org/reader/253">Stefan Schmelz</a><br/></td>
+								<td>00:04:59</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_067_der_nagel_64kb.mp3" class="play-btn">Play</a> 41 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_067_der_nagel.mp3" class="chapter-name">Der Nagel</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:01:55</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_075_des_teufels_grossmutter_64kb.mp3" class="play-btn">Play</a> 42 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_075_des_teufels_grossmutter.mp3" class="chapter-name">Der Teufel und seine Großmutter</a></td>
+								
+								<td><a href="https://librivox.org/reader/253">Stefan Schmelz</a><br/></td>
+								<td>00:08:08</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_078_der_wolf_und_der_fuchs_64kb.mp3" class="play-btn">Play</a> 43 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_078_der_wolf_und_der_fuchs.mp3" class="chapter-name">Der Wolf und der Fuchs</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:05:08</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_079_derwolfunddermensch_64kb.mp3" class="play-btn">Play</a> 44 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_079_derwolfunddermensch.mp3" class="chapter-name">Der Wolf und der Mensch</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:03:19</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_080_wolf_und_die_sieben_jungen_geisslein_64kb.mp3" class="play-btn">Play</a> 45 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_080_wolf_und_die_sieben_jungen_geisslein.mp3" class="chapter-name">Der Wolf und die sieben jungen Geißlein</a></td>
+								
+								<td><a href="https://librivox.org/reader/137">Stephan Gambke</a><br/></td>
+								<td>00:07:02</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_083_der_alte_grossvater_und_der_enkel_64kb.mp3" class="play-btn">Play</a> 46 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_083_der_alte_grossvater_und_der_enkel.mp3" class="chapter-name">Der alte Großvater und der Enkel</a></td>
+								
+								<td><a href="https://librivox.org/reader/146">Felix</a><br/></td>
+								<td>00:01:31</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_091_gestiefelterkater_64kb.mp3" class="play-btn">Play</a> 47 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_091_gestiefelterkater.mp3" class="chapter-name">Der gestiefelte Kater</a></td>
+								
+								<td><a href="https://librivox.org/reader/146">Felix</a><br/></td>
+								<td>00:10:46</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_093_derglaesernesarg_64kb.mp3" class="play-btn">Play</a> 48 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_093_derglaesernesarg.mp3" class="chapter-name">Der gläserne Sag</a></td>
+								
+								<td><a href="https://librivox.org/reader/146">Felix</a><br/></td>
+								<td>00:13:38</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_100_der_suesse_brei_64kb.mp3" class="play-btn">Play</a> 49 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_100_der_suesse_brei.mp3" class="chapter-name">Der süße Brei</a></td>
+								
+								<td><a href="https://librivox.org/reader/590">atti</a><br/></td>
+								<td>00:01:47</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_105_wunderliche_spielmann_64kb.mp3" class="play-btn">Play</a> 50 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_105_wunderliche_spielmann.mp3" class="chapter-name">Der wunderliche Spielmann</a></td>
+								
+								<td><a href="https://librivox.org/reader/137">Stephan Gambke</a><br/></td>
+								<td>00:06:59</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_106_desherrnunddesteufelsgetier_64kb.mp3" class="play-btn">Play</a> 51 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_106_desherrnunddesteufelsgetier.mp3" class="chapter-name">Des Herrn und des Teufels Getier</a></td>
+								
+								<td><a href="https://librivox.org/reader/146">Felix</a><br/></td>
+								<td>00:02:38</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_112_die_bremer_stadtmusikanten_64kb.mp3" class="play-btn">Play</a> 52 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_112_die_bremer_stadtmusikanten.mp3" class="chapter-name">Die Bremer Stadtmusikanten</a></td>
+								
+								<td><a href="https://librivox.org/reader/19">Kara Shallenberg</a><br/></td>
+								<td>00:09:13</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_115_die_eule_64kb.mp3" class="play-btn">Play</a> 53 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_115_die_eule.mp3" class="chapter-name">Die Eule</a></td>
+								
+								<td><a href="https://librivox.org/reader/143">Marcus Exner</a><br/></td>
+								<td>00:06:06</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_118_die_geschenke_des_kleinen_volkes_64kb.mp3" class="play-btn">Play</a> 54 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_118_die_geschenke_des_kleinen_volkes.mp3" class="chapter-name">Die Geschenke des kleinen Volkes</a></td>
+								
+								<td><a href="https://librivox.org/reader/143">Marcus Exner</a><br/></td>
+								<td>00:06:36</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_125_nelke_64kb.mp3" class="play-btn">Play</a> 55 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_125_nelke.mp3" class="chapter-name">Die Nelke</a></td>
+								
+								<td><a href="https://librivox.org/reader/252">Rainer</a><br/></td>
+								<td>00:12:15</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_136_die_alte_bettelfrau_64kb.mp3" class="play-btn">Play</a> 56 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_136_die_alte_bettelfrau.mp3" class="chapter-name">Die alte Bettelfrau</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:01:31</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_138_die_drei_brueder_64kb.mp3" class="play-btn">Play</a> 57 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_138_die_drei_brueder.mp3" class="chapter-name">Die drei Brüder</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:04:31</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_140_die_drei_federn_64kb.mp3" class="play-btn">Play</a> 58 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_140_die_drei_federn.mp3" class="chapter-name">Die drei Federn</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:07:05</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_142_die_drei_glueckskinder_64kb.mp3" class="play-btn">Play</a> 59 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_142_die_drei_glueckskinder.mp3" class="chapter-name">Die drei Glückskinder</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:06:37</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_143_die_drei_handwerksburschen_64kb.mp3" class="play-btn">Play</a> 60 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_143_die_drei_handwerksburschen.mp3" class="chapter-name">Die drei Handwerksburschen</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:07:49</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_150_goldenegans_64kb.mp3" class="play-btn">Play</a> 61 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_150_goldenegans.mp3" class="chapter-name">Die goldene Gans</a></td>
+								
+								<td><a href="https://librivox.org/reader/252">Rainer</a><br/></td>
+								<td>00:10:57</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_152_die_himmlische_hochzeit_64kb.mp3" class="play-btn">Play</a> 62 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_152_die_himmlische_hochzeit.mp3" class="chapter-name">Die himmlische Hochzeit</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:03:48</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_153_die_klare_sonne_bringts_an_den_tag_64kb.mp3" class="play-btn">Play</a> 63 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_153_die_klare_sonne_bringts_an_den_tag.mp3" class="chapter-name">Die klare Sonne bringt’s an den Tag</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:03:43</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_154_die_kluge_bauerntochter_64kb.mp3" class="play-btn">Play</a> 64 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_154_die_kluge_bauerntochter.mp3" class="chapter-name">Die kluge Bauerntochter</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:08:53</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_156_die_klugen_leute_64kb.mp3" class="play-btn">Play</a> 65 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_156_die_klugen_leute.mp3" class="chapter-name">Die klugen Leute</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:09:08</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_168_die_wunderliche_gasterei_64kb.mp3" class="play-btn">Play</a> 66 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_168_die_wunderliche_gasterei.mp3" class="chapter-name">Die wunderliche Gasterei</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:02:48</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_170_die_zwoelf_apostel_64kb.mp3" class="play-btn">Play</a> 67 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_170_die_zwoelf_apostel.mp3" class="chapter-name">Die zwölf Apostel</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:03:14</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_173_die_zwoelf_faulen_knechte_64kb.mp3" class="play-btn">Play</a> 68 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_173_die_zwoelf_faulen_knechte.mp3" class="chapter-name">Die zwölf faulen Knechte</a></td>
+								
+								<td><a href="https://librivox.org/reader/396">Matthias Blazejak</a><br/></td>
+								<td>00:07:11</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_176_dornroeschen_64kb.mp3" class="play-btn">Play</a> 69 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_176_dornroeschen.mp3" class="chapter-name">Dornröschen</a></td>
+								
+								<td><a href="https://librivox.org/reader/145">Carsten Thiel</a><br/></td>
+								<td>00:08:40</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_196_laeuschenundfloehchen_64kb.mp3" class="play-btn">Play</a> 70 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_196_laeuschenundfloehchen.mp3" class="chapter-name">Läuschen und Flöhchen</a></td>
+								
+								<td><a href="https://librivox.org/reader/356">Julia Wahl</a><br/></td>
+								<td>00:02:56</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_205_raetselmaerchen_64kb.mp3" class="play-btn">Play</a> 71 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_205_raetselmaerchen.mp3" class="chapter-name">Rätselmärchen</a></td>
+								
+								<td><a href="https://librivox.org/reader/590">atti</a><br/></td>
+								<td>00:01:09</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_211_schneewittchen_64kb.mp3" class="play-btn">Play</a> 72 </td>
+								<td><a href="http://www.archive.org/download/grimm_maerchen2_librivox/grimm_211_schneewittchen.mp3" class="chapter-name">Schneewittchen</a></td>
+								
+								<td><a href="https://librivox.org/reader/145">Carsten Thiel</a><br/></td>
+								<td>00:20:06</td>
+
+															</tr>
+
+						
+					</tbody>
+				</table>
+	
+
+</div><!-- end .page -->
+</div><!-- end .main-content -->
+
+
+	<footer class="footer-wrap">
+		<div class="footer">
+		
+		   
+			
+			<p class="license clear"><a href="#"><img src="https://librivox.org/images/public-domain-license.gif" alt="public-domain-license" width="88" height="31" /></a></p>
+		</div><!-- end .footer-wrap -->	
+	</footer>
+    <!--[if lte IE 9]>	
+	    <script type="text/javascript" src="https://librivox.org/js/catalog/jquery.columnizer.js"></script>
+     <![endif]-->
+
+
+
+<script type="text/javascript">
+
+	var search_category = "page";
+
+	var sub_category;
+
+	var advanced_search = "0";
+
+	var primary_key = 0;
+
+	var search_page  = "1";
+	set_advanced_form_page(search_page);
+
+	var search_order = 'alpha';
+
+	var project_type = 'either';
+
+	var q = "";
+
+	var spinner = '<div class="loading_img" style="margin-left:300px;margin-top:60px;"><img src="../../img/loading.gif"/></div>';
+
+	$('.browse-header').hide();
+
+	var pathArray = window.location.pathname.split( '/' );
+
+	var current_page = pathArray[1]; 
+
+	if (q != '')
+	{
+		advanced_search = 0;
+		$('.advanced-search-inner').hide('slow');
+		librivox_search();
+	}
+	else if (advanced_search == 1)
+	{
+		advanced_search_actions();
+	}
+	else if (advanced_search == 2)
+	{
+		advanced_form_submit();
+	}
+	else if (advanced_search == 3)
+	{
+		//may be able to combine with below
+		$('.advanced-search-inner').hide();
+		get_results(search_category, search_page, sub_category, primary_key);
+	}
+	else
+	{	
+		//only on loading search page
+		if (current_page == 'search') 
+		{
+			var item = $('.js-menu_item[data-menu_item="'+search_category+'"]');
+			load_search_data(item, search_category);
+		}
+		else if (jQuery.inArray(current_page, ['author', 'reader', 'group']) > -1)
+		{
+			get_results(current_page, search_page, sub_category, primary_key);
+		}
+
+	}	
+	advanced_search = 0; // it's done its job
+
+
+	// do better 
+	$('#sort_type').hide();
+	if (search_category == 'title' ||  search_category == 'reader')
+	{
+		$('#sort_type').show();
+	}	
+
+	$('#sort_menu').hide();
+	if (search_category == 'title' || (primary_key > 0))
+	{
+		$('#sort_menu').show();
+	}	
+
+
+	// Manage menus
+	$('.js-menu_item').on('click', function(e){
+
+		search_category = $(this).attr('data-menu_item');
+
+		primary_key = 0;
+
+		if (current_page != 'search') 
+		{
+			window.location.href = CI_ROOT + 'search/' + search_category;
+		}	
+
+		e.preventDefault();
+
+		$('.advanced-search-inner').hide('slow');
+		$('#sidebar_wrapper').show();
+
+		$('#sort_menu').hide();
+		if (search_category == 'title' || (primary_key > 0))
+		{
+			$('#sort_menu').show();
+		}	
+
+		q = '';
+		$('#q').val('');		
+		
+		load_search_data($(this), $(this).attr('data-menu_item'));
+
+	});
+
+	$('.js-title-submenu').on('click', function(e){
+		e.preventDefault();
+		$('.js-title-submenu a').removeClass('selected');
+		$(this).children('a').addClass('selected');
+
+		project_type = $(this).attr('data-submenu');
+
+		set_advanced_form_page(1); //this is a new search, so reset
+
+		get_results(search_category, search_page, sub_category, primary_key);
+	});
+
+	$('.js-sort-menu').on('change', function(){
+		search_order = $(this).val();
+		get_results(search_category, search_page, sub_category, primary_key);
+
+	});
+
+
+	function load_search_data(item, label)
+	{
+		$('.js-menu_item a').removeClass('active').removeClass('current-page');
+
+		item.children('a').addClass('active').addClass('current-page');
+
+		//console.log(item.attr('data-menu_item'));
+
+		//global
+		search_order = 'alpha';
+		if (item.attr('data-menu_item') == 'title')
+		{
+			search_order = 'catalog_date';
+		}
+
+		$('.js-sort-menu').val(search_order);		
+
+		get_results(search_category, 1);
+
+		set_browse_header(label);
+
+	}
+
+
+	function set_browse_header(label)
+	{
+		label = label.charAt(0).toUpperCase() + label.slice(1);
+		var text = 'Browsing <span>'+ label +'</span>';
+		$('.browse-header').html(text).show();
+		$('.browse-header-wrap').show();
+	}
+
+
+	function get_results(search_category, search_page, sub_category, primary_key)
+	{
+	    sub_category 	= typeof sub_category !== 'undefined' ? sub_category : '';
+	    primary_key 	= typeof primary_key !== 'undefined' ? primary_key : 0;
+	    search_order 	= typeof search_order !== 'undefined' ? search_order : 'alpha';
+	    project_type 	= typeof project_type !== 'undefined' ? project_type : 'either';
+
+		var params = { 'primary_key': primary_key, 'search_category':search_category, 'sub_category': sub_category ,'search_page':search_page, 'search_order': search_order, 'project_type': project_type} ;
+
+		if (history.pushState && current_page == 'search') {
+			history.pushState(null, location.textContent, location.href);
+			history.replaceState(null, null, "https://librivox.org/search");
+		}
+
+		$.ajax({
+		  	url: CI_ROOT + current_page + '/get_results' ,
+		  	type: 'get', //yes, get...we want these all to work through the browser addressbar as well, now
+		  	data: { 'primary_key': primary_key, 'search_category':search_category, 'sub_category': sub_category ,'search_page':search_page, 'search_order': search_order, 'project_type': project_type},
+		  	beforeSend: function(){
+		  		$('.browse-list').html(spinner);
+		  		$('.page-number-nav').html('');
+		  	}, 		  	
+	      	complete: function(r){
+				var response_obj = jQuery.parseJSON(r.responseText);
+
+				$('.browse-list').html('');
+
+				if (response_obj.status == 'SUCCESS')
+				{				
+
+			  		$('#sort_menu').hide();
+			  		$('#sort_type').hide();
+
+
+					if ((response_obj.results != 'No results') && (search_category != 'group') && (search_category == 'title' || (primary_key > 0)))
+					{
+						$('#sort_menu').show();	
+						$('#sort_type').show();				
+					}
+
+					$('.browse-list').html(response_obj.results);
+					$('.page-number-nav').html(response_obj.pagination);
+				}
+
+				if (history.pushState) {
+					history.pushState(null, location.textContent, location.href);
+
+					history.replaceState(null, null, "?primary_key=" + primary_key + '&search_category=' + search_category + '&search_page=' + search_page + '&search_form=get_results');	
+					
+				}
+
+
+			}
+		});		
+	}
+
+
+	/* Advanced search form function  */
+
+	$('#advanced_search_form_submit').on('click', function(e){
+		e.preventDefault();
+
+		set_advanced_form_page(1); //this is a new search, so reset
+
+		advanced_form_submit();
+	});
+
+	function set_advanced_form_page(new_page)
+	{
+		search_page = new_page;
+		$('#search_page').val(new_page);
+	}
+
+	function advanced_form_submit()
+	{
+		$('.advanced-search-inner').hide('slow');
+
+		$('#sort_type').hide();
+		//console.log('hidden');	
+
+		q = '';
+		$('#q').val('');
+
+		get_advanced_results();
+
+		$('#sidebar_wrapper').show();		
+	}
+
+	function get_advanced_results()
+	{
+
+		$.ajax({
+		  	url: CI_ROOT  + 'advanced_search',
+		  	type: 'get',
+		  	data: $('#advanced_search_form').serialize() + '&q=' + q ,
+		  	beforeSend: function(){
+		  		$('.browse-list').html(spinner);
+		  		$('.page-number-nav').html('');
+		  	}, 
+	      	complete: function(r){
+				var response_obj = jQuery.parseJSON(r.responseText);
+
+				$('.browse-list').html(''); //clear the spinner, success or no
+				
+				//console.log(response_obj.status);
+
+		  		$('#sort_menu').hide();
+		  		$('#sort_type').hide();
+
+				if (response_obj.status == 'SUCCESS')
+				{					
+					$('.browse-list').html(response_obj.results);
+					$('.page-number-nav').html(response_obj.pagination);
+										
+					if (search_category == 'title' || (primary_key > 0))
+					{
+						$('#sort_menu').show();
+					}	
+				}
+
+
+				if (history.pushState) {
+					history.pushState(null, location.textContent, location.href);
+
+					if (q != '')
+					{
+						history.replaceState(null, null, "?q=" + q + '&search_form=advanced');
+					}	
+					else
+					{
+						history.replaceState(null, null, "?" + $('#advanced_search_form').serialize());
+					}	
+					
+				}
+
+			}
+		});
+	}	
+
+
+	$('.js-advanced-search').on('click', function(e){
+
+		// TODO: make toggle
+
+		if (current_page != 'search') 
+		{
+			window.location.href = CI_ROOT + 'search/' + 'advanced_search';
+		}
+
+
+		e.preventDefault();
+		advanced_search_actions();
+		return false;	
+
+	});
+
+	function advanced_search_actions()
+	{
+
+		$('.browse-header').html('');
+		$('.browse-list').html('');			
+		$('.page-number-nav').html('');
+		$('#sidebar_wrapper').hide();
+		$('#sort_menu').hide();
+
+		$('.advanced-search-inner').show('slow');
+
+	}
+
+
+	/* end Advanced Search Form*/
+
+	/* Librivox search form */
+
+	$('#searchsubmit').on('click', function(e){
+		e.preventDefault();
+
+		//console.log(current_page);
+
+		q = $('#q').val();
+
+		if (current_page != 'search') 
+		{
+			window.location.href = CI_ROOT + 'search/q/' + q;
+		}
+
+		librivox_search();
+
+		$('#sidebar_wrapper').show();
+		$('.advanced-search-inner').hide('slow');
+
+	});
+
+
+	function librivox_search()
+	{
+		set_advanced_form_page(1); //this is a new search, so reset
+
+		search_order = 'alpha';
+
+		$('#advanced_search_form #sort_order').val('alpha'); // the code eventually serializes the form, so we need to set it to alpha here
+
+		$('.browse-header-wrap').hide();
+
+		get_advanced_results();
+	}
+
+
+	/* end Librivox search form*/
+
+
+	$(document).on('click', '.page-number', function(e)
+	{
+		e.preventDefault();
+		search_page = $(this).attr('data-page_number');
+		var call_function = $(this).attr('data-call_function');
+
+		if (call_function == 'get_advanced_results')
+		{
+			$('#search_page').val(search_page); //set it for the form.serialize()
+			get_advanced_results();
+		}
+		else
+		{
+			get_results(search_category, search_page, sub_category, primary_key);
+		}	
+		
+		return false;
+	});
+
+	$(document).on('click', '.js-sublink', function(e)
+	{
+		e.preventDefault();
+		sub_category = $(this).attr('data-sub_category');
+		primary_key = $(this).attr('data-primary_key');
+
+		set_advanced_form_page(1); //this is a new search, so reset
+
+		if (search_category == 'title' || (primary_key > 0))
+		{
+			$('#sort_menu').show();
+		}
+
+		var label = $(this).text();
+
+		set_browse_header(label);
+
+		get_results(search_category, search_page, sub_category, primary_key);
+
+		return false;
+
+	});	
+
+	//reader sections
+
+	$('.data_tab').on('click', function(){
+		$('.data_tab').removeClass('selected');
+		$(this).addClass('selected');
+
+		$('.tab-pane').removeClass('selected').hide();
+
+		var active_pane = $(this).attr('data-tab');
+		$('#'+ active_pane ).show();
+
+		return false;
+	});
+
+
+</script>
+
+<script type="text/javascript">
+
+ var _gaq = _gaq || [];
+ _gaq.push(['_setAccount', 'UA-1429228-8']);
+ _gaq.push(['_setDomainName', 'librivox.org']);
+ _gaq.push(['_trackPageview']);
+
+ (function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+ </script>

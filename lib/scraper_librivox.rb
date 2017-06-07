@@ -3,16 +3,32 @@ require 'json'
 require 'nokogiri'
 
 class ScraperLibrivox
+  LOCAL_WEBPAGE_URI_PREFIX = "./fixtures/web_pages/"
 
   class << self
-    def get_audiobook_attributes_hash(url_librivox)
+    def get_audiobook_attributes_hash(url_librivox, special_processing=:none)
       attributes = Hash.new
       begin
         if url_librivox.start_with?("http:")
           url_librivox = "https" + url_librivox[4,url_librivox.length]
         end
-        page_content = Nokogiri::HTML(open(url_librivox, :read_timeout=>nil))
-        # title, author, genre
+        if special_processing == :save_http_responses
+          substring_length = url_librivox.length - 8
+          substring_length -= 1 if url_librivox.end_with?("/")
+          open(get_local_uri(url_librivox), "wb") { |file|
+            open(url_librivox, :read_timeout=>nil) { |uri|
+               file.write(uri.read)
+            }
+          }
+        end
+        if special_processing == :local_uri_calls
+          uri = get_local_uri(url_librivox)
+        else
+          uri = url_librivox
+        end
+
+        page_content = Nokogiri::HTML(open(uri, :read_timeout=>nil))
+        # SCRAPE: title, author, & genre
         title_author_genre_section =
               page_content.css("div.main-content div.page div.content-wrap")
         attributes[:title] = title_author_genre_section.css("h1")[0].text
@@ -22,21 +38,23 @@ class ScraperLibrivox
         author_elements.each {|element|
           # NOTE: author data consists of (1) url ending w/ author-id (2) string
           #   containing author's displayable name and (birth-death) designation.
+          # The following statement builds a hash entry like:
+          #   {"91" => "Charles DICKENS (1812 - 1870)"}
           authors_hash[element.attribute("href").value[/\d+$/]] = element.text
         }
         if !authors_hash.empty?
-          attributes[:author_data] = authors_hash
+          attributes[:authors_hash] = authors_hash
         end
 
         genre_elements = title_author_genre_section.css("p.book-page-genre")
         genre_elements.each{ |element|
           if element.css("span").text == "Genre(s):"
-            attributes[:genre_data] = element.text[10, element.text.length]
+            attributes[:genre_csv_string] = element.text[10, element.text.length]
             break
           end
         }
 
-        # date-released from sidebar section
+        # SCRAPE: date-released from sidebar section
         product_details = page_content.css(
             "div.main-content div.sidebar.book-page div.book-page-sidebar dl.product-details *")
         previous_text = ""
@@ -48,7 +66,7 @@ class ScraperLibrivox
           previous_text = element.text
         }
 
-        # readers
+        # SCRAPE: readers
           # examine "thead" section to see in which "column" readers are displayed
         chapter_download_table = page_content.css(
                   "div.main-content div.page.book-page table.chapter-download")
@@ -66,20 +84,29 @@ class ScraperLibrivox
           rows.each{|tr_element|
             reader_element = tr_element.css("a")[reader_index]
             if reader_element != nil
+              # NOTE: reader data consists of (1) url ending w/ author-id (2) string
+              #   containing reader's displayable name and OPTIONAL (birth-death) designation.
+              # The following statement builds a hash entry like:
+              #     {"110" => "Cynthia Lyons (1946-2011)"}
               readers_hash[reader_element.attribute("href").value[/\d+$/]] = reader_element.text
             end
           }
           if !readers_hash.empty?
-            attributes[:reader_data] = readers_hash
+            attributes[:readers_hash] = readers_hash
           end
         end
-
 
       rescue OpenURI::HTTPError => ex
         attributes[:http_error] = ex.to_s
       end
 
       return attributes
+    end
+
+    def get_local_uri(url_librivox)
+      substring_length = url_librivox.length - 8
+      substring_length -= 1 if url_librivox.end_with?("/")
+      return LOCAL_WEBPAGE_URI_PREFIX + url_librivox[8,substring_length]
     end
   end
 end

@@ -35,7 +35,7 @@ module Category
     end
 
     def add_audiobook(audiobook)
-      if self.audiobooks[audiobook.id] == nil
+      if self.audiobooks[audiobook.id] == nil # this audiobook not yet "registered" here
         self.audiobooks[audiobook.id] = audiobook
         title_key = audiobook.title
         if title_key.upcase.start_with?("THE ")

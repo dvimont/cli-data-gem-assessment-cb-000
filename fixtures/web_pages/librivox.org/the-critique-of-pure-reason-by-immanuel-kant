@@ -1,0 +1,1178 @@
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 ie"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 ie"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 ie"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9 ie"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type">
+
+  <title>LibriVox</title>
+  <meta name="description" content="Librivox" />
+  <meta name="author" content="Librivox" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://librivox.org/favicon.ico">
+  <link rel="stylesheet" href="https://librivox.org/css/style.css?v=1">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <script type="text/javascript" src="https://librivox.org/js/catalog/small-menu.js"></script> 
+ 
+
+  <script type="text/javascript">
+  	var CI_ROOT = "https://librivox.org/"
+  </script>
+
+</head>
+
+<body>
+
+	<section class="header-wrap">
+		<header class="site-header">
+		
+			<!-- Site title/Logo and tagline -->
+			<hgroup class="logo-wrap">
+				<h1 class="logo"><a href="https://librivox.org/"><img src="https://librivox.org/images/librivox-logo.png" alt="librivox-logo" width="180" height="37"><span class="assistive-text">Librivox</span></a></h1>
+				<h3 class="tagline">Acoustical liberation of books in the public domain</h3>
+			</hgroup>
+			
+			<!-- Sub menu -->
+			<nav class="sub-menu">
+			<h1 class="assistive-text icon-fontawesome-webfont"><span>Menu</span></h1>
+			<div class="assistive-text skip-link"><a href="#" title="Skip to content">Skip to content</a></div> 
+				<ul class="sub-menu-list">
+					<li class="first"><a href="https://librivox.org/pages/about-librivox">about</a></li>
+					<li><a href="http://forum.librivox.org/">forum</a></li>	
+					<li><a href="https://librivox.org/pages/contact-librivox">contact</a></li>
+					<li><a href="https://librivox.org/pages/help">help</a></li>
+					<li class="twitter ir"><a href="http://twitter.com/librivox">Twitter</a></li>
+					<!-- <li class="facebook ir"><a href="http://www.facebook.com/LibriVox">Facebook</a></li> -->
+					<li class="rss "><a href="https://librivox.org/pages/librivox-feeds">rss</a></li> 
+				</ul>																
+			</nav><!-- end sub-menu -->   
+			
+			<!-- Search Form -->	
+			<div class="search-wrap">
+				<form role="search" action="#" id="searchform" method="get" class="searchform">
+					<label class="assistive-text" for="q">Search Librivox</label>
+					<input type="text" placeholder="Search by Author, Title or Reader" id="q" name="q" class="field">
+					<input type="text" id="dummy" name="dummy" style="display:none;">
+					<input type="submit" value="Search" id="searchsubmit" name="submit" class="submit">
+				</form>
+
+				<a href="#" class="advanced-search js-advanced-search"> Advanced search</a>	
+			</div> <!-- end search-wrap -->		    
+		</header>
+		
+
+
+	<!-- Main menu -->	
+	<div class="main-menu-wrap">
+		<section class="main-menu">
+			<h3>Browse the catalog</h3>
+			<nav class="main-menu-list-wrap"> 
+				<ul class="main-menu-list">
+					<li data-menu_item="author" class="js-menu_item first"><a href="#"><span class="author-icon"></span>Author</a></li>
+					<li data-menu_item="title" class="js-menu_item last"><a href="#"><span class="title-icon"></span>Title</a></li>
+					<li data-menu_item="genre" class="js-menu_item "><a href="#" ><span class="genre-icon"></span>Genre/Subject</a></li>
+					<li data-menu_item="language" class="js-menu_item "><a href="#"><span class="language-icon"></span>Language</a></li>
+					<!-- <li data-menu_item="reader" class="js-menu_item "><a href="#"><span class="reader-icon"></span>Reader</a></li> -->
+					
+				</ul>
+			</nav>
+			
+													
+		</section> <!-- end main-menu --> 
+		
+
+	</div> <!-- end .main-menu-wrap -->	  
+
+	</section><!-- end .header-wrap -->	
+
+
+	<input type="hidden" id="primary_key" value="0">
+
+<div class="main-content">
+	
+	
+	<div class="sidebar book-page">
+
+
+	<a href="https://librivox.org/pages/donate-to-librivox/" class="donate">Donate to Librivox</a>
+
+	<a href="https://librivox.org/pages/thank-a-reader/" class="thank-reader">Thank a reader</a>
+
+
+	
+	<div class="disclaimer">
+		LibriVox recordings are Public Domain in the USA. If you are not in the USA, please verify the copyright status of these works in your own country before downloading, otherwise you may be violating copyright laws.
+	</div>
+
+
+	
+	<div class="book-page-sidebar">
+		
+		<h4>Listen/Download (<a href="https://librivox.org/pages/help">help?</a>)</h4>
+
+		<dl class="listen-download clearfix">
+				
+			  <dt>Whole book (zip file)</dt>
+			  <dd><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_pure_reason_0709_librivox_64kb_mp3.zip" class="book-download-btn">Download</a></dd>
+			
+			  <dt>Subscribe by iTunes</dt>
+			  <dd><a href="itpc://librivox.org/rss/602" class="book-download-btn">iTunes</a></dd>
+
+			  <dt>RSS Feed</dt>
+			  <dd><a href="http://librivox.org/rss/602" class="book-download-btn">RSS</a></dd>
+
+			  <dt>Download torrent</dt>
+			  <dd><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_pure_reason_0709_librivox_archive.torrent" class="book-download-btn">Torrent</a></dd> 					  
+		</dl>
+
+		
+					
+	</div>
+	
+	<div class="book-page-sidebar">
+		<h4>Production details</h4>
+		<dl class="product-details clearfix">
+		  <dt>Running Time:</dt>
+		  <dd>26:09:21</dd>
+
+		  <dt>Zip file size:</dt>
+		  <dd>753.6MB</dd>
+		
+		  <dt>Catalog date:</dt>
+		  <dd>2007-09-24</dd>
+		
+		  <dt>Read by:</dt>
+		  <dd>LibriVox Volunteers</dd> 
+		  
+		  <dt>Book Coordinator:</dt>
+		  <dd><a href="https://librivox.org/reader/128">ML Cohen</a></dd>
+		  
+		  <dt>Meta Coordinator:</dt>
+		  <dd><a href="https://librivox.org/reader/56">Kirsten Ferreri</a></dd>
+		  
+		  <dt>Proof Listener:</dt>
+		  <dd><a href="https://librivox.org/reader/">&nbsp;</a></dd>				  
+		</dl>
+
+	</div>
+	
+	<div class="book-page-sidebar">
+		<h4>Links</h4>
+
+					<p><a href="http://www.archive.org/details/critique_pure_reason_0709_librivox">Internet Archive Page</a></p>
+		
+					<p><a href="http://etext.library.adelaide.edu.au/k/kant/immanuel/k16p/">Online text</a></p>
+		
+									<p><a href="http://en.wikipedia.org/wiki/Kant">Wikipedia - Immanuel Kant</a></p>
+							
+
+					<p><a href="http://en.wikipedia.org/wiki/Critique_of_Pure_Reason">Wikipedia Book - The Critique of Pure Reason</a></p>
+		
+					<p><a href="http://etext.library.adelaide.edu.au/k/kant/immanuel/k16p/">Alternative online text</a></p>
+					<p><a href="https://archive.org/download/critique_pure_reason_0709_librivox/CritiqueOfPureReason32kb_librivox.m4b">Download M4B (193MB)</a></p>
+		
+	</div>
+				
+
+
+
+
+</div>	
+	
+	<div class="page book-page">
+
+			<div class="content-wrap clearfix">
+				<div class="book-page-book-cover">
+					<img src="http://www.archive.org/download/LibrivoxCdCoverArt6/critique_of_pure_reason_1012.jpg" alt="book-cover-large" width="175" height="175" />
+
+										<a href="http://www.archive.org/download/LibrivoxCdCoverArt6/critique_of_pure_reason_1012.jpg" class="download-cover">Download cover art</a>
+					
+										<a href="http://www.archive.org/download/LibrivoxCdCoverArt6/critique_of_pure_reason_1012.pdf" class="download-cover">Download CD case insert</a>
+					
+				</div>
+				
+				<h1>The Critique of Pure Reason</h1>
+				
+				<p class="book-page-author"><a href="https://librivox.org/author/1312">Immanuel KANT (1724 - 1804)</a>, translated by <a href="https://librivox.org/author/6482">John Miller Dow MEIKLEJOHN (1836 - 1902)</a></p>
+				
+				<div class="description"><p>The Critique of Pure Reason, first published in 1781 with a second edition in 1787, has been called the most influential and important philosophical text of the modern age.<br><br>Kant saw the Critique of Pure Reason as an attempt to bridge the gap between rationalism (there are significant ways in which our concepts and knowledge are gained independently of sense experience) and empiricism (sense experience is the ultimate source of all our concepts and knowledge) and, in particular, to counter the radical empiricism of David Hume (our beliefs are purely the result of accumulated habits, developed in response to accumulated sense experiences). Using the methods of science, Kant demonstrates that though each mind may, indeed, create its own universe, those universes are guided by certain common laws, which are rationally discernable. (Summary by Ticktockman)</p></div>	<!-- .description -->
+
+				<p class="book-page-genre"><span>Genre(s):</span> *Non-fiction, Philosophy</p>
+
+				<p class="book-page-genre"><span>Language:</span> English</p>
+
+				
+				
+			</div> 	<!-- end .content-wrap --> 
+		
+			<table class="chapter-download">
+					<thead>
+						<tr>
+							<th>Section</th>
+							<th>Chapter</th>
+							
+							<th>Reader</th>
+							<th>Time</th>
+
+							
+						</tr>
+					</thead>
+						<tbody>
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_01_kant_64kb.mp3" class="play-btn">Play</a> 01 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_01_kant.mp3" class="chapter-name">Preface to the First Edition, 1781</a></td>
+								
+								<td><a href="https://librivox.org/reader/128">ML Cohen</a><br/></td>
+								<td>00:20:04</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_02_kant_64kb.mp3" class="play-btn">Play</a> 02 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_02_kant.mp3" class="chapter-name">Preface to the Second Edition, 1787</a></td>
+								
+								<td><a href="https://librivox.org/reader/128">ML Cohen</a><br/></td>
+								<td>00:53:26</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_03_kant_64kb.mp3" class="play-btn">Play</a> 03 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_03_kant.mp3" class="chapter-name">Introduction</a></td>
+								
+								<td><a href="https://librivox.org/reader/196">Stewart Wills</a><br/></td>
+								<td>00:40:45</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_04_kant_64kb.mp3" class="play-btn">Play</a> 04 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_04_kant.mp3" class="chapter-name">Transcendental Doctrine of Elements--Space</a></td>
+								
+								<td><a href="https://librivox.org/reader/296">Carl Manchester</a><br/></td>
+								<td>00:20:21</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_05_kant_64kb.mp3" class="play-btn">Play</a> 05 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_05_kant.mp3" class="chapter-name">Transcendental Doctrine of Elements--Time</a></td>
+								
+								<td><a href="https://librivox.org/reader/296">Carl Manchester</a><br/></td>
+								<td>00:37:25</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_06_kant_64kb.mp3" class="play-btn">Play</a> 06 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_06_kant.mp3" class="chapter-name">Transcendental Logic</a></td>
+								
+								<td><a href="https://librivox.org/reader/77">JemmaBlythe</a><br/></td>
+								<td>00:26:14</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_07_kant_64kb.mp3" class="play-btn">Play</a> 07 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_07_kant.mp3" class="chapter-name">Transcendental Analytic</a></td>
+								
+								<td><a href="https://librivox.org/reader/78">Hugh McGuire</a><br/></td>
+								<td>00:23:33</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_08_kant_64kb.mp3" class="play-btn">Play</a> 08 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_08_kant.mp3" class="chapter-name">Deduction of the Pure Conceptions</a></td>
+								
+								<td><a href="https://librivox.org/reader/20">Gesine</a><br/></td>
+								<td>00:17:20</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_09_kant_64kb.mp3" class="play-btn">Play</a> 09 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_09_kant.mp3" class="chapter-name">Transcendental Deduction of the Pure Conceptions</a></td>
+								
+								<td><a href="https://librivox.org/reader/1058">James Tiley</a><br/></td>
+								<td>00:32:34</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_10_kant_64kb.mp3" class="play-btn">Play</a> 10 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_10_kant.mp3" class="chapter-name">Application of the Categories to Objects of the Senses</a></td>
+								
+								<td><a href="https://librivox.org/reader/1058">James Tiley</a><br/></td>
+								<td>00:48:46</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_11_kant_64kb.mp3" class="play-btn">Play</a> 11 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_11_kant.mp3" class="chapter-name">Analytic of Principles/Schematism</a></td>
+								
+								<td><a href="https://librivox.org/reader/1535">Robert Scott</a><br/></td>
+								<td>00:45:14</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_12_kant_64kb.mp3" class="play-btn">Play</a> 12 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_12_kant.mp3" class="chapter-name">System of All Principles of the Pure Understanding</a></td>
+								
+								<td><a href="https://librivox.org/reader/56">Kirsten Ferreri</a><br/></td>
+								<td>00:15:11</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_13_kant_64kb.mp3" class="play-btn">Play</a> 13 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_13_kant.mp3" class="chapter-name">Systematic Representation of All Synthetical Principles/1st Analogy</a></td>
+								
+								<td><a href="https://librivox.org/reader/1535">Robert Scott</a><br/></td>
+								<td>01:24:59</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_14_kant_64kb.mp3" class="play-btn">Play</a> 14 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_14_kant.mp3" class="chapter-name">Second Analogy</a></td>
+								
+								<td><a href="https://librivox.org/reader/56">Kirsten Ferreri</a><br/></td>
+								<td>00:36:48</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_15_kant_64kb.mp3" class="play-btn">Play</a> 15 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_15_kant.mp3" class="chapter-name">Third Analogy</a></td>
+								
+								<td><a href="https://librivox.org/reader/56">Kirsten Ferreri</a><br/></td>
+								<td>00:14:47</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_16_kant_64kb.mp3" class="play-btn">Play</a> 16 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_16_kant.mp3" class="chapter-name">The Postulates of Empirical Thought</a></td>
+								
+								<td><a href="https://librivox.org/reader/128">ML Cohen</a><br/></td>
+								<td>00:43:08</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_17_kant_64kb.mp3" class="play-btn">Play</a> 17 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_17_kant.mp3" class="chapter-name">Division of All Objects into Phenomena and Noumena</a></td>
+								
+								<td><a href="https://librivox.org/reader/597">Lisa Chau</a><br/></td>
+								<td>00:34:55</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_18_kant_64kb.mp3" class="play-btn">Play</a> 18 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_18_kant.mp3" class="chapter-name">Of the Equivocal Nature of Amphiboly</a></td>
+								
+								<td><a href="https://librivox.org/reader/296">Carl Manchester</a><br/></td>
+								<td>00:12:25</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_19_kant_64kb.mp3" class="play-btn">Play</a> 19 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_19_kant.mp3" class="chapter-name">Remark on the Amphiboly of the Conceptions of Reflections</a></td>
+								
+								<td><a href="https://librivox.org/reader/1535">Robert Scott</a><br/></td>
+								<td>00:55:51</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_20_kant_64kb.mp3" class="play-btn">Play</a> 20 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_20_kant.mp3" class="chapter-name">Transcendental Dialectic: Introduction</a></td>
+								
+								<td><a href="https://librivox.org/reader/1094">tubeyes</a><br/></td>
+								<td>00:09:07</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_21_kant_64kb.mp3" class="play-btn">Play</a> 21 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_21_kant.mp3" class="chapter-name">Of the Conceptions of Pure Reason</a></td>
+								
+								<td><a href="https://librivox.org/reader/1058">James Tiley</a><br/></td>
+								<td>01:14:18</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_22_kant_64kb.mp3" class="play-btn">Play</a> 22 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_22_kant.mp3" class="chapter-name">Of the Dialectical Procedure of Pure Reason</a></td>
+								
+								<td><a href="https://librivox.org/reader/1096">Geoff Dugwyler</a><br/></td>
+								<td>00:04:49</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_23_kant_64kb.mp3" class="play-btn">Play</a> 23 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_23_kant.mp3" class="chapter-name">Of the Paralogisms of Pure Reason</a></td>
+								
+								<td><a href="https://librivox.org/reader/1096">Geoff Dugwyler</a><br/></td>
+								<td>00:49:08</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_24_kant_64kb.mp3" class="play-btn">Play</a> 24 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_24_kant.mp3" class="chapter-name">The Antinomy of Pure Reason</a></td>
+								
+								<td><a href="https://librivox.org/reader/613">D.E. Wittkower</a><br/></td>
+								<td>00:26:52</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_25_kant_64kb.mp3" class="play-btn">Play</a> 25 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_25_kant.mp3" class="chapter-name">Antithetic of Pure Reason/1st &amp; 2nd Conflicts</a></td>
+								
+								<td><a href="https://librivox.org/reader/613">D.E. Wittkower</a><br/></td>
+								<td>00:38:56</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_26_kant_64kb.mp3" class="play-btn">Play</a> 26 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_26_kant.mp3" class="chapter-name">3rd &amp; 4th Conflict of the Transcendental Ideas</a></td>
+								
+								<td><a href="https://librivox.org/reader/613">D.E. Wittkower</a><br/></td>
+								<td>00:29:49</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_27_kant_64kb.mp3" class="play-btn">Play</a> 27 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_27_kant.mp3" class="chapter-name">Of the Interest of Reason in these Self-Contradictions</a></td>
+								
+								<td><a href="https://librivox.org/reader/613">D.E. Wittkower</a><br/></td>
+								<td>00:27:35</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_28_kant_64kb.mp3" class="play-btn">Play</a> 28 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_28_kant.mp3" class="chapter-name">Of the Necessity Imposed upon Pure Reason of Presenting a Solution of its Transcendental Problems</a></td>
+								
+								<td><a href="https://librivox.org/reader/613">D.E. Wittkower</a><br/></td>
+								<td>00:40:09</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_29_kant_64kb.mp3" class="play-btn">Play</a> 29 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_29_kant.mp3" class="chapter-name">Critical Solution of the Cosmological Problem</a></td>
+								
+								<td><a href="https://librivox.org/reader/613">D.E. Wittkower</a><br/></td>
+								<td>00:35:03</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_30_kant_64kb.mp3" class="play-btn">Play</a> 30 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_30_kant.mp3" class="chapter-name">Empirical Use of the Regulative Principle of Reason with regard to the Cosmological Ideas</a></td>
+								
+								<td><a href="https://librivox.org/reader/613">D.E. Wittkower</a><br/></td>
+								<td>00:32:20</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_31_kant_64kb.mp3" class="play-btn">Play</a> 31 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_31_kant.mp3" class="chapter-name">Solution of the Cosmological Idea of the Totality of the Deduction of Cosmical Events from their Causes</a></td>
+								
+								<td><a href="https://librivox.org/reader/613">D.E. Wittkower</a><br/></td>
+								<td>00:51:16</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_32_kant_64kb.mp3" class="play-btn">Play</a> 32 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_32_kant.mp3" class="chapter-name">Solution of the Cosmological Idea of the Totality of the Dependence of  Phenomenal Existences</a></td>
+								
+								<td><a href="https://librivox.org/reader/613">D.E. Wittkower</a><br/></td>
+								<td>00:15:24</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_33_kant_64kb.mp3" class="play-btn">Play</a> 33 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_33_kant.mp3" class="chapter-name">The Ideal of Pure Reason</a></td>
+								
+								<td><a href="https://librivox.org/reader/688">J. M. Smallheer</a><br/></td>
+								<td>00:26:29</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_34_kant_64kb.mp3" class="play-btn">Play</a> 34 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_34_kant.mp3" class="chapter-name">Of the Arguments Employed by Speculative Reason in Proof of the Existence of a Supreme Being</a></td>
+								
+								<td><a href="https://librivox.org/reader/128">ML Cohen</a><br/></td>
+								<td>00:28:55</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_35_kant_64kb.mp3" class="play-btn">Play</a> 35 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_35_kant.mp3" class="chapter-name">Of the Impossibility of a Cosmological Proof of the Existence of God</a></td>
+								
+								<td><a href="https://librivox.org/reader/128">ML Cohen</a><br/></td>
+								<td>00:26:53</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_36_kant_64kb.mp3" class="play-btn">Play</a> 36 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_36_kant.mp3" class="chapter-name">Of the Impossibility of a Physico-Theological Proof</a></td>
+								
+								<td><a href="https://librivox.org/reader/128">ML Cohen</a><br/></td>
+								<td>00:34:04</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_37_kant_64kb.mp3" class="play-btn">Play</a> 37 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_37_kant.mp3" class="chapter-name">Of the Regulative Employment of the Ideas of Pure Reason</a></td>
+								
+								<td><a href="https://librivox.org/reader/1535">Robert Scott</a><br/></td>
+								<td>01:06:38</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_38_kant_64kb.mp3" class="play-btn">Play</a> 38 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_38_kant.mp3" class="chapter-name">Of the Ultimate End of the Natural Dialectic of Human Reason</a></td>
+								
+								<td><a href="https://librivox.org/reader/56">Kirsten Ferreri</a><br/></td>
+								<td>00:51:33</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_39_kant_64kb.mp3" class="play-btn">Play</a> 39 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_39_kant.mp3" class="chapter-name">Transcendental Doctrine of Method</a></td>
+								
+								<td><a href="https://librivox.org/reader/56">Kirsten Ferreri</a><br/></td>
+								<td>00:03:06</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_40_kant_64kb.mp3" class="play-btn">Play</a> 40 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_40_kant.mp3" class="chapter-name">Discipline of Pure Reason in the Sphere of Dogmatism</a></td>
+								
+								<td><a href="https://librivox.org/reader/100">Judy Bieber</a><br/></td>
+								<td>00:42:22</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_41_kant_64kb.mp3" class="play-btn">Play</a> 41 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_41_kant.mp3" class="chapter-name">Discipline of Pure Reason in Polemics</a></td>
+								
+								<td><a href="https://librivox.org/reader/100">Judy Bieber</a><br/></td>
+								<td>00:50:46</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_42_kant_64kb.mp3" class="play-btn">Play</a> 42 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_42_kant.mp3" class="chapter-name">Discipline of Pure Reason in Hypothesis</a></td>
+								
+								<td><a href="https://librivox.org/reader/100">Judy Bieber</a><br/></td>
+								<td>00:20:45</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_43_kant_64kb.mp3" class="play-btn">Play</a> 43 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_43_kant.mp3" class="chapter-name">Discipline of Pure Reason in Relation to Proofs</a></td>
+								
+								<td><a href="https://librivox.org/reader/100">Judy Bieber</a><br/></td>
+								<td>00:20:33</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_44_kant_64kb.mp3" class="play-btn">Play</a> 44 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_44_kant.mp3" class="chapter-name">The Canon of Pure Reason</a></td>
+								
+								<td><a href="https://librivox.org/reader/688">J. M. Smallheer</a><br/></td>
+								<td>00:14:37</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_45_kant_64kb.mp3" class="play-btn">Play</a> 45 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_45_kant.mp3" class="chapter-name">Ideal of the Summum Bonum as a Determining Ground of the Ultimate End of Pure Reason</a></td>
+								
+								<td><a href="https://librivox.org/reader/128">ML Cohen</a><br/></td>
+								<td>00:24:53</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_46_kant_64kb.mp3" class="play-btn">Play</a> 46 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_46_kant.mp3" class="chapter-name">Of Opinion, Knowledge, and Belief</a></td>
+								
+								<td><a href="https://librivox.org/reader/296">Carl Manchester</a><br/></td>
+								<td>00:19:10</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_47_kant_64kb.mp3" class="play-btn">Play</a> 47 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_47_kant.mp3" class="chapter-name">The Architectonic of Pure Reason</a></td>
+								
+								<td><a href="https://librivox.org/reader/128">ML Cohen</a><br/></td>
+								<td>00:30:13</td>
+
+															</tr>
+
+							
+							<tr>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_48_kant_64kb.mp3" class="play-btn">Play</a> 48 </td>
+								<td><a href="http://www.archive.org/download/critique_pure_reason_0709_librivox/critique_of_pure_reason_48_kant.mp3" class="chapter-name">The History of Pure Reason</a></td>
+								
+								<td><a href="https://librivox.org/reader/20">Gesine</a><br/></td>
+								<td>00:09:52</td>
+
+															</tr>
+
+						
+					</tbody>
+				</table>
+	
+
+</div><!-- end .page -->
+</div><!-- end .main-content -->
+
+
+	<footer class="footer-wrap">
+		<div class="footer">
+		
+		   
+			
+			<p class="license clear"><a href="#"><img src="https://librivox.org/images/public-domain-license.gif" alt="public-domain-license" width="88" height="31" /></a></p>
+		</div><!-- end .footer-wrap -->	
+	</footer>
+    <!--[if lte IE 9]>	
+	    <script type="text/javascript" src="https://librivox.org/js/catalog/jquery.columnizer.js"></script>
+     <![endif]-->
+
+
+
+<script type="text/javascript">
+
+	var search_category = "page";
+
+	var sub_category;
+
+	var advanced_search = "0";
+
+	var primary_key = 0;
+
+	var search_page  = "1";
+	set_advanced_form_page(search_page);
+
+	var search_order = 'alpha';
+
+	var project_type = 'either';
+
+	var q = "";
+
+	var spinner = '<div class="loading_img" style="margin-left:300px;margin-top:60px;"><img src="../../img/loading.gif"/></div>';
+
+	$('.browse-header').hide();
+
+	var pathArray = window.location.pathname.split( '/' );
+
+	var current_page = pathArray[1]; 
+
+	if (q != '')
+	{
+		advanced_search = 0;
+		$('.advanced-search-inner').hide('slow');
+		librivox_search();
+	}
+	else if (advanced_search == 1)
+	{
+		advanced_search_actions();
+	}
+	else if (advanced_search == 2)
+	{
+		advanced_form_submit();
+	}
+	else if (advanced_search == 3)
+	{
+		//may be able to combine with below
+		$('.advanced-search-inner').hide();
+		get_results(search_category, search_page, sub_category, primary_key);
+	}
+	else
+	{	
+		//only on loading search page
+		if (current_page == 'search') 
+		{
+			var item = $('.js-menu_item[data-menu_item="'+search_category+'"]');
+			load_search_data(item, search_category);
+		}
+		else if (jQuery.inArray(current_page, ['author', 'reader', 'group']) > -1)
+		{
+			get_results(current_page, search_page, sub_category, primary_key);
+		}
+
+	}	
+	advanced_search = 0; // it's done its job
+
+
+	// do better 
+	$('#sort_type').hide();
+	if (search_category == 'title' ||  search_category == 'reader')
+	{
+		$('#sort_type').show();
+	}	
+
+	$('#sort_menu').hide();
+	if (search_category == 'title' || (primary_key > 0))
+	{
+		$('#sort_menu').show();
+	}	
+
+
+	// Manage menus
+	$('.js-menu_item').on('click', function(e){
+
+		search_category = $(this).attr('data-menu_item');
+
+		primary_key = 0;
+
+		if (current_page != 'search') 
+		{
+			window.location.href = CI_ROOT + 'search/' + search_category;
+		}	
+
+		e.preventDefault();
+
+		$('.advanced-search-inner').hide('slow');
+		$('#sidebar_wrapper').show();
+
+		$('#sort_menu').hide();
+		if (search_category == 'title' || (primary_key > 0))
+		{
+			$('#sort_menu').show();
+		}	
+
+		q = '';
+		$('#q').val('');		
+		
+		load_search_data($(this), $(this).attr('data-menu_item'));
+
+	});
+
+	$('.js-title-submenu').on('click', function(e){
+		e.preventDefault();
+		$('.js-title-submenu a').removeClass('selected');
+		$(this).children('a').addClass('selected');
+
+		project_type = $(this).attr('data-submenu');
+
+		set_advanced_form_page(1); //this is a new search, so reset
+
+		get_results(search_category, search_page, sub_category, primary_key);
+	});
+
+	$('.js-sort-menu').on('change', function(){
+		search_order = $(this).val();
+		get_results(search_category, search_page, sub_category, primary_key);
+
+	});
+
+
+	function load_search_data(item, label)
+	{
+		$('.js-menu_item a').removeClass('active').removeClass('current-page');
+
+		item.children('a').addClass('active').addClass('current-page');
+
+		//console.log(item.attr('data-menu_item'));
+
+		//global
+		search_order = 'alpha';
+		if (item.attr('data-menu_item') == 'title')
+		{
+			search_order = 'catalog_date';
+		}
+
+		$('.js-sort-menu').val(search_order);		
+
+		get_results(search_category, 1);
+
+		set_browse_header(label);
+
+	}
+
+
+	function set_browse_header(label)
+	{
+		label = label.charAt(0).toUpperCase() + label.slice(1);
+		var text = 'Browsing <span>'+ label +'</span>';
+		$('.browse-header').html(text).show();
+		$('.browse-header-wrap').show();
+	}
+
+
+	function get_results(search_category, search_page, sub_category, primary_key)
+	{
+	    sub_category 	= typeof sub_category !== 'undefined' ? sub_category : '';
+	    primary_key 	= typeof primary_key !== 'undefined' ? primary_key : 0;
+	    search_order 	= typeof search_order !== 'undefined' ? search_order : 'alpha';
+	    project_type 	= typeof project_type !== 'undefined' ? project_type : 'either';
+
+		var params = { 'primary_key': primary_key, 'search_category':search_category, 'sub_category': sub_category ,'search_page':search_page, 'search_order': search_order, 'project_type': project_type} ;
+
+		if (history.pushState && current_page == 'search') {
+			history.pushState(null, location.textContent, location.href);
+			history.replaceState(null, null, "https://librivox.org/search");
+		}
+
+		$.ajax({
+		  	url: CI_ROOT + current_page + '/get_results' ,
+		  	type: 'get', //yes, get...we want these all to work through the browser addressbar as well, now
+		  	data: { 'primary_key': primary_key, 'search_category':search_category, 'sub_category': sub_category ,'search_page':search_page, 'search_order': search_order, 'project_type': project_type},
+		  	beforeSend: function(){
+		  		$('.browse-list').html(spinner);
+		  		$('.page-number-nav').html('');
+		  	}, 		  	
+	      	complete: function(r){
+				var response_obj = jQuery.parseJSON(r.responseText);
+
+				$('.browse-list').html('');
+
+				if (response_obj.status == 'SUCCESS')
+				{				
+
+			  		$('#sort_menu').hide();
+			  		$('#sort_type').hide();
+
+
+					if ((response_obj.results != 'No results') && (search_category != 'group') && (search_category == 'title' || (primary_key > 0)))
+					{
+						$('#sort_menu').show();	
+						$('#sort_type').show();				
+					}
+
+					$('.browse-list').html(response_obj.results);
+					$('.page-number-nav').html(response_obj.pagination);
+				}
+
+				if (history.pushState) {
+					history.pushState(null, location.textContent, location.href);
+
+					history.replaceState(null, null, "?primary_key=" + primary_key + '&search_category=' + search_category + '&search_page=' + search_page + '&search_form=get_results');	
+					
+				}
+
+
+			}
+		});		
+	}
+
+
+	/* Advanced search form function  */
+
+	$('#advanced_search_form_submit').on('click', function(e){
+		e.preventDefault();
+
+		set_advanced_form_page(1); //this is a new search, so reset
+
+		advanced_form_submit();
+	});
+
+	function set_advanced_form_page(new_page)
+	{
+		search_page = new_page;
+		$('#search_page').val(new_page);
+	}
+
+	function advanced_form_submit()
+	{
+		$('.advanced-search-inner').hide('slow');
+
+		$('#sort_type').hide();
+		//console.log('hidden');	
+
+		q = '';
+		$('#q').val('');
+
+		get_advanced_results();
+
+		$('#sidebar_wrapper').show();		
+	}
+
+	function get_advanced_results()
+	{
+
+		$.ajax({
+		  	url: CI_ROOT  + 'advanced_search',
+		  	type: 'get',
+		  	data: $('#advanced_search_form').serialize() + '&q=' + q ,
+		  	beforeSend: function(){
+		  		$('.browse-list').html(spinner);
+		  		$('.page-number-nav').html('');
+		  	}, 
+	      	complete: function(r){
+				var response_obj = jQuery.parseJSON(r.responseText);
+
+				$('.browse-list').html(''); //clear the spinner, success or no
+				
+				//console.log(response_obj.status);
+
+		  		$('#sort_menu').hide();
+		  		$('#sort_type').hide();
+
+				if (response_obj.status == 'SUCCESS')
+				{					
+					$('.browse-list').html(response_obj.results);
+					$('.page-number-nav').html(response_obj.pagination);
+										
+					if (search_category == 'title' || (primary_key > 0))
+					{
+						$('#sort_menu').show();
+					}	
+				}
+
+
+				if (history.pushState) {
+					history.pushState(null, location.textContent, location.href);
+
+					if (q != '')
+					{
+						history.replaceState(null, null, "?q=" + q + '&search_form=advanced');
+					}	
+					else
+					{
+						history.replaceState(null, null, "?" + $('#advanced_search_form').serialize());
+					}	
+					
+				}
+
+			}
+		});
+	}	
+
+
+	$('.js-advanced-search').on('click', function(e){
+
+		// TODO: make toggle
+
+		if (current_page != 'search') 
+		{
+			window.location.href = CI_ROOT + 'search/' + 'advanced_search';
+		}
+
+
+		e.preventDefault();
+		advanced_search_actions();
+		return false;	
+
+	});
+
+	function advanced_search_actions()
+	{
+
+		$('.browse-header').html('');
+		$('.browse-list').html('');			
+		$('.page-number-nav').html('');
+		$('#sidebar_wrapper').hide();
+		$('#sort_menu').hide();
+
+		$('.advanced-search-inner').show('slow');
+
+	}
+
+
+	/* end Advanced Search Form*/
+
+	/* Librivox search form */
+
+	$('#searchsubmit').on('click', function(e){
+		e.preventDefault();
+
+		//console.log(current_page);
+
+		q = $('#q').val();
+
+		if (current_page != 'search') 
+		{
+			window.location.href = CI_ROOT + 'search/q/' + q;
+		}
+
+		librivox_search();
+
+		$('#sidebar_wrapper').show();
+		$('.advanced-search-inner').hide('slow');
+
+	});
+
+
+	function librivox_search()
+	{
+		set_advanced_form_page(1); //this is a new search, so reset
+
+		search_order = 'alpha';
+
+		$('#advanced_search_form #sort_order').val('alpha'); // the code eventually serializes the form, so we need to set it to alpha here
+
+		$('.browse-header-wrap').hide();
+
+		get_advanced_results();
+	}
+
+
+	/* end Librivox search form*/
+
+
+	$(document).on('click', '.page-number', function(e)
+	{
+		e.preventDefault();
+		search_page = $(this).attr('data-page_number');
+		var call_function = $(this).attr('data-call_function');
+
+		if (call_function == 'get_advanced_results')
+		{
+			$('#search_page').val(search_page); //set it for the form.serialize()
+			get_advanced_results();
+		}
+		else
+		{
+			get_results(search_category, search_page, sub_category, primary_key);
+		}	
+		
+		return false;
+	});
+
+	$(document).on('click', '.js-sublink', function(e)
+	{
+		e.preventDefault();
+		sub_category = $(this).attr('data-sub_category');
+		primary_key = $(this).attr('data-primary_key');
+
+		set_advanced_form_page(1); //this is a new search, so reset
+
+		if (search_category == 'title' || (primary_key > 0))
+		{
+			$('#sort_menu').show();
+		}
+
+		var label = $(this).text();
+
+		set_browse_header(label);
+
+		get_results(search_category, search_page, sub_category, primary_key);
+
+		return false;
+
+	});	
+
+	//reader sections
+
+	$('.data_tab').on('click', function(){
+		$('.data_tab').removeClass('selected');
+		$(this).addClass('selected');
+
+		$('.tab-pane').removeClass('selected').hide();
+
+		var active_pane = $(this).attr('data-tab');
+		$('#'+ active_pane ).show();
+
+		return false;
+	});
+
+
+</script>
+
+<script type="text/javascript">
+
+ var _gaq = _gaq || [];
+ _gaq.push(['_setAccount', 'UA-1429228-8']);
+ _gaq.push(['_setDomainName', 'librivox.org']);
+ _gaq.push(['_trackPageview']);
+
+ (function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+ </script>
