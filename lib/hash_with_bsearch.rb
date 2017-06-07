@@ -30,7 +30,7 @@ class HashWithBsearch
     if @sorted_key_value_array.empty?
       return nil
     else
-      found_kv_pair = @sorted_key_value_array.bsearch{|kv_pair| kv_pair[0] >= key}
+      found_kv_pair = @sorted_key_value_array.bsearch{|kv_pair| key <=> kv_pair[0]}
       return (found_kv_pair == nil) ? nil : found_kv_pair[1]
     end
   end

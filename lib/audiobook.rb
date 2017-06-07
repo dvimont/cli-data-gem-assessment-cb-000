@@ -63,10 +63,10 @@ class Audiobook
         :id.to_s + ": " + self.id +
         "\n  " + :url_librivox.to_s + ": " + self.url_librivox +
         "\n  " + :title.to_s + ": " + self.title +
-        "\n  " + :authors_hash.to_s + ": " + self.authors_hash.to_s +
-        "\n  " + :readers_hash.to_s + ": " + self.readers_hash.to_s +
-        "\n  " + :language.to_s + ": " + self.language.to_s +
-        "\n  " + :genre_csv_string.to_s + ": " + self.genre_csv_string +
+#        "\n  " + :authors_hash.to_s + ": " + self.authors_hash.to_s +
+#        "\n  " + :readers_hash.to_s + ": " + self.readers_hash.to_s +
+#        "\n  " + :language.to_s + ": " + self.language.to_s +
+#        "\n  " + :genre_csv_string.to_s + ": " + self.genre_csv_string +
         "\n  " + :date_released.to_s + ": " + self.date_released
     if self.http_error != nil
       output_string += "\n  " + :http_error.to_s + ": " + self.http_error
