@@ -1,7 +1,8 @@
-class Reader
+class Reader < Contributor
   extend Category::ClassMethods
-  include Category::InstanceMethods
 
-  @@SUBCATEGORIZABLE = true
-
+  @@all_by_name = HashWithBsearch.new
+  def self.all_by_name
+    return @@all_by_name
+  end
 end

@@ -31,10 +31,6 @@ class Audiobook
       @@works_in_progress.add(self)
     else
       @@all.add(self)
-      # following logic moved to #build_category_objects
-      # if @language != nil
-      #   @language.add_audiobook(self)
-      # end
     end
   end
 
@@ -54,19 +50,13 @@ class Audiobook
     end
     if self.authors_hash != nil && !self.authors_hash.empty?
       @authors = Author.mass_initialize(self.authors_hash)
-#      @authors.each{|author|
-#        puts "AUTHOR LAST NAME: " + author.last_name
-#        puts "AUTHOR FIRST NAME: " + author.first_name if author.first_name != nil
-#        puts "AUTHOR BIRTH YEAR: " + author.birth_year if author.birth_year != nil
-#        puts "AUTHOR DEATH YEAR: " + author.death_year if author.death_year != nil
-#      }
       @authors.each{|author| author.add_audiobook(self)}
     end
+    if self.readers_hash != nil && !self.readers_hash.empty?
+      @readers = Reader.mass_initialize(self.readers_hash)
+      @readers.each{|reader| reader.add_audiobook(self)}
+    end
   end
-
-#  def language=(language_string)
-#    @language = Language.create_or_get_existing(language_string)
-#  end
 
   def to_s()
     output_string = "\n" +

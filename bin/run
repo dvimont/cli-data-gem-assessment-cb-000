@@ -9,13 +9,18 @@ CatalogBuilder.build(525, :local_uri_calls)
 #Audiobook.list_all
 
 puts "AUTHORS (" + Author.all.size.to_s + "):"
-Author.all_by_name.each{|author|
+# Author.all_by_name.values.each{|author| puts " -- " + author.to_s}
+=begin
+Author.all_by_name.values.each{|author|
   puts author.id + " " + author.to_s
   puts "  -- " + author.audiobooks_by_title.size.to_s + " audiobooks by this author."
   author.audiobooks_by_title.values.each{|audiobook|
     puts "  -- " + audiobook.title
   }
 }
+=end
+puts "READERS (" + Reader.all_by_name.size.to_s + "):"
+# Reader.all_by_name.values.each{|reader| puts " -- " + reader.to_s}
 
 puts "LANGUAGES (" + Language.all.size.to_s + "):"
 =begin
