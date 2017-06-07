@@ -1,17 +1,21 @@
 module Category
   module ClassMethods
     def self.extended(base) # fires at start-up (during Class-level instantiation)
-      base.class_variable_set(:@@all, HashWithBsearch.new) # {|a,b| a<=>b})
+      base.class_variable_set(:@@all, HashWithBsearch.new)
     end
 
     def all
       return self.class_variable_get(:@@all)
     end
 
-    def create_or_get_existing(id_string)
+    def create_or_get_existing(id_string, attributes=nil)
       retrieved_object = self.all[id_string]
       if retrieved_object == nil
         retrieved_object = self.new({id: id_string})
+        if !attributes.nil?
+          retrieved_object.add_attributes(attributes)
+        end
+        retrieved_object.add_self_to_class_collections
       end
       return retrieved_object
     end
@@ -23,11 +27,13 @@ module Category
 
     def initialize(attributes)
       self.add_attributes(attributes)
-      self.class.all[self.id] = self
-
       @audiobooks = HashWithBsearch.new # default (id) order
       @audiobooks_by_title = HashWithBsearch.new # {|a,b| a.title <=> b.title}
       @audiobooks_by_date = HashWithBsearch.new(:descending)
+    end
+
+    def add_self_to_class_collections()
+      self.class.all[self.id] = self
     end
 
     def add_attributes(attributes)
