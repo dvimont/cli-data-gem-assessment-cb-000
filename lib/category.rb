@@ -27,7 +27,7 @@ module Category
 
       @audiobooks = HashWithBsearch.new # default (id) order
       @audiobooks_by_title = HashWithBsearch.new # {|a,b| a.title <=> b.title}
-      @audiobooks_by_date = HashWithBsearch.new {|a,b| b <=> a}
+      @audiobooks_by_date = HashWithBsearch.new(:descending)
     end
 
     def add_attributes(attributes)

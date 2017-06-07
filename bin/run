@@ -14,14 +14,14 @@ Language.all.each{|key, language|
   puts language.id.to_s
   puts language.audiobooks_by_title.size.to_s + " audiobooks in this language."
 
-=begin
+#=begin
   puts "== this language's audiobooks by title"
   language.audiobooks_by_title.values.each{|audiobook| puts "  " + audiobook.title}
   puts "==="
   puts "== this languages's audiobooks by date of release"
   language.audiobooks_by_date.values.each{|audiobook| puts "  " + audiobook.date_released +
         " " + audiobook.title}
-=end
+#=end
 
 }
 #=end

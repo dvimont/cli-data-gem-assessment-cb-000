@@ -9,11 +9,12 @@
 class HashWithBsearch
 
   # INITIALIZE ACCEPTS OPTIONAL OVERRIDE COMPARATOR BLOCK
-  def initialize(&block)
+  def initialize(sort_option=:ascending)
     result = (@wrapped_hash = Hash.new)
+    @sort_option = sort_option
     @sorted_hash = Hash.new
-    if block_given?
-      @sort_block = proc &block
+    if @sort_option == :descending
+      @sort_block = proc {|a,b| b<=>a}
     else
       @sort_block = proc {|a,b| a<=>b}
     end
@@ -30,7 +31,11 @@ class HashWithBsearch
     if @sorted_key_value_array.empty?
       return nil
     else
-      found_kv_pair = @sorted_key_value_array.bsearch{|kv_pair| key <=> kv_pair[0]}
+      if @sort_option == :descending
+        found_kv_pair = @sorted_key_value_array.bsearch{|kv_pair| kv_pair[0] <=> key}
+      else
+        found_kv_pair = @sorted_key_value_array.bsearch{|kv_pair| key <=> kv_pair[0]}
+      end
       return (found_kv_pair == nil) ? nil : found_kv_pair[1]
     end
   end
