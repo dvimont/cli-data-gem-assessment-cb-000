@@ -24,17 +24,15 @@ class Audiobook
   end
 
   attr_accessor :id, :url_librivox, :title, :date_released, :url_text,
-                :gutenberg_id, :gutenberg_subjects,
-                :http_error
+                :language, :authors_hash, :readers_hash, :genres_csv_string,
+                :gutenberg_id, :gutenberg_subjects, :http_error
                  #, :url_iarchive, :url_text_source
-  attr_reader :language_object, :authors, :readers, :genres
-  # may want to ultimately make the following attr_writer only (no public access)
-  attr_accessor :language, :authors_hash, :genre_csv_string, :readers_hash
-
+  attr_reader :language_object, :authors, :readers, :genres_librivox, :genres_gutenberg
 
   def initialize(attributes)
     self.add_attributes(attributes)
-    if (self.url_librivox == nil || self.url_librivox == "") # only completed audiobooks have URL
+    # only completed audiobooks have a url_librivox value
+    if (self.url_librivox.nil? || self.url_librivox.empty?)
       @@works_in_progress.add(self)
     else
       @@all.add(self)
@@ -49,22 +47,30 @@ class Audiobook
       self.send(("#{key}="), value)
     }
     if !self.gutenberg_id.nil?
-      @@all_by_gutenberg_id[self.gutenberg_id] = self # accessed to build GenreGutenberg objects
+      @@all_by_gutenberg_id[self.gutenberg_id] = self # to scrape Gutenberg xml files
     end
   end
 
   def build_category_objects
-    if self.language != nil && self.language != ""
+    if !self.language.nil? && !self.language.empty?
       @language_object = Language.create_or_get_existing(self.language)
       @language_object.add_audiobook(self)
     end
-    if self.authors_hash != nil && !self.authors_hash.empty?
+    if !self.authors_hash.nil? && !self.authors_hash.empty?
       @authors = Author.mass_initialize(self.authors_hash)
       @authors.each{|author| author.add_audiobook(self)}
     end
-    if self.readers_hash != nil && !self.readers_hash.empty?
+    if !self.readers_hash.nil? && !self.readers_hash.empty?
       @readers = Reader.mass_initialize(self.readers_hash)
       @readers.each{|reader| reader.add_audiobook(self)}
+    end
+    if !self.genres_csv_string.nil? && !self.genres_csv_string.empty?
+      @genres_librivox = GenreLibrivox.mass_initialize(self.genres_csv_string)
+      @genres_librivox.each{|genre_librivox| genre_librivox.add_audiobook(self)}
+    end
+    if !self.gutenberg_subjects.nil? && !self.gutenberg_subjects.empty?
+      @genres_gutenberg = GenreGutenberg.mass_initialize(self.gutenberg_subjects)
+      @genres_gutenberg.each{|genre_gutenberg| genre_gutenberg.add_audiobook(self)}
     end
   end
 
@@ -76,7 +82,7 @@ class Audiobook
         "\n  " + :authors_hash.to_s + ": " + self.authors_hash.to_s +
 #        "\n  " + :readers_hash.to_s + ": " + self.readers_hash.to_s +
 #        "\n  " + :language.to_s + ": " + self.language.to_s +
-#        "\n  " + :genre_csv_string.to_s + ": " + self.genre_csv_string +
+#        "\n  " + :genres_csv_string.to_s + ": " + self.genres_csv_string +
         "\n  " + :date_released.to_s + ": " + self.date_released
     if self.http_error != nil
       output_string += "\n  " + :http_error.to_s + ": " + self.http_error

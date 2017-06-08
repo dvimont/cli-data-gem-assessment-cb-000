@@ -1,12 +1,10 @@
-require 'open-uri'
-require 'json'
 require 'nokogiri'
 
 # NOTE: This process utiizes a tar file provided by Project Gutenberg,
 #   provided to obviate the need for external agents to pound their website
 #   with robotic scraping "attacks". The process involves opening the tar
-#   file and looping through its file directorys looking for a matching
-#   audibook in the Audiobook.all_by_gutenberg_id collection. When a matching
+#   file and looping through its file directory looking for a matching
+#   audibook in the Audiobook.all_by_gutenberg_id collection. When a match
 #   is found, the current Gutenberg file is opened with the Nokogiri parser,
 #   and its subject (i.e. genre) data is extracted and passed to the audiobook.
 

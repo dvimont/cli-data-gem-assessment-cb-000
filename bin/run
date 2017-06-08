@@ -5,12 +5,13 @@ require_relative '../config/environment'
 puts "*** BUILDING CATALOG OF AUDIOBOOKS! ***"
 optional_parm = "&id=7926" # get explicit audiobook webpage for development/testing
 # CatalogBuilder.build(10, :save_http_responses) # 10000, optional_parm)
-CatalogBuilder.build(1, :local_uri_calls)
+CatalogBuilder.build(525, :local_uri_calls)
 #Audiobook.list_all
 
+puts "AUDIOBOOKS (#{Audiobook.all.size.to_s})"
 puts "AUTHORS (" + Author.all.size.to_s + "):"
 # Author.all_by_name.values.each{|author| puts " -- " + author.to_s}
-#=begin
+=begin
 Author.all_by_name.values.each{|author|
   puts author.id + " " + author.to_s
   puts "  -- " + author.audiobooks_by_title.size.to_s + " audiobooks by this author."
@@ -22,7 +23,7 @@ Author.all_by_name.values.each{|author|
     }
   }
 }
-#=end
+=end
 puts "READERS (" + Reader.all_by_name.size.to_s + "):"
 # Reader.all_by_name.values.each{|reader| puts " -- " + reader.to_s}
 
@@ -42,5 +43,12 @@ Language.all.each{|key, language|
 #=end
 }
 =end
+
+puts "GENRES from Librivox (#{GenreLibrivox.all.size.to_s})"
+#GenreLibrivox.all.values.each {|genre| puts "  : #{genre.id} (#{genre.audiobooks.size.to_s})"}
+
+puts "GENRES from Gutenberg (#{GenreGutenberg.all.size.to_s})"
+GenreGutenberg.all.values.each {|genre| puts "  : #{genre.id} (#{genre.audiobooks.size.to_s})"}
+
 puts "=====\nAudiobook count: " + Audiobook.all.size.to_s
 # Audiobook.all.each{|audiobook| puts "url: " + audiobook.url_librivox}

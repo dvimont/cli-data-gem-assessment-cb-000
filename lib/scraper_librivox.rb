@@ -1,4 +1,3 @@
-require 'open-uri'
 require 'json'
 require 'nokogiri'
 
@@ -43,7 +42,7 @@ class ScraperLibrivox
         genre_elements = title_author_genre_section.css("p.book-page-genre")
         genre_elements.each{ |element|
           if element.css("span").text == "Genre(s):"
-            attributes[:genre_csv_string] = element.text[10, element.text.length]
+            attributes[:genres_csv_string] = element.text[10, element.text.length]
             break
           end
         }

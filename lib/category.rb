@@ -10,7 +10,7 @@ module Category
 
     def create_or_get_existing(id_string, attributes=nil)
       retrieved_object = self.all[id_string]
-      if retrieved_object == nil
+      if retrieved_object.nil?
         retrieved_object = self.new({id: id_string})
         if !attributes.nil?
           retrieved_object.add_attributes(attributes)
@@ -19,6 +19,7 @@ module Category
       end
       return retrieved_object
     end
+
   end
 
   module InstanceMethods

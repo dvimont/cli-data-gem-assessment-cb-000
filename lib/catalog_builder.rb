@@ -73,12 +73,11 @@ class CatalogBuilder
     puts "** COMPLETED scraping of Librivox pages for #{Audiobook.all.size.to_s} audiobooks: " + current_time
     puts "====="
 
-  end
+    puts "** STARTING scraping of Gutenberg xml docs for #{Audiobook.all_by_gutenberg_id.size.to_s} audiobooks: " + current_time
+    ScraperGutenberg.process_gutenberg_genres
+    puts "** COMPLETED scraping of Gutenberg xml docs for #{Audiobook.all_by_gutenberg_id.size.to_s} audiobooks: " + current_time
+    puts "====="
 
-  def self.current_time
-    current_time = Time.now.to_s
-    current_time = current_time.slice(0,current_time.length - 6)
-    return current_time
   end
 
   def self.build_category_objects
@@ -88,13 +87,12 @@ class CatalogBuilder
     }
     puts "** COMPLETED building of Category objects for #{Audiobook.all.size.to_s} audiobooks: " + current_time
     puts "====="
+  end
 
-    puts "** STARTING building of GenreGutenberg objects for #{Audiobook.all_by_gutenberg_id.size.to_s} audiobooks: " + current_time
-    ScraperGutenberg.process_gutenberg_genres
-    puts "** COMPLETED building of Category objects for #{Audiobook.all_by_gutenberg_id.size.to_s} audiobooks: " + current_time
-    puts "====="
-
-
+  def self.current_time
+    current_time = Time.now.to_s
+    current_time = current_time.slice(0,current_time.length - 6)
+    return current_time
   end
 
   def self.get_local_uri(api_parms)
