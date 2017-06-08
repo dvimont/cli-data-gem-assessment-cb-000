@@ -1,6 +1,7 @@
 class Audiobook
   @@all = SortedSet.new
   @@works_in_progress = SortedSet.new
+  @@all_by_gutenberg_id = HashWithBsearch.new
 
   def self.mass_initialize(hash_array)
     hash_array.each{ |hash| Audiobook.new(hash) }
@@ -8,6 +9,10 @@ class Audiobook
 
   def self.all()
     return @@all
+  end
+
+  def self.all_by_gutenberg_id()
+    return @@all_by_gutenberg_id
   end
 
   def self.works_in_progress
@@ -18,7 +23,8 @@ class Audiobook
     self.all.each {|audiobook| puts audiobook.to_s }
   end
 
-  attr_accessor :id, :url_librivox, :title, :date_released, :url_text
+  attr_accessor :id, :url_librivox, :title, :date_released, :url_text,
+                :gutenberg_id, :gutenberg_subjects,
                 :http_error
                  #, :url_iarchive, :url_text_source
   attr_reader :language_object, :authors, :readers, :genres
@@ -42,6 +48,9 @@ class Audiobook
       end
       self.send(("#{key}="), value)
     }
+    if !self.gutenberg_id.nil?
+      @@all_by_gutenberg_id[self.gutenberg_id] = self # accessed to build GenreGutenberg objects
+    end
   end
 
   def build_category_objects

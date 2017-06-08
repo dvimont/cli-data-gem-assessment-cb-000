@@ -22,6 +22,7 @@ class ScraperLibrivox
         end
 
         page_content = Nokogiri::HTML(open(uri, :read_timeout=>nil))
+
         # SCRAPE: title, author, & genre
         title_author_genre_section =
               page_content.css("div.main-content div.page div.content-wrap")
@@ -63,8 +64,12 @@ class ScraperLibrivox
         links = page_content.css(
             "div.main-content div.sidebar.book-page div.book-page-sidebar p a")
         links.each {|element|
-          if element.text.upcase == "ONLINE TEXT"
-            attributes[:url_text] = element.attribute("href").value
+          if element.text.upcase[/.*ONLINE TEXT.*/]
+            url_text = element.attribute("href").value
+            attributes[:url_text] = url_text
+            if url_text[/gutenberg.org\/etext\/\d+$/]
+              attributes[:gutenberg_id] = url_text[/\d+$/]
+            end
             break
           end
         }

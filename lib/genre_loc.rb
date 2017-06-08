@@ -1,7 +1,7 @@
-class Language
+class GenreLOC
   extend Category::ClassMethods
   include Category::InstanceMethods
 
-  @@SUBCATEGORIZABLE = false
+  @@SUBCATEGORIZABLE = true
 
 end

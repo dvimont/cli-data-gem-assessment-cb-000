@@ -5,7 +5,7 @@ require_relative '../config/environment'
 puts "*** BUILDING CATALOG OF AUDIOBOOKS! ***"
 optional_parm = "&id=7926" # get explicit audiobook webpage for development/testing
 # CatalogBuilder.build(10, :save_http_responses) # 10000, optional_parm)
-CatalogBuilder.build(10, :local_uri_calls)
+CatalogBuilder.build(1, :local_uri_calls)
 #Audiobook.list_all
 
 puts "AUTHORS (" + Author.all.size.to_s + "):"
@@ -15,7 +15,11 @@ Author.all_by_name.values.each{|author|
   puts author.id + " " + author.to_s
   puts "  -- " + author.audiobooks_by_title.size.to_s + " audiobooks by this author."
   author.audiobooks_by_title.values.each{|audiobook|
-    puts "  -- " + audiobook.title + " online text URL: " + audiobook.url_text
+    puts "  -- " + audiobook.title + " online text URL: " + audiobook.url_text.to_s
+    puts "     GUTENBERG SUBJECTS ARE AS FOLLOWS:"
+    audiobook.gutenberg_subjects.each{|subject|
+      puts "        >> " + subject
+    }
   }
 }
 #=end

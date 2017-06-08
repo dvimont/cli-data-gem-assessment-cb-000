@@ -55,5 +55,9 @@ module Category
     def <=>(other)
       return self.id <=> other.id
     end
+
+    def to_s()
+      return self.id
+    end
   end
 end
