@@ -13,13 +13,7 @@ class ScraperLibrivox
           url_librivox = "https" + url_librivox[4,url_librivox.length]
         end
         if special_processing == :save_http_responses
-          substring_length = url_librivox.length - 8
-          substring_length -= 1 if url_librivox.end_with?("/")
-          open(get_local_uri(url_librivox), "wb") { |file|
-            open(url_librivox, :read_timeout=>nil) { |uri|
-               file.write(uri.read)
-            }
-          }
+          retrieve_and_persist_http_response(url_librivox)
         end
         if special_processing == :local_uri_calls
           uri = get_local_uri(url_librivox)
@@ -63,6 +57,16 @@ class ScraperLibrivox
             break
           end
           previous_text = element.text
+        }
+
+        # SCRAPE: url_text from sidebar section
+        links = page_content.css(
+            "div.main-content div.sidebar.book-page div.book-page-sidebar p a")
+        links.each {|element|
+          if element.text.upcase == "ONLINE TEXT"
+            attributes[:url_text] = element.attribute("href").value
+            break
+          end
         }
 
         # SCRAPE: readers
@@ -127,10 +131,17 @@ class ScraperLibrivox
       return attributes
     end
 
-    def get_local_uri(url_librivox)
-      substring_length = url_librivox.length - 8
-      substring_length -= 1 if url_librivox.end_with?("/")
-      return LOCAL_WEBPAGE_URI_PREFIX + url_librivox[8,substring_length]
+    def retrieve_and_persist_http_response(url)
+      open(get_local_uri(url), "wb") { |file|
+        open(url, :read_timeout=>nil) { |uri| file.write(uri.read) }
+      }
+    end
+
+    def get_local_uri(url)
+      url_prefix_length = url[/https?:\/\//].length
+      substring_length = url.length - url_prefix_length
+      substring_length -= 1 if url.end_with?("/")
+      return LOCAL_WEBPAGE_URI_PREFIX + url[url_prefix_length,substring_length]
     end
   end
 end

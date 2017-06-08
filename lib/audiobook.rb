@@ -18,7 +18,8 @@ class Audiobook
     self.all.each {|audiobook| puts audiobook.to_s }
   end
 
-  attr_accessor :id, :url_librivox, :title, :date_released, :http_error
+  attr_accessor :id, :url_librivox, :title, :date_released, :url_text
+                :http_error
                  #, :url_iarchive, :url_text_source
   attr_reader :language_object, :authors, :readers, :genres
   # may want to ultimately make the following attr_writer only (no public access)
