@@ -62,6 +62,7 @@ class CatalogBuilder
 
     self.scrape_webpages
     self.build_category_objects
+    self.build_solo_group_hashes # must come after Reader category objects instantiated
   end
 
   def self.scrape_webpages
@@ -86,6 +87,15 @@ class CatalogBuilder
       audiobook.build_category_objects
     }
     puts "** COMPLETED building of Category objects for #{Audiobook.all.size.to_s} audiobooks: " + current_time
+    puts "====="
+  end
+
+  def self.build_solo_group_hashes
+    puts "** STARTING building of Solo and Group hashes for #{Audiobook.all.size.to_s} audiobooks: " + current_time
+    Audiobook.all.each{ |audiobook|
+      audiobook.build_solo_group_hashes
+    }
+    puts "** COMPLETED building of Solo and Group hashes for #{Audiobook.all.size.to_s} audiobooks: " + current_time
     puts "====="
   end
 

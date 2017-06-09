@@ -9,18 +9,44 @@ CatalogBuilder.build(525, :local_uri_calls)
 #Audiobook.list_all
 
 puts "AUDIOBOOKS (#{Audiobook.all.size.to_s})"
+puts "  TOTAL SOLO WORKS: " + Audiobook.solo_works_by_date.size.to_s
+puts "  TOTAL GROUP WORKS: " + Audiobook.group_works_by_date.size.to_s
+=begin
+puts "newest 20 solo releases..."
+count = 0
+Audiobook.solo_works_by_date.values.each {|audiobook|
+  puts audiobook.title + " released: " + audiobook.date_released
+  count += 1
+  if count == 20
+    break
+  end
+}
+puts "\nnewest 20 group releases..."
+count = 0
+Audiobook.group_works_by_date.values.each {|audiobook|
+  puts audiobook.title + " released: " + audiobook.date_released
+  count += 1
+  if count == 20
+    break
+  end
+}
+=end
 puts "AUTHORS (" + Author.all.size.to_s + "):"
 # Author.all_by_name.values.each{|author| puts " -- " + author.to_s}
 =begin
 Author.all_by_name.values.each{|author|
   puts author.id + " " + author.to_s
-  puts "  -- " + author.audiobooks_by_title.size.to_s + " audiobooks by this author."
+  puts "  -- " + author.audiobooks_by_title.size.to_s + " ALL audiobooks by this author."
   author.audiobooks_by_title.values.each{|audiobook|
-    puts "  -- " + audiobook.title + " online text URL: " + audiobook.url_text.to_s
-    puts "     GUTENBERG SUBJECTS ARE AS FOLLOWS:"
-    audiobook.gutenberg_subjects.each{|subject|
-      puts "        >> " + subject
-    }
+    puts "    >>-- " + audiobook.title + " online text URL: " + audiobook.url_text.to_s
+  }
+  puts "  -- " + author.solo_works_by_title.size.to_s + " SOLO audiobooks by this author."
+  author.solo_works_by_title.values.each{|audiobook|
+    puts "    >>-- " + audiobook.title + " online text URL: " + audiobook.url_text.to_s
+  }
+  puts "  -- " + author.group_works_by_title.size.to_s + " GROUP audiobooks by this author."
+  author.group_works_by_title.values.each{|audiobook|
+    puts "    >>-- " + audiobook.title + " online text URL: " + audiobook.url_text.to_s
   }
 }
 =end
@@ -48,7 +74,7 @@ puts "GENRES from Librivox (#{GenreLibrivox.all.size.to_s})"
 #GenreLibrivox.all.values.each {|genre| puts "  : #{genre.id} (#{genre.audiobooks.size.to_s})"}
 
 puts "GENRES from Gutenberg (#{GenreGutenberg.all.size.to_s})"
-GenreGutenberg.all.values.each {|genre| puts "  : #{genre.id} (#{genre.audiobooks.size.to_s})"}
+#GenreGutenberg.all.values.each {|genre| puts "  : #{genre.id} (#{genre.audiobooks.size.to_s})"}
 
 puts "=====\nAudiobook count: " + Audiobook.all.size.to_s
-# Audiobook.all.each{|audiobook| puts "url: " + audiobook.url_librivox}
+# Audiobook.all.each{|audiobook| puts "internet archive url: " + audiobook.url_iarchive}

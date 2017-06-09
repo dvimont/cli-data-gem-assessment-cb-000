@@ -24,13 +24,19 @@ module Category
 
   module InstanceMethods
     attr_accessor :id
-    attr_reader :audiobooks, :audiobooks_by_title, :audiobooks_by_date
+    attr_reader :audiobooks, :audiobooks_by_title, :audiobooks_by_date,
+          :solo_works_by_title, :solo_works_by_date,
+          :group_works_by_title, :group_works_by_date
 
     def initialize(attributes)
       self.add_attributes(attributes)
       @audiobooks = HashWithBsearch.new # default (id) order
       @audiobooks_by_title = HashWithBsearch.new # {|a,b| a.title <=> b.title}
       @audiobooks_by_date = HashWithBsearch.new(:descending)
+      @solo_works_by_title = HashWithBsearch.new
+      @solo_works_by_date = HashWithBsearch.new(:descending)
+      @group_works_by_title = HashWithBsearch.new
+      @group_works_by_date = HashWithBsearch.new(:descending)
     end
 
     def add_self_to_class_collections()
@@ -50,6 +56,15 @@ module Category
         end
         self.audiobooks_by_title[title_key] = audiobook
         self.audiobooks_by_date[audiobook.date_released] = audiobook
+        if !audiobook.readers_hash.nil?
+          if audiobook.readers_hash.size == 1
+            self.solo_works_by_title[title_key] = audiobook
+            self.solo_works_by_date[audiobook.date_released] = audiobook
+          elsif audiobook.readers_hash.size > 1
+            self.group_works_by_title[title_key] = audiobook
+            self.group_works_by_date[audiobook.date_released] = audiobook
+          end
+        end
       end
     end
 

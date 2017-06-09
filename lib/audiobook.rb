@@ -1,17 +1,19 @@
 class Audiobook
   @@all = SortedSet.new
   @@works_in_progress = SortedSet.new
-  @@all_by_gutenberg_id = HashWithBsearch.new
+  @@all_by_gutenberg_id = HashWithBsearch.new # used to build GenreGutenberg
+  @@solo_works_by_date = HashWithBsearch.new(:descending) # newest solos
+  @@group_works_by_date = HashWithBsearch.new(:descending) # newest group works
 
   def self.mass_initialize(hash_array)
     hash_array.each{ |hash| Audiobook.new(hash) }
   end
 
-  def self.all()
+  def self.all
     return @@all
   end
 
-  def self.all_by_gutenberg_id()
+  def self.all_by_gutenberg_id
     return @@all_by_gutenberg_id
   end
 
@@ -19,14 +21,22 @@ class Audiobook
     return @@works_in_progress
   end
 
-  def self.list_all()
+  def self.solo_works_by_date
+    return @@solo_works_by_date
+  end
+
+  def self.group_works_by_date
+    return @@group_works_by_date
+  end
+
+  def self.list_all
     self.all.each {|audiobook| puts audiobook.to_s }
   end
 
   attr_accessor :id, :url_librivox, :title, :date_released, :url_text,
                 :language, :authors_hash, :readers_hash, :genres_csv_string,
-                :gutenberg_id, :gutenberg_subjects, :http_error
-                 #, :url_iarchive, :url_text_source
+                :gutenberg_id, :gutenberg_subjects, :url_cover_art, :url_iarchive
+                :http_error
   attr_reader :language_object, :authors, :readers, :genres_librivox, :genres_gutenberg
 
   def initialize(attributes)
@@ -52,6 +62,10 @@ class Audiobook
   end
 
   def build_category_objects
+    if !self.readers_hash.nil? && !self.readers_hash.empty?
+      @readers = Reader.mass_initialize(self.readers_hash)
+      @readers.each{|reader| reader.add_audiobook(self)}
+    end
     if !self.language.nil? && !self.language.empty?
       @language_object = Language.create_or_get_existing(self.language)
       @language_object.add_audiobook(self)
@@ -60,10 +74,6 @@ class Audiobook
       @authors = Author.mass_initialize(self.authors_hash)
       @authors.each{|author| author.add_audiobook(self)}
     end
-    if !self.readers_hash.nil? && !self.readers_hash.empty?
-      @readers = Reader.mass_initialize(self.readers_hash)
-      @readers.each{|reader| reader.add_audiobook(self)}
-    end
     if !self.genres_csv_string.nil? && !self.genres_csv_string.empty?
       @genres_librivox = GenreLibrivox.mass_initialize(self.genres_csv_string)
       @genres_librivox.each{|genre_librivox| genre_librivox.add_audiobook(self)}
@@ -71,6 +81,24 @@ class Audiobook
     if !self.gutenberg_subjects.nil? && !self.gutenberg_subjects.empty?
       @genres_gutenberg = GenreGutenberg.mass_initialize(self.gutenberg_subjects)
       @genres_gutenberg.each{|genre_gutenberg| genre_gutenberg.add_audiobook(self)}
+    end
+  end
+
+  def build_solo_group_hashes
+    if !self.readers.nil?
+      if self.readers.size == 1
+        @@solo_works_by_date[self.date_released + self.title[0,10]] = self
+      elsif self.readers.size > 1
+        @@group_works_by_date[self.date_released + self.title[0,10]] = self
+
+      end
+    else
+      puts "AUDIOBOOK NEITHER SOLO NOR GROUP: " + self.title + " " +
+          self.url_librivox # +
+    #      " other reader count: " + self.readers_hash.size.to_s
+          puts ""
+    #      puts self.readers_hash.to_s
+
     end
   end
 

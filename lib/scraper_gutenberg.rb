@@ -30,7 +30,7 @@ class ScraperGutenberg
               "rdf|RDF pgterms|ebook dcterms|subject rdf|Description rdf|value")
           gutenberg_subjects = Array.new
           subject_elements.each{|subject|
-            gutenberg_subjects.push(subject.text) if !subject.text[/^P[A-Z]$/]
+            gutenberg_subjects.push(subject.text) if !subject.text[/^[A-Z][A-Z]?$/]
           }
           if !gutenberg_subjects.empty?
             matched_audiobook.gutenberg_subjects = gutenberg_subjects
