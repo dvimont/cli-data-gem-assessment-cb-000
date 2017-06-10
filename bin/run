@@ -4,8 +4,9 @@ require_relative '../config/environment'
 
 puts "*** BUILDING CATALOG OF AUDIOBOOKS! ***"
 optional_parm = "&id=7926" # get explicit audiobook webpage for development/testing
-# CatalogBuilder.build(10, :save_http_responses) # 10000, optional_parm)
-CatalogBuilder.build(525, :local_uri_calls)
+CatalogBuilder.build(12000, :local_uri_calls) # :local_api_calls) # 10000, optional_parm)
+# CatalogBuilder.build(5, :local_uri_calls)
+# CatalogBuilder.build(10, :local_uri_calls)
 #Audiobook.list_all
 
 puts "AUDIOBOOKS (#{Audiobook.all.size.to_s})"

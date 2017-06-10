@@ -11,23 +11,27 @@ class ScraperLibrivox
         if url_librivox.start_with?("http:")
           url_librivox = "https" + url_librivox[4,url_librivox.length]
         end
-        if special_processing == :save_http_responses
+        if special_processing != :local_uri_calls
           retrieve_and_persist_http_response(url_librivox)
         end
-        if special_processing == :local_uri_calls
-          uri = get_local_uri(url_librivox)
-        else
-          uri = url_librivox
-        end
 
-        page_content = Nokogiri::HTML(open(uri, :read_timeout=>nil))
+        page_content = Nokogiri::HTML(open(get_local_uri(url_librivox), :read_timeout=>nil))
         book_page_section = page_content.css("div.main-content div.page.book-page")
+        if book_page_section.nil? || book_page_section.size == 0
+          return attributes
+        end
         book_page_sidebar_section = page_content.css(
                 "div.main-content div.sidebar.book-page div.book-page-sidebar")
 
         # SCRAPE: title, genre, and url_cover_art
         title_genre_section = book_page_section.css("div.content-wrap")
-        attributes[:title] = title_genre_section.css("h1")[0].text
+        title_element = title_genre_section.css("h1")[0]
+        if title_element
+          attributes[:title] = title_genre_section.css("h1")[0].text
+        else
+          puts "  -- no title found for audiobook at url: " + url_librivox
+          attributes[:title] = "NO TITLE: " + url_librivox
+        end
 
         genre_elements = title_genre_section.css("p.book-page-genre")
         genre_elements.each{ |element|
@@ -37,8 +41,10 @@ class ScraperLibrivox
           end
         }
 
-        attributes[:url_cover_art] = title_genre_section.css(
-                      "div.book-page-book-cover img").attribute("src").value
+        cover_art_img_element = title_genre_section.css("div.book-page-book-cover img")
+        if cover_art_img_element
+          attributes[:url_cover_art] = cover_art_img_element.attribute("src").value
+        end
 
         # SCRAPE: date-released from sidebar section
         product_details = book_page_sidebar_section.css("dl.product-details *")
@@ -106,8 +112,17 @@ class ScraperLibrivox
     end
 
     def retrieve_and_persist_http_response(url)
+      # if webpage already stored locally, do not do remote call & persist
+      begin
+        Nokogiri::HTML(open(get_local_uri(url), :read_timeout=>nil))
+      # rescue OpenURI::HTTPError => ex
+      rescue Errno::ENOENT
+        # if not found locally carry on with remote call & persist
+      else
+        return
+      end
       open(get_local_uri(url), "wb") { |file|
-        open(url, :read_timeout=>nil) { |uri| file.write(uri.read) }
+        open(url, {:read_timeout=>nil, :redirect=>false}) { |uri| file.write(uri.read) }
       }
     end
 

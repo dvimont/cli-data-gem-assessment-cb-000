@@ -35,17 +35,25 @@ class Audiobook
 
   attr_accessor :id, :url_librivox, :title, :date_released, :url_text,
                 :language, :authors_hash, :readers_hash, :genres_csv_string,
-                :gutenberg_id, :gutenberg_subjects, :url_cover_art, :url_iarchive
+                :gutenberg_id, :gutenberg_subjects, :url_cover_art, :url_iarchive,
                 :http_error
   attr_reader :language_object, :authors, :readers, :genres_librivox, :genres_gutenberg
 
   def initialize(attributes)
     self.add_attributes(attributes)
     # only completed audiobooks have a url_librivox value
-    if (self.url_librivox.nil? || self.url_librivox.empty?)
+    if (self.url_librivox.nil? || self.url_librivox.empty? ||
+                  # must be in librivox.org domain
+                  !self.url_librivox[/^https?:\/\/librivox.org/] ||
+                  # must NOT have multiple directories after domain
+                  self.url_librivox[/^https?:\/\/librivox.org\/.+\/.+/])
       @@works_in_progress.add(self)
     else
-      @@all.add(self)
+      if self.http_error.nil?
+        @@all.add(self)
+      else
+        puts "HTTP ERROR for audiobook (#{self.url_librivox}): " + self.http_error
+      end
     end
   end
 
@@ -93,8 +101,8 @@ class Audiobook
 
       end
     else
-      puts "AUDIOBOOK NEITHER SOLO NOR GROUP: " + self.title + " " +
-          self.url_librivox # +
+      puts "AUDIOBOOK NEITHER SOLO NOR GROUP: title: #{self.title.to_s} ; url_librivox: #{self.url_librivox.to_s}"
+           # +
     #      " other reader count: " + self.readers_hash.size.to_s
           puts ""
     #      puts self.readers_hash.to_s

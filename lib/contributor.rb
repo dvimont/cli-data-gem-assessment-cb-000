@@ -57,13 +57,17 @@ class Contributor
 
   def add_self_to_class_collections()
     super
-    if self.last_name.to_s == "VERSION" || self.last_name.to_s == "VULGATA"
-      name_key = self.first_name.to_s + " " + self.last_name.to_s
+    if self.first_name.nil?
+      name_key = self.last_name
     else
-      name_key = self.last_name.to_s +
-                  ("_" * (30 - self.last_name.length)) + self.first_name.to_s
+      if self.last_name.to_s == "VERSION" || self.last_name.to_s == "VULGATA"
+        name_key = self.first_name.to_s + " " + self.last_name.to_s
+      else
+        name_key = self.last_name.to_s +
+                    ("_" * (30 - self.last_name.length)) + self.first_name.to_s
+      end
     end
-    self.class.all_by_name[name_key.upcase] = self
+    self.class.all_by_name[name_key.upcase] = self  if !name_key.nil?
   end
 
   def to_s()
