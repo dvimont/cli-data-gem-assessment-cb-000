@@ -93,20 +93,12 @@ class Audiobook
   end
 
   def build_solo_group_hashes
-    if !self.readers.nil?
-      if self.readers.size == 1
-        @@solo_works_by_date[self.date_released + self.title[0,10]] = self
-      elsif self.readers.size > 1
-        @@group_works_by_date[self.date_released + self.title[0,10]] = self
-
-      end
+    if !self.readers.nil? && self.readers.size == 1
+      @@solo_works_by_date[self.date_released + self.title[0,10]] = self
     else
-      puts "AUDIOBOOK NEITHER SOLO NOR GROUP: title: #{self.title.to_s} ; url_librivox: #{self.url_librivox.to_s}"
-           # +
-    #      " other reader count: " + self.readers_hash.size.to_s
-          puts ""
-    #      puts self.readers_hash.to_s
-
+      if !self.date_released.nil? && !self.title.nil?
+        @@group_works_by_date[self.date_released + self.title[0,10]] = self
+      end
     end
   end
 
