@@ -18,7 +18,7 @@ class CatalogBuilder
     build_timer = Timer.new
     api_timer = Timer.new
 
-    puts "****** BUILDING CATALOG OF AUDIOBOOKS! ******"
+    puts "****** BUILDING CATALOG OF AUDIOBOOKS! ****** #{self.current_time}"
     puts "*** Starting API calls and Audiobook initialization"
     while records_remaining_to_fetch > 0
       call_limit = (records_remaining_to_fetch > LIMIT_PER_CALL) ?
@@ -71,7 +71,8 @@ class CatalogBuilder
     self.build_category_objects
     self.build_solo_group_hashes # must come after Reader category objects instantiated
 
-    puts "****** FULL BUILD OF CATALOG OF #{Audiobook.all.size.to_s} AUDIOBOOKS COMPLETED IN #{build_timer.how_long?} ******"
+    puts "****** FULL BUILD OF CATALOG OF #{Audiobook.all.size.to_s} AUDIOBOOKS COMPLETED IN #{build_timer.how_long?} " +
+        "****** #{self.current_time}"
   end
 
   def self.scrape_webpages
@@ -148,12 +149,21 @@ end
 class Timer
 
   def initialize
-    @start_time = Time.now.tv_sec
+    @start_time = Time.now.to_f
   end
 
   def how_long?
-    total_seconds = Time.now.tv_sec - @start_time
-    return "#{(total_seconds / 60).to_s}:#{"%02d" % (total_seconds % 60).to_s}"
+    total_seconds_float = Time.now.to_f - @start_time
+    total_seconds = total_seconds_float.to_i
+    hundredths_of_second = (((total_seconds_float - total_seconds).round(2)) * 100).to_i
+    less_than = ""
+    if hundredths_of_second == 0 && total_seconds == 0
+      hundredths_of_second = 1 if hundredths_of_second == 0 && total_seconds == 0
+      less_than = "< "
+    end
+
+    return less_than + "#{(total_seconds / 60).to_s}:#{"%02d"%(total_seconds % 60).to_s}" +
+                      ".#{"%02d"%(hundredths_of_second).to_s}"
   end
 
 end
