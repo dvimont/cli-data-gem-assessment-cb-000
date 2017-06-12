@@ -8,6 +8,8 @@
 
 class HashWithBsearch
 
+  EMPTY_ARRAY = Array.new
+
   def initialize(sort_option=:ascending)
     result = (@wrapped_hash = Hash.new)
     @sort_option = sort_option
@@ -47,6 +49,26 @@ class HashWithBsearch
     else
       return @sorted_hash.each
     end
+  end
+
+  def select(&block)
+    rebuild_sorted_hash
+    return @sorted_hash.select &block
+  end
+
+  # Intended to optimize efficiency when searching for an ordered subset of
+  #  items that match the submitted key_prefix
+  def key_starts_with(key_prefix)
+    start_index = @sorted_key_value_array.bsearch_index{ |kv_pair|
+                    kv_pair[0][0,key_prefix.length] >= key_prefix }
+    return EMPTY_ARRAY  if start_index.nil?
+
+    end_index = @sorted_key_value_array.bsearch_index{ |kv_pair|
+                    kv_pair[0][0,key_prefix.length] > key_prefix} - 1
+    end_index = @sorted_key_value_array - 1  if end_index.nil?
+
+    return EMPTY_ARRAY  if end_index < start_index # key_prefix not found!
+    return @sorted_key_value_array[start_index..end_index]
   end
 
   def keys

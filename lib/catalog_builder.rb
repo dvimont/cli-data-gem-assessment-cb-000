@@ -6,12 +6,21 @@ class CatalogBuilder
 
   LIBRIVOX_API_URL = "https://librivox.org/api/feed/audiobooks/"
   LIBRIVOX_API_PARMS = "?fields={id,url_librivox,language}&format=json"
-  DEFAULT_CATALOG_SIZE = 100
+  DEFAULT_CATALOG_SIZE = 12000
   LIMIT_PER_CALL = 50
   LOCAL_API_RESPONSE_URI_PREFIX = "./fixtures/api_responses/"
+  VALID_SPECIAL_PROCESSING_OPTIONS = [:local_uri_calls, :local_api_calls]
   @@special_processing_parm = :none
 
-  def self.build(catalog_size=DEFAULT_CATALOG_SIZE, special_processing=:default, optional_parms="")
+  def self.default_catalog_size
+    return DEFAULT_CATALOG_SIZE
+  end
+
+  def self.build(catalog_size=DEFAULT_CATALOG_SIZE, special_processing=:local_uri_calls, optional_parms="")
+    if !VALID_SPECIAL_PROCESSING_OPTIONS.include?(special_processing)
+      raise ArgumentError, "Invalid special_processing argument submitted: <#{special_processing.to_s}>.  " +
+          "Valid options are: #{VALID_SPECIAL_PROCESSING_OPTIONS.to_s}"
+    end
     @@special_processing = special_processing
     offset = 0
     records_remaining_to_fetch = catalog_size

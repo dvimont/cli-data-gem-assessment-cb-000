@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require_relative '../config/environment'
+
+CATALOG_SIZE = 525
+CliController.new(CATALOG_SIZE).start
