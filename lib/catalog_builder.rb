@@ -26,12 +26,10 @@ class CatalogBuilder
       records_remaining_to_fetch -= call_limit
 
       # puts "** Called API for #{call_limit.to_s} records at offset #{offset.to_s}: " + current_time
-
       begin
         api_parms = LIBRIVOX_API_PARMS +
             "&offset=" + offset.to_s + "&limit=" + call_limit.to_s + optional_parms
-        if @@special_processing != :local_uri_calls &&
-              @@special_processing != :local_api_calls
+        if @@special_processing != :local_api_calls && @@special_processing != :local_uri_calls
           open(get_local_uri(api_parms), "wb") { |file|
             open(LIBRIVOX_API_URL + api_parms, :read_timeout=>nil) { |uri|
                file.write(uri.read)
@@ -54,18 +52,22 @@ class CatalogBuilder
       offset += call_limit
       # puts "** Call to API completed: " + current_time
       json_string = api_result.read
-      if (@@special_processing == :local_api_calls ||
-              @@special_processing == :local_uri_calls) && json_string.empty?
+      if json_string.empty? && (@@special_processing == :local_api_calls || @@special_processing == :local_uri_calls)
         puts "***    Apparent end of catalog has been reached while using :local_*_calls special_processing option! **"
         break
       end
       returned_hash = JSON.parse(json_string,{symbolize_names: true})
       hash_array = returned_hash.values[0]
       Audiobook.mass_initialize(hash_array)
-      # puts "** Initialization of Audiobook set completed: " + current_time
-      # puts "====="
     end
     puts "***    API calls and Audiobooks initialization completed in #{api_timer.how_long?}"
+
+    if @@special_processing == :convert_to_zip
+      Audiobook.all.each{ |audiobook|
+        ScraperLibrivox.convert_to_zip(audiobook.url_librivox)
+      }
+      return
+    end
 
     self.scrape_webpages
     self.build_category_objects
@@ -79,11 +81,13 @@ class CatalogBuilder
     puts "*** Starting scraping of #{Audiobook.all.size.to_s} Librivox webpages"
     scrape_timer = Timer.new
     progress_counter = 0
-    # puts "** STARTING scraping of Librivox pages for #{Audiobook.all.size.to_s} audiobooks: " + current_time
+    apparent_works_in_progress = SortedSet.new
     Audiobook.all.each{ |audiobook|
       attributes_hash = ScraperLibrivox.get_audiobook_attributes_hash(
                               audiobook.url_librivox, @@special_processing)
-      if !attributes_hash.nil?
+      if attributes_hash.nil?
+        apparent_works_in_progress.add(audiobook)
+      else
         audiobook.add_attributes(attributes_hash)
       end
       # progress_counter += 1
@@ -91,23 +95,21 @@ class CatalogBuilder
       #   puts "   -- scraping completed for #{progress_counter.to_s} audiobooks -- "  + current_time
       # end
     }
-    # puts "** COMPLETED scraping of Librivox pages for #{Audiobook.all.size.to_s} audiobooks: " + current_time
-    ##puts "====="
+    apparent_works_in_progress.each{|audiobook|
+      Audiobook.all.delete(audiobook)
+      Audiobook.works_in_progress.add(audiobook)
+    }
     puts "***    Scraping of #{Audiobook.all.size.to_s} Librivox webpages completed in: #{scrape_timer.how_long?}"
 
     puts "*** Starting scraping of Gutenberg repository"
     scrape_timer = Timer.new
-    # puts "** STARTING scraping of Gutenberg xml docs for #{Audiobook.all_by_gutenberg_id.size.to_s} audiobooks: " + current_time
     ScraperGutenberg.process_gutenberg_genres
-    #puts "** COMPLETED scraping of Gutenberg xml docs for #{Audiobook.all_by_gutenberg_id.size.to_s} audiobooks: " + current_time
-    #puts "====="
     puts "***    Scraping of Gutenberg repository completed in: #{scrape_timer.how_long?}"
   end
 
   def self.build_category_objects
     puts "*** Starting initialization of Categories for #{Audiobook.all.size.to_s} audiobooks"
     category_timer = Timer.new
-    # puts "** STARTING building of Category objects for #{Audiobook.all.size.to_s} audiobooks: " + current_time
     progress_counter = 0
     Audiobook.all.each{ |audiobook|
       next if audiobook.title.nil?
@@ -117,20 +119,15 @@ class CatalogBuilder
       #   puts "   -- build of categories completed for #{progress_counter.to_s} audiobooks -- " + current_time
       # end
     }
-    # puts "** COMPLETED building of Category objects for #{Audiobook.all.size.to_s} audiobooks: " + current_time
-    # puts "====="
     puts "***    Initialization of Categories completed in: #{category_timer.how_long?}"
   end
 
   def self.build_solo_group_hashes
     puts "*** Starting Solo/Group categorization for #{Audiobook.all.size.to_s} audiobooks"
     solo_group_timer = Timer.new
-    # puts "** STARTING building of Solo and Group hashes for #{Audiobook.all.size.to_s} audiobooks: " + current_time
     Audiobook.all.each{ |audiobook|
       audiobook.build_solo_group_hashes
     }
-    # puts "** COMPLETED building of Solo and Group hashes for #{Audiobook.all.size.to_s} audiobooks: " + current_time
-    # puts "====="
     puts "***    Solo/Group categorization completed in: #{solo_group_timer.how_long?}"
   end
 

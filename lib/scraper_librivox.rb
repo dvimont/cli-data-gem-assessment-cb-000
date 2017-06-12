@@ -1,8 +1,12 @@
 require 'json'
 require 'nokogiri'
+require 'zip'
 
 class ScraperLibrivox
-  LOCAL_WEBPAGE_URI_PREFIX = "./fixtures/web_pages/"
+  LIBRIVOX_DOMAIN = "librivox.org/"
+  LOCAL_WEBPAGE_URI_PATH = "./fixtures/web_pages/" + LIBRIVOX_DOMAIN
+  HTML_FILE_SUFFIX = ".html"
+  LOCAL_ZIP_FILE_SUFFIX = HTML_FILE_SUFFIX + ".zip"
 
   class << self
     def get_audiobook_attributes_hash(url_librivox, special_processing=:none)
@@ -15,7 +19,9 @@ class ScraperLibrivox
           retrieve_and_persist_http_response(url_librivox)
         end
 
-        page_content = Nokogiri::HTML(open(get_local_uri(url_librivox), :read_timeout=>nil))
+        page_content = get_local_page_content(url_librivox)
+        return if page_content.nil?
+
         book_page_section = page_content.css("div.main-content div.page.book-page")
         if book_page_section.nil? || book_page_section.size == 0
           return attributes
@@ -112,25 +118,62 @@ class ScraperLibrivox
     end
 
     def retrieve_and_persist_http_response(url)
-      # if webpage already stored locally, do not do remote call & persist
-      begin
-        Nokogiri::HTML(open(get_local_uri(url), :read_timeout=>nil))
-      # rescue OpenURI::HTTPError => ex
-      rescue Errno::ENOENT
-        # if not found locally carry on with remote call & persist
-      else
+      local_file_metadata = get_local_file_metadata(url)
+
+      # if webpage already stored locally, nothing need be done
+      if File.file?(local_file_metadata[0])
         return
       end
-      open(get_local_uri(url), "wb") { |file|
-        open(url, {:read_timeout=>nil, :redirect=>false}) { |uri| file.write(uri.read) }
+      # assure no "redirect" is occurring with librivox page (works in progress often redirect)
+      open(url, {:read_timeout=>nil, :redirect=>false}) { |uri| return if uri.read.empty? }
+
+      puts "***    Persisting file locally for: #{local_file_metadata[1]}" # " in #{local_file_metadata[0]}"
+      Zip::File.open(local_file_metadata[0], Zip::File::CREATE) { |zipfile|
+        open(url, {:read_timeout=>nil, :redirect=>false}) { |uri|
+          zipfile.get_output_stream(local_file_metadata[1]) { |f| f.puts uri.read }
+        }
       }
     end
 
-    def get_local_uri(url)
-      url_prefix_length = url[/https?:\/\//].length
-      substring_length = url.length - url_prefix_length
-      substring_length -= 1 if url.end_with?("/")
-      return LOCAL_WEBPAGE_URI_PREFIX + url[url_prefix_length,substring_length]
+    def get_local_page_content(url)
+      local_file_metadata = get_local_file_metadata(url)
+      if !File.file?(local_file_metadata[0])
+        return nil
+      end
+      Zip::File.open(local_file_metadata[0]) { |zipfile|
+        return Nokogiri::HTML(zipfile.read(local_file_metadata[1]))
+      }
     end
+
+    def get_local_file_metadata(url)
+      url_prefix = url[/https?:\/\/librivox.org\//]
+      return nil if url_prefix.nil?
+
+      substring_length = url.length - url_prefix.length
+      substring_length -= 1 if url.end_with?("/")
+      page_identifier = url[url_prefix.length,substring_length]
+      zip_file_uri = LOCAL_WEBPAGE_URI_PATH + page_identifier + LOCAL_ZIP_FILE_SUFFIX
+      html_file_name = page_identifier + HTML_FILE_SUFFIX
+      return [zip_file_uri, html_file_name]
+    end
+
+#    ZIP_FILETYPE = ".zip"
+#    ZIP_SUBDIR = "zips/"
+#    def convert_to_zip(url_librivox)  # file, path)
+#      local_uri = get_local_uri(url_librivox)
+#      html_filename = get_local_file_metadata(url_librivox)[1] # second element is html file-name
+#      zipfile = LOCAL_WEBPAGE_URI_PATH + ZIP_SUBDIR + html_filename + ZIP_FILETYPE
+#      if !File.file?(local_uri)
+#        puts "LOCAL FILE NOT FOUND; SKIPPING: " + local_uri
+#        return
+#      end
+#      if File.file?(zipfile)
+#        puts "ZIPFILE ALREADY EXISTS: " + zipfile
+#      else
+#        puts "CONVERTING FOLLOWING TO ZIP: " + local_uri
+#        Zip::File.open(zipfile, Zip::File::CREATE) { |zipfile|  zipfile.add(html_filename, local_uri) }
+#        puts "ZIPFILE CREATED: " + zipfile
+#      end
+#    end
   end
 end
