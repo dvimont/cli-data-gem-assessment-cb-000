@@ -2,6 +2,12 @@
 
 ## Overview
 
+TODO (a partial list):
+-- Add logger capturing of “puts” output.
+-- Add rspec (junit equivalent) testing.
+-- Bundle this all into a gem infrastructure.
+
+
 This package is intended to fulfill the requirements of the Flatiron School
 lesson entitled "CLI Data Gem Project".
 
@@ -20,7 +26,7 @@ Note that, in order to provide for O(log n) efficiency in querying the various
 categories, a new class, HashWithBsearch, was written. If time permits, it may
 be worthwhile to publish an enhanced version of this class as a gem.
 
-## Requirements
+## Requirements [from original instructions provided by Flatiron School]:
 
 1. Provide a CLI
 2. CLI must provide access to data from a web page.
