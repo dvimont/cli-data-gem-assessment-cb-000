@@ -8,8 +8,6 @@
 
 class HashWithBsearch
 
-  EMPTY_ARRAY = Array.new
-
   def initialize(sort_option=:ascending)
     result = (@wrapped_hash = Hash.new)
     @sort_option = sort_option
@@ -61,13 +59,17 @@ class HashWithBsearch
   def key_starts_with(key_prefix)
     start_index = @sorted_key_value_array.bsearch_index{ |kv_pair|
                     kv_pair[0][0,key_prefix.length] >= key_prefix }
-    return EMPTY_ARRAY  if start_index.nil?
+    return []  if start_index.nil?
 
     end_index = @sorted_key_value_array.bsearch_index{ |kv_pair|
-                    kv_pair[0][0,key_prefix.length] > key_prefix} - 1
-    end_index = @sorted_key_value_array - 1  if end_index.nil?
+                    kv_pair[0][0,key_prefix.length] > key_prefix}
+    if end_index.nil? # end of array was reached
+      end_index = @sorted_key_value_array.size - 1
+    else
+      end_index -= 1
+    end
 
-    return EMPTY_ARRAY  if end_index < start_index # key_prefix not found!
+    return []  if end_index < start_index # i.e. if key_prefix not found!
     return @sorted_key_value_array[start_index..end_index]
   end
 

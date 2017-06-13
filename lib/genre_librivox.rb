@@ -3,6 +3,10 @@ class GenreLibrivox
   include Category::InstanceMethods
 
   @@SUBCATEGORIZABLE = true
+  
+  def self.all_by_name
+    return @@all
+  end
 
   def self.mass_initialize(genres_csv_string)
     genres_librivox = Array.new
@@ -14,6 +18,10 @@ class GenreLibrivox
       end
     }
     return genres_librivox
+  end
+
+  def self.to_s()
+    return "Librivox Genre"
   end
 
 end

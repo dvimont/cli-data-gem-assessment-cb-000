@@ -3,6 +3,11 @@ class GenreGutenberg
   include Category::InstanceMethods
 
   @@SUBCATEGORIZABLE = true
+  
+  def self.all_by_name
+    return @@all
+  end
+
 
   def self.mass_initialize(gutenberg_subjects)
     genres_gutenberg = Array.new
@@ -14,6 +19,10 @@ class GenreGutenberg
       end
     }
     return genres_gutenberg
+  end
+
+  def self.to_s()
+    return "Gutenberg Genre"
   end
 
 end

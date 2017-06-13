@@ -6,7 +6,8 @@ require_relative '../config/environment'
 #      "./fixtures/web_pages/librivox.org/")
 
 optional_parm = "&id=7926" # get explicit audiobook webpage for development/testing
-CatalogBuilder.build(1, :local_uri_calls) # :local_api_calls) # 10000, optional_parm)
+# CatalogBuilder.build(12000, :remote_api_calls)
+CatalogBuilder.build(12000, :local_uri_calls)
 # CatalogBuilder.build(525, :local_uri_calls)
 # CatalogBuilder.build(12000, :local_api_calls)
 

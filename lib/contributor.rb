@@ -3,9 +3,9 @@ class Contributor
 
   @@SUBCATEGORIZABLE = true
 
-  def self.all_by_name
+#  def self.all_by_name
     #  this method implemented only in subclasses
-  end
+#  end
 
   def self.mass_initialize(hash)
     contributors = Array.new

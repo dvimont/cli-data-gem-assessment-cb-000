@@ -20,6 +20,10 @@ module Category
       return retrieved_object
     end
 
+    def get(id)
+      return self.all[id]
+    end
+
   end
 
   module InstanceMethods

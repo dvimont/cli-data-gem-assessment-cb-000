@@ -9,8 +9,31 @@ class CatalogBuilder
   DEFAULT_CATALOG_SIZE = 12000
   LIMIT_PER_CALL = 50
   LOCAL_API_RESPONSE_URI_PREFIX = "./fixtures/api_responses/"
-  VALID_SPECIAL_PROCESSING_OPTIONS = [:local_uri_calls, :local_api_calls]
-  @@special_processing_parm = :none
+  # NOTE: It is intentional that there is no special processing option to force a
+  #    "full refresh" of all local files. This is to prevent accidental submission
+  #    of such an option, which can (depending upon the time of day) almost constitute
+  #    the equivalent of a "denial of service attack" on the Librivox server.
+  #  To intentionally do a full refresh of the local API and webpage files, simply
+  #    rename the appropriate subdirectories in the "./fixtures" directory, create
+  #    new empty directories in their places, and run with :remote_api_calls option.
+  # NOTE also that the tar file containing Gutenberg collection information
+  #    (via which GenreGutenberg category classes are derived) may need
+  #    to periodically be manually refreshed via download from Gutenberg
+  #    (see http://www.gutenberg.org/feeds/):
+  #    The file should be manually unzipped and placed in the
+  #    .fixtures/web_pages/gutenberg directory to replace the "rdf-files.tar"
+  VALID_SPECIAL_PROCESSING_OPTIONS = [
+    :local_uri_calls, # forces all API calls and all webpage lookups to be done against local files
+    :local_api_calls, # all API calls done against local files;
+                        # webpage lookups initially done against local zip files
+                        #  ==>> if webpage not found locally,
+                        #         remote lookup done and result zipped/persisted locally
+    :remote_api_calls # Librivox API calls done remotely via http: calls (which may find new audiobooks)
+                        # webpage lookups initially done against local zip files
+                        #  ==>> if webpage not found locally,
+                        #         remote lookup done and result zipped/persisted locally
+  ]
+  @@special_processing_parm = :local_uri_calls
 
   def self.default_catalog_size
     return DEFAULT_CATALOG_SIZE
@@ -34,11 +57,12 @@ class CatalogBuilder
                             LIMIT_PER_CALL : records_remaining_to_fetch
       records_remaining_to_fetch -= call_limit
 
-      # puts "** Called API for #{call_limit.to_s} records at offset #{offset.to_s}: " + current_time
       begin
         api_parms = LIBRIVOX_API_PARMS +
             "&offset=" + offset.to_s + "&limit=" + call_limit.to_s + optional_parms
         if @@special_processing != :local_api_calls && @@special_processing != :local_uri_calls
+          puts "** Called API for #{call_limit.to_s} records at offset #{offset.to_s}: " + current_time
+
           open(get_local_uri(api_parms), "wb") { |file|
             open(LIBRIVOX_API_URL + api_parms, :read_timeout=>nil) { |uri|
                file.write(uri.read)
