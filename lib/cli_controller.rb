@@ -118,14 +118,21 @@ class CliController
     category_object.audiobooks_by_title.values.each.with_index(1) {|audiobook, i|
       puts "      #{i.to_s}: #{audiobook.title.cyan}\n" +
               "         URL: #{audiobook.url_librivox.cyan}"
-      if i % CliController::SCROLL_SIZE == 0 && i < list_size
-        puts "#{i.to_s} of #{list_size.to_s} displayed. ENTER to continue scrolling; 0 to return to menu."
+      input = nil
+      if i == list_size
+        puts "   All audiobooks have been displayed; enter number to open in browser; ENTER to return to menu."
+        print PROMPT; input = gets.strip
+      elsif i % CliController::SCROLL_SIZE == 0
+        puts "#{i.to_s} of #{list_size.to_s} displayed.\n" +
+            "Enter number to open in browser; ENTER to continue scrolling; 0 to return to menu."
         print CliController::MORE_PROMPT; input = gets.strip
-        return true if input == "0"
       end
+      if !input.nil? && input.to_i.to_s == input && input.to_i.between?(1, list_size)
+        system("xdg-open", "#{category_object.audiobooks_by_title.values[input.to_i - 1].url_librivox}")
+        print CliController::MORE_PROMPT; input = gets.strip
+      end
+      return true if input == "0"
     }
-    puts "   All audiobooks have been displayed. ENTER to return to menu."
-    print PROMPT; input = gets.strip
     return true
   end
 
