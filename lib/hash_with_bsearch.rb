@@ -54,8 +54,8 @@ class HashWithBsearch
     return @sorted_hash.select &block
   end
 
-  # Intended to optimize efficiency when searching for an ordered subset of
-  #  items that match the submitted key_prefix
+  # Intended to provide O(log n) efficiency when searching for an ordered
+  #  subset of items that match the submitted <key_prefix> argument.
   # EXAMPLE: authors_keyed_by_name.key_starts_with("M") would return an array
   #          of key-value pairs for all authors whose name begins with "M".
   def key_starts_with(key_prefix)
