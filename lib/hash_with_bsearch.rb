@@ -1,10 +1,10 @@
 ## NOTE: This Hash wrapper efficiently finds and returns values
-##  (via the #[] method) through encapsulated use of the Array#bsearch method.
+##  (via the #[] method) through encapsulated use of the Array#bsearch method
+##  against an internally maintained sorted key-value array.
 ##
 ##  It is intended for situations in which efficiency of lookups is paramount,
-##  but where efficiency in adding values and building the initial Hash is not
-##  so important. Note that every time the content of the Hash is altered, it
-##  requires the @sorted_key_value_array to be recomputed via Hash#sort.
+##  but where efficiency in adding values and building the initial Hash is less
+##  important.
 
 class HashWithBsearch
 
@@ -56,6 +56,8 @@ class HashWithBsearch
 
   # Intended to optimize efficiency when searching for an ordered subset of
   #  items that match the submitted key_prefix
+  # EXAMPLE: authors_keyed_by_name.key_starts_with("M") would return an array
+  #          of key-value pairs for all authors whose name begins with "M".
   def key_starts_with(key_prefix)
     start_index = @sorted_key_value_array.bsearch_index{ |kv_pair|
                     kv_pair[0][0,key_prefix.length] >= key_prefix }
@@ -129,7 +131,7 @@ class HashWithBsearch
           @sorted_key_value_array.insert(insertion_index, inserted_kv_pair)
         end
       end
-      @sorted_hash = nil
+      @sorted_hash = nil # forces rebuild of @sorted_hash upon next invocation of a getter method
     end
   end
 end
