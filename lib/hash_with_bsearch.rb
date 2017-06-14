@@ -92,7 +92,7 @@ class HashWithBsearch
   end
 
   # NOTE: #shift, #clear, and all other standard deletion methods (#pop, etc.) have
-  #  not yet been properly coded, as they were not needed by the original application
+  #  not yet been properly coded, as they were not needed by the original application.
   #  Ultimately, the @wrapped_hash variable should be done away with, and all
   #  operations should go against @sorted_key_value_array
   def shift()
