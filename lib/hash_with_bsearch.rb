@@ -91,7 +91,10 @@ class HashWithBsearch
     sync_sorted_array_and_hash([key, value])
   end
 
-  # NOTE: this code is not optimized for deletions/shifts (it simply resorts the underlying array)
+  # NOTE: #shift, #clear, and all other standard deletion methods (#pop, etc.) have
+  #  not yet been properly coded, as they were not needed by the original application
+  #  Ultimately, the @wrapped_hash variable should be done away with, and all
+  #  operations should go against @sorted_key_value_array
   def shift()
     result = @wrapped_hash.shift
     sync_sorted_array_and_hash
